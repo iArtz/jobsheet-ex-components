@@ -1,0 +1,30 @@
+{
+  "name": "iartz/jobsheet-ex-components",
+  "description": "Report Explosion Proof Motor Components",
+  "type": "library",
+  "version": "1.0.0",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": ">= 7.4.33"
+  },
+  "authors": [
+    {
+      "name": "iArt",
+      "email": "iart@aboutdev.id"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Jobsheet\\Ex\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Jobsheet\\Ex\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6"
+  }
+}
