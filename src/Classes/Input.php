@@ -33,9 +33,9 @@ class Input extends FormElement
             case 'checkbox':
                 $input = <<<HTML
                             <div class="inline-flex items-center">
-                                <label class="mr-2" for="{$this->name}">{$this->title}</label>
+                                <label class="mx-4" for="{$this->name}">{$this->title}</label>
                                 <input
-                                    class="form-checkbox h-4 w-4 text-indigo-600"
+                                    class="form-checkbox h-5 w-5 text-indigo-600"
                                     name="{$this->name}"
                                     id="{$this->name}"
                                     type="{$this->type}"
