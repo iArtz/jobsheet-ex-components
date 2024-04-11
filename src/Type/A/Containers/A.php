@@ -22,7 +22,7 @@ class A
 
         return [
             Header::build(),
-            // MachineDetail::build(),
+            MachineDetail::build(),
             // MachineDetailSinglePhase::build(),
         ];
     }

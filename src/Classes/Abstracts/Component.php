@@ -2,6 +2,7 @@
 
 namespace Jobsheet\Ex\Classes\Abstracts;
 
+use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Container;
 use Jobsheet\Ex\Classes\Input;
 
@@ -29,4 +30,8 @@ abstract class Component
         }
         return $container;
     }
+
+    abstract public static function build(): FormElement;
+
+    abstract public static function loadData(FormElement $form): void;
 }
