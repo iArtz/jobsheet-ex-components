@@ -16,14 +16,14 @@ class A
     {
         static::$components = [
             Header::class,
-            // MachineDetail::class,
-            // MachineDetailSinglePhase::class
+            MachineDetail::class,
+            MachineDetailSinglePhase::class
         ];
 
         return [
             Header::build(),
             MachineDetail::build(),
-            // MachineDetailSinglePhase::build(),
+            MachineDetailSinglePhase::build(),
         ];
     }
 

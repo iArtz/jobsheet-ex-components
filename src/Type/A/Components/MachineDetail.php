@@ -5,7 +5,6 @@ namespace Jobsheet\Ex\Type\A\Components;
 use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
-use Jobsheet\Ex\Classes\Container;
 use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Fieldset;
 use Jobsheet\Ex\Classes\Form;
@@ -22,11 +21,9 @@ class MachineDetail extends Component
 
     public static function build(): FormElement
     {
-        $form = new Form('machine_detail', '', '/api/ex/save');
-        $group = new Fieldset('Machine Details', 'Machine Details (' . join(', ', static::$compatibleWith) . ')');
-        $container = new Container;
-        static::combineElements($container);
-        $group->add($container);
+        $form = new Form('machine_details_form,', '', '/api/ex/save');
+        $group = new Fieldset('machine_details', 'Machine Details (' . join(', ', static::$compatibleWith) . ')');
+        static::combineElements($group);
         $form->add($group);
         return $form;
     }
@@ -70,5 +67,49 @@ class MachineDetail extends Component
                 new Input('performance', 'BS/IEC/Other (performance)'),
             ],
         ];
+    }
+
+    public static function loadData(FormElement $form): void
+    {
+        $data = [
+            'machine_details' => [
+                [
+                    'frame' => 'Frame',
+                    'type' => 'Type',
+                ],
+                [
+
+                    'manufacture' => 'Manufacture',
+                    'model' => 'Model',
+                    'ser_no' => 'Ser.No',
+                ],
+                [
+
+                    'power' => 'Power',
+                    'power_unit', '', ['kW', 'HP', 'Nm' => 'W'],
+                    'speed' => 'Speed',
+                    'speed_unit', '', ['RPM' => 'Pole'],
+                    'insulation_class' => 'Insulation Class',
+                    'design' => 'Design',
+                ],
+                [
+                    'voltage' => 'Voltage',
+                    'frequency' => 'Frequency',
+                    'temp-rise_class' => 'Temp.Rise Class',
+                    'duty' => 'Duty',
+                ],
+                [
+                    'current' => 'Current',
+                    'cos' => 'Cos.φ',
+                    'ip' => 'IP',
+                    'sf' => 'SF',
+                ],
+                [
+                    'performance' => 'BS/IEC/Other (performance)'
+                ]
+            ]
+        ];
+
+        $form->setData($data);
     }
 }

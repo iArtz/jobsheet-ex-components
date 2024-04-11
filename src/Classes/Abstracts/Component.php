@@ -4,7 +4,6 @@ namespace Jobsheet\Ex\Classes\Abstracts;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Container;
-use Jobsheet\Ex\Classes\Input;
 
 abstract class Component
 {

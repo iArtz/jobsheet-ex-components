@@ -21,8 +21,9 @@ class Input extends FormElement
             case 'text':
             case 'date':
                 $input = <<<HTML
-                            <label for="{$this->name}">{$this->title}</label> :
+                            <label class="text-xs mx-2" for="{$this->name}">{$this->title}</label> :
                             <input
+                                class="text-blue-900 text-center text-sm"
                                 name="{$this->name}"
                                 id="{$this->name}"
                                 type="{$this->type}"
@@ -33,9 +34,9 @@ class Input extends FormElement
             case 'checkbox':
                 $input = <<<HTML
                             <div class="inline-flex items-center">
-                                <label class="mx-4" for="{$this->name}">{$this->title}</label>
+                                <label class="mx-4 text-xs" for="{$this->name}">{$this->title}</label>
                                 <input
-                                    class="form-checkbox h-5 w-5 text-indigo-600"
+                                    class="form-checkbox h-4 w-4 text-sm accent-amber-400 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                                     name="{$this->name}"
                                     id="{$this->name}"
                                     type="{$this->type}"

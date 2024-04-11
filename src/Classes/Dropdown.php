@@ -15,11 +15,16 @@ class Dropdown extends Input
         $this->list = $list;
     }
 
+    protected function handlerSelected($item)
+    {
+        return ($this->data == $item) ? 'selected' : '';
+    }
+
     protected function createList()
     {
         $output = '';
         foreach ($this->list as $item) {
-            $output .= "<option value='{$item}'>{$item}</option>";
+            $output .= "<option value='{$item}' {$this->handlerSelected($item)}>{$item}</option>";
         }
         return $output;
     }
@@ -27,8 +32,7 @@ class Dropdown extends Input
     public function render(): string
     {
         return <<<HTML
-                    <label for="{$this->name}">{$this->title}</label>
-                    <select name="{$this->name}" id="{$this->name}">
+                    <select class="text-sm text-amber-500" name="{$this->name}" id="{$this->name}">
                         {$this->createList()}
                     </select>
                 HTML;

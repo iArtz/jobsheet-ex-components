@@ -21,7 +21,7 @@ class Header extends Component
 
     public static function build(): FormElement
     {
-        $form = new Form('header', "TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)", "/header_exd/save");
+        $form = new Form('header_form', "TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)", "/header_exd/save");
         $group = new Fieldset('header', 'Header');
         static::combineElements($group);
         $form->add($group);
@@ -51,7 +51,7 @@ class Header extends Component
         ];
     }
 
-    public static function loadData(FormElement $form)
+    public static function loadData(FormElement $form): void
     {
         define('DATE_FORMAT', 'Y-m-d');
 
