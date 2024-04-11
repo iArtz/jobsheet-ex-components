@@ -19,19 +19,11 @@ abstract class Component
     protected static function combineElements(FormElement $container): FormElement
     {
         $containerClasses = ['flex', 'justify-center', 'justify-items-center'];
-        $itemClasses = ['flex-auto'];
 
-        foreach (static::createElements() as $key => $record) {
+        foreach (static::createElements() as $key => $element) {
             $row = new Container($key, $containerClasses);
-            foreach ($record as $key => $element) {
-                $col = new Container($key, $itemClasses);
-                if ($element instanceof Input) {
-                    $col->add($element);
-                } else {
-                    $row->add($element);
-                    continue;
-                }
-                $row->add($col);
+            foreach ($element as $field) {
+                $row->add($field);
             }
             $container->add($row);
         }

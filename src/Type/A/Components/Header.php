@@ -58,43 +58,21 @@ class Header extends Component
         $data = [
             'header' => [
                 [ // Row Container
-                    [ // Col Container
-                        'single_phase' => true,
-                    ],
-                    [
-                        '2_speed' => true,
-                    ],
-                    [
-                        'lv' => true,
-                    ],
-                    [
-                        'mv' => true,
-                    ],
-                    [
-                        'dc' => true,
-                    ]
+                    'single_phase' => true,
+                    '2_speed' => true,
+                    'lv' => true,
+                    'mv' => true,
+                    'dc' => true,
                 ],
                 [
-                    [
-                        'job_no' => 'Job No',
-                    ],
-                    [
-                        'incoming_date' => date(DATE_FORMAT),
-                    ],
-                    [
-                        'delivery_date' => date(DATE_FORMAT),
-                    ]
+                    'job_no' => 'Job No',
+                    'incoming_date' => date(DATE_FORMAT),
+                    'delivery_date' => date(DATE_FORMAT),
                 ],
                 [
-                    [
-                        'customer' => 'Customer',
-                    ],
-                    [
-                        'tel' => '02-xxx-xxxx',
-                    ],
-                    [
-                        'fax' => '02-xxx-xxxx'
-                    ]
+                    'customer' => 'Customer',
+                    'tel' => '02-xxx-xxxx',
+                    'fax' => '02-xxx-xxxx'
                 ]
             ]
         ];
