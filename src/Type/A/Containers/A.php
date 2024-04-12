@@ -3,31 +3,30 @@
 namespace Jobsheet\Ex\Type\A\Containers;
 
 use Jobsheet\Ex\Classes\Abstracts\Component;
+use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
+use Jobsheet\Ex\Utils\Helper;
 
 class A
 {
     const TYPE = 'A';
-    private static array $components;
+    private static array $components = [
+        Header::class,
+        MachineDetails::class,
+        MachineDetailsSinglePhase::class,
+        MachineDetailsDC::class,
+        CertificationDetails::class,
+    ];
+    private static object $data;
 
     public static function initialForm()
     {
-        static::$components = [
-            Header::class,
-            MachineDetails::class,
-            MachineDetailsSinglePhase::class,
-            MachineDetailsDC::class,
-        ];
-
-        return [
-            Header::build(),
-            MachineDetails::build(),
-            MachineDetailsSinglePhase::build(),
-            MachineDetailsDC::build()
-        ];
+        $components = static::filterComponentsByMotorType();
+        static::$components = $components->classes;
+        return $components->builders;
     }
 
     public static function loadData(array $forms): void
@@ -92,11 +91,28 @@ class A
         $html = ob_get_clean();
 
         if (isset($_GET['debug'])) {
-            echo "<pre>";
-            var_export($forms);
-            echo "</pre>";
+            Helper::export($forms);
         }
 
         echo $html;
+    }
+
+    public static function setData(object $data): void
+    {
+        static::$data = $data;
+    }
+
+    protected static function filterComponentsByMotorType()
+    {
+        $classes = [];
+        $builders = [];
+        foreach (static::$components as $component) {
+            if (in_array(static::$data->motor_type, $component::$compatibleWith)) {
+                $classes[] = $component;
+                $builders[] = $component::build();
+            }
+        }
+
+        return (object) ['classes' => $classes, 'builders' => $builders];
     }
 }

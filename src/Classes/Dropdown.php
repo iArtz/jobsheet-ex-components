@@ -22,7 +22,7 @@ class Dropdown extends Input
 
     protected function createList()
     {
-        $output = '';
+        $output = '<option selected disabled>-</option>';
         foreach ($this->list as $item) {
             $output .= "<option value='{$item}' {$this->handlerSelected($item)}>{$item}</option>";
         }

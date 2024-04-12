@@ -4,15 +4,13 @@ namespace Jobsheet\Ex\Type\A\Components;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
-use Jobsheet\Ex\Classes\Form;
-use Jobsheet\Ex\Classes\Fieldset;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Classes\Dropdown;
 
 class MachineDetailsSinglePhase extends MachineDetails
 {
-    protected static array $compatibleWith = [
+    public static array $compatibleWith = [
         MotorType::SinglePhase
     ];
 

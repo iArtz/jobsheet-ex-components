@@ -16,8 +16,6 @@ abstract class Component
         return static::$compatibleWith;
     }
 
-    abstract protected static function createElements(): array;
-
     protected static function combineElements(FormElement $container): FormElement
     {
         $containerClasses = ['flex', 'justify-center', 'justify-items-center'];
@@ -40,6 +38,8 @@ abstract class Component
         $form->add($group);
         return $form;
     }
+
+    abstract protected static function createElements(): array;
 
     abstract public static function build(): FormElement;
 

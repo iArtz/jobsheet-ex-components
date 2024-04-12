@@ -5,14 +5,11 @@ namespace Jobsheet\Ex\Type\A\Components;
 use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
-use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Input;
-use Jobsheet\Ex\Classes\Fieldset;
-use stdClass;
 
 class Header extends Component
 {
-    protected static array $compatibleWith = [
+    public static array $compatibleWith = [
         MotorType::SinglePhase,
         MotorType::TwoSpeed,
         MotorType::LV,
