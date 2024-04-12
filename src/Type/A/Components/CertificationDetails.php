@@ -64,6 +64,13 @@ class CertificationDetails extends Component
                 new Input('ia-in', 'IA/IN'),
                 new Input('ip', 'IP'),
                 new Input('temperature_class', 'Temperature class'),
+            ],
+            [
+                new Input('performance', 'BS/IEC/Other (performance)'),
+                new Input('year_of_certificate', 'Year of Certificate'),
+            ],
+            [
+                new Input('special_certificate', 'Special certificate or manufacturer\'s requirements')
             ]
         ];
     }
@@ -92,6 +99,14 @@ class CertificationDetails extends Component
                     'ia-in' => 'IA/IN',
                     'ip' => 'IP',
                     'temperature_class' => 'Temperature class',
+                ],
+                [
+                    'performance' => 'BS/IEC/Other (performance)',
+                    'year_of_certificate' => 'Year of Certificate'
+                ],
+                [
+
+                    'special_certificate' => 'Special certificate or manufacturer\'s requirements'
                 ]
             ]
         ];
