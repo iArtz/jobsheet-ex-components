@@ -11,7 +11,7 @@ use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 
-class MachineDetail extends Component
+class MachineDetails extends Component
 {
     protected static array $compatibleWith = [
         MotorType::LV,

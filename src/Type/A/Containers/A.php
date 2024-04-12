@@ -4,8 +4,9 @@ namespace Jobsheet\Ex\Type\A\Containers;
 
 use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Type\A\Components\Header;
-use Jobsheet\Ex\Type\A\Components\MachineDetail;
-use Jobsheet\Ex\Type\A\Components\MachineDetailSinglePhase;
+use Jobsheet\Ex\Type\A\Components\MachineDetails;
+use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
+use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
 
 class A
 {
@@ -16,14 +17,16 @@ class A
     {
         static::$components = [
             Header::class,
-            MachineDetail::class,
-            MachineDetailSinglePhase::class
+            MachineDetails::class,
+            MachineDetailsSinglePhase::class,
+            MachineDetailsDC::class,
         ];
 
         return [
             Header::build(),
-            MachineDetail::build(),
-            MachineDetailSinglePhase::build(),
+            MachineDetails::build(),
+            MachineDetailsSinglePhase::build(),
+            MachineDetailsDC::build()
         ];
     }
 

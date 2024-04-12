@@ -10,16 +10,16 @@ use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Classes\Dropdown;
 
-class MachineDetailSinglePhase extends MachineDetail
+class MachineDetailsDC extends MachineDetails
 {
     protected static array $compatibleWith = [
-        MotorType::SinglePhase
+        MotorType::DC
     ];
 
     public static function build(): FormElement
     {
-        $form = new Form('machine_details_single_phase_form', '', '/api/ex/save');
-        $group = new Fieldset('machine_details_single_phase', 'Machine Details (' . join(', ', static::$compatibleWith) . ')');
+        $form = new Form('machine_details_dc_form', '', '/api/ex/save');
+        $group = new Fieldset('machine_details_dc', 'Machine Details (' . join(', ', static::$compatibleWith) . ')');
         static::combineElements($group);
         $form->add($group);
         return $form;
@@ -43,25 +43,23 @@ class MachineDetailSinglePhase extends MachineDetail
                 new Input('speed', 'Speed'),
                 new Dropdown('speed_unit', '', ['RPM', 'Pole']),
                 new Input('insulation_class', 'Insulation Class'),
-                new Input('ip', 'IP')
+                new Input('design', 'Design')
             ],
             [
-                new Input('voltage', 'Voltage'),
+                new Input('arm-voltage', 'Arm.Voltage'),
                 new Span('V.'),
-                new Input('frequency', 'Frequency'),
-                new Span('Hz.'),
+                new Input('arm-current', 'Arm.Current'),
+                new Span('A.'),
                 new Input('temp-rise_class', 'Temp.Rise Class'),
-                new Input('cos', 'Cos.φ'),
+                new Input('duty', 'Duty'),
             ],
             [
-                new Input('current_a', 'Current'),
+                new Input('field_voltage', 'Field Voltage'),
+                new Span('V.'),
+                new Input('field_current', 'Field Current'),
                 new Span('A.'),
-                new Input('cap-start_uF', 'Cap.Start'),
-                new Span('uF.'),
-                new Input('cap-start_v', 'V.'),
-                new Input('cap-run', 'Cap.Run'),
-                new Span('uF.'),
-                new Input('cap-run_v', 'V.'),
+                new Input('ip', 'IP'),
+                new Input('sf', 'SF'),
             ],
             [
                 new Input('performance', 'BS/IEC/Other (performance)')
@@ -72,7 +70,7 @@ class MachineDetailSinglePhase extends MachineDetail
     public static function loadData(FormElement $form): void
     {
         $data = [
-            'machine_details_single_phase' => [
+            'machine_details_dc' => [
                 [
                     'frame' => 'Frame',
                     'type' => 'Type'
@@ -91,17 +89,16 @@ class MachineDetailSinglePhase extends MachineDetail
                     'ip' => 'IP'
                 ],
                 [
-                    'voltage' => 'Voltage',
-                    'frequency' => 'Frequency',
+                    'arm-voltage' => 'Arm.Voltage',
+                    'arm-current' => 'Arm.Current',
                     'temp-rise_class' => 'Temp.Rise Class',
-                    'cos' => 'Cos.φ',
+                    'duty' => 'Duty',
                 ],
                 [
-                    'current_a' => 'Current',
-                    'cap-start_uF' => 'Cap.Start',
-                    'cap-start_v' => 'V.',
-                    'cap-run' => 'Cap.Run',
-                    'cap-run_v' => 'V.',
+                    'field_voltage' => 'Field Voltage',
+                    'field_current' => 'Field Current',
+                    'ip' => 'IP',
+                    'sf' => 'SF',
                 ],
                 [
                     'performance' => 'BS/IEC/Other (performance)'
