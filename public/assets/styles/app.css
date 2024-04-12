@@ -15,6 +15,6 @@ fieldset {
 }
 
 input {
-  border-bottom: dashed red 2px;
+  border-bottom: dashed red 1.5px;
   width: 100%;
 }

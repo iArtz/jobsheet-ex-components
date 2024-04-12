@@ -15,7 +15,7 @@ class Span extends FormElement
     public function render(): string
     {
         return <<<HTML
-                <span class="px-2 text-xs">{$this->title}</span>
+                <span class="px-1 text-xs mt-2 mr-1">{$this->title}</span>
             HTML;
     }
 }

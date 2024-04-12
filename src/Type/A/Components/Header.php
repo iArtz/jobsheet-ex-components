@@ -22,7 +22,7 @@ class Header extends Component
     public static function build(): FormElement
     {
         $form = new Form('header_form', "TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)", "/header_exd/save");
-        $group = new Fieldset('header', 'Header');
+        $group = new Fieldset('header', 'Header (' . join(', ', static::$compatibleWith) . ')');
         static::combineElements($group);
         $form->add($group);
         return $form;

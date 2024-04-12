@@ -17,7 +17,7 @@ class Dropdown extends Input
 
     protected function handlerSelected($item)
     {
-        return ($this->data == $item) ? 'selected' : '';
+        return ($this->data == $item) ? 'selected disabled' : '';
     }
 
     protected function createList()
@@ -32,7 +32,7 @@ class Dropdown extends Input
     public function render(): string
     {
         return <<<HTML
-                    <select class="text-sm text-amber-500" name="{$this->name}" id="{$this->name}">
+                    <select class="text-xs text-amber-500 mb-2 font-medium" name="{$this->name}" id="{$this->name}">
                         {$this->createList()}
                     </select>
                 HTML;
