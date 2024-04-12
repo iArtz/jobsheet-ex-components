@@ -11,7 +11,7 @@ use Jobsheet\Ex\Classes\Span;
 
 class CertificationDetails extends Component
 {
-    public static array $compatibleWith = [
+    protected static array $compatibleWith = [
         MotorType::SinglePhase,
         MotorType::TwoSpeed,
         MotorType::LV,

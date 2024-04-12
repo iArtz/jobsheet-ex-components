@@ -10,7 +10,7 @@ use Jobsheet\Ex\Classes\Dropdown;
 
 class MachineDetailsSinglePhase extends MachineDetails
 {
-    public static array $compatibleWith = [
+    protected static array $compatibleWith = [
         MotorType::SinglePhase
     ];
 

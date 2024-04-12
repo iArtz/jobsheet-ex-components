@@ -9,7 +9,7 @@ use Jobsheet\Ex\Classes\Input;
 
 class Header extends Component
 {
-    public static array $compatibleWith = [
+    protected static array $compatibleWith = [
         MotorType::SinglePhase,
         MotorType::TwoSpeed,
         MotorType::LV,

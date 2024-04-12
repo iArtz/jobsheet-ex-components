@@ -107,7 +107,7 @@ class A
         $classes = [];
         $builders = [];
         foreach (static::$components as $component) {
-            if (in_array(static::$data->motor_type, $component::$compatibleWith)) {
+            if (in_array(static::$data->motor_type, $component::compatibleWith())) {
                 $classes[] = $component;
                 $builders[] = $component::build();
             }

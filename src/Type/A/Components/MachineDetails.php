@@ -11,7 +11,7 @@ use Jobsheet\Ex\Classes\Span;
 
 class MachineDetails extends Component
 {
-    public static array $compatibleWith = [
+    protected static array $compatibleWith = [
         MotorType::LV,
         MotorType::MV,
         MotorType::TwoSpeed
