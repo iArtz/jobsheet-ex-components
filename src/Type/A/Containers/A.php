@@ -8,6 +8,7 @@ use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
+use Jobsheet\Ex\Type\A\Components\Pictures;
 use Jobsheet\Ex\Utils\Helper;
 
 class A
@@ -19,6 +20,7 @@ class A
         MachineDetailsSinglePhase::class,
         MachineDetailsDC::class,
         CertificationDetails::class,
+        Pictures::class,
     ];
     private static object $data;
 

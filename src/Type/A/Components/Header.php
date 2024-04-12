@@ -6,6 +6,7 @@ use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Input;
+use Jobsheet\Ex\Utils\Helper;
 
 class Header extends Component
 {
@@ -31,7 +32,7 @@ class Header extends Component
             ]
         ];
 
-        return static::createForm(json_decode(json_encode($config)));
+        return static::createForm(Helper::arrayToObject($config));
     }
 
     protected static function createElements(): array

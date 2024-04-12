@@ -8,6 +8,7 @@ use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
+use Jobsheet\Ex\Utils\Helper;
 
 class CertificationDetails extends Component
 {
@@ -33,7 +34,7 @@ class CertificationDetails extends Component
             ]
         ];
 
-        return static::createForm(json_decode(json_encode($config)));
+        return static::createForm(Helper::arrayToObject($config));
     }
 
     protected static function createElements(): array
