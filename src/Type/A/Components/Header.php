@@ -8,6 +8,7 @@ use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Fieldset;
+use stdClass;
 
 class Header extends Component
 {
@@ -21,11 +22,19 @@ class Header extends Component
 
     public static function build(): FormElement
     {
-        $form = new Form('header_form', "TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)", "/header_exd/save");
-        $group = new Fieldset('header', 'Header (' . join(', ', static::$compatibleWith) . ')');
-        static::combineElements($group);
-        $form->add($group);
-        return $form;
+        $config = [
+            'form' => [
+                'name' => 'header_form',
+                'title' => "TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)",
+                'action' => "/header_exd/save"
+            ],
+            'fieldset' => [
+                'name' => 'header',
+                'title' => 'Header'
+            ]
+        ];
+
+        return static::createForm(json_decode(json_encode($config)));
     }
 
     protected static function createElements(): array

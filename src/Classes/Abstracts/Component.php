@@ -4,6 +4,8 @@ namespace Jobsheet\Ex\Classes\Abstracts;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Container;
+use Jobsheet\Ex\Classes\Form;
+use Jobsheet\Ex\Classes\Fieldset;
 
 abstract class Component
 {
@@ -28,6 +30,15 @@ abstract class Component
             $container->add($row);
         }
         return $container;
+    }
+
+    protected static function createForm(object $config): FormElement
+    {
+        $form = new Form($config->form->name, $config->form->title, $config->form->action);
+        $group = new Fieldset($config->fieldset->name, $config->fieldset->title . ' (' . join(', ', static::$compatibleWith) . ')');
+        static::combineElements($group);
+        $form->add($group);
+        return $form;
     }
 
     abstract public static function build(): FormElement;

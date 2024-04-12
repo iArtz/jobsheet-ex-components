@@ -6,8 +6,6 @@ use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Dropdown;
-use Jobsheet\Ex\Classes\Fieldset;
-use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 
@@ -21,11 +19,19 @@ class MachineDetails extends Component
 
     public static function build(): FormElement
     {
-        $form = new Form('machine_details_form,', '', '/api/ex/save');
-        $group = new Fieldset('machine_details', 'Machine Details (' . join(', ', static::$compatibleWith) . ')');
-        static::combineElements($group);
-        $form->add($group);
-        return $form;
+        $config = [
+            'form' => [
+                'name' => 'machine_details_form',
+                'title' => '',
+                'action' => '/api/ex/save'
+            ],
+            'fieldset' => [
+                'name' => 'machine_details',
+                'title' => 'Machine Details'
+            ]
+        ];
+
+        return static::createForm(json_decode(json_encode($config)));
     }
 
     protected static function createElements(): array
