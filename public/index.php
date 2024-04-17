@@ -7,7 +7,8 @@ use Jobsheet\Ex\Type\A\Containers\A;
 use Jobsheet\Ex\Utils\Helper;
 
 $data = [
-    'motor_type' => MotorType::DC
+    'motor_type' => MotorType::LV,
+    'debug' => true
 ];
 A::setData(Helper::arrayToObject($data));
 A::renderPage();

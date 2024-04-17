@@ -9,7 +9,10 @@ use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
 use Jobsheet\Ex\Type\A\Components\Pictures;
+use Jobsheet\Ex\Type\A\Components\PicturesDC;
+use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Utils\Helper;
+use stdClass;
 
 class A
 {
@@ -21,6 +24,8 @@ class A
         MachineDetailsDC::class,
         CertificationDetails::class,
         Pictures::class,
+        PicturesDC::class,
+        StaticTest::class,
     ];
     private static object $data;
 
@@ -104,12 +109,15 @@ class A
         static::$data = $data;
     }
 
-    protected static function filterComponentsByMotorType()
+    protected static function filterComponentsByMotorType(): stdClass
     {
         $classes = [];
         $builders = [];
         foreach (static::$components as $component) {
-            if (in_array(static::$data->motor_type, $component::compatibleWith())) {
+            if (
+                in_array(static::$data->motor_type, $component::compatibleWith())
+                || (isset(static::$data->debug) && static::$data->debug)
+            ) {
                 $classes[] = $component;
                 $builders[] = $component::build();
             }

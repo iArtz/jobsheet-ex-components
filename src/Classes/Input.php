@@ -44,7 +44,16 @@ class Input extends FormElement
                                     {$this->handlerCheckbox()}
                                 >
                             </div>
-                    HTML;
+                        HTML;
+                break;
+            case 'image':
+                $imageUrl = htmlspecialchars($this->data ?? 'https://placehold.co/300x200');
+                $input = <<<HTML
+                            <div class="flex flex-col justify-between p-4">
+                                    <img src="{$imageUrl}">
+                                    <span class="text-center">{$this->title} </span>
+                            </div>
+                        HTML;
                 break;
         }
         return $input;

@@ -5,29 +5,31 @@ namespace Jobsheet\Ex\Type\A\Components;
 use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
-use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Classes\Input;
+use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class Pictures extends Component
+class StaticTest extends Component
 {
     protected static array $compatibleWith = [
+        MotorType::DC,
         MotorType::LV,
         MotorType::MV,
-        MotorType::TwoSpeed,
         MotorType::SinglePhase,
+        MotorType::TwoSpeed
     ];
 
     public static function build(): FormElement
     {
         $config = [
             'form' => [
-                'name' => 'pictures_form', 'title' => '',
+                'name' => 'static_test_from',
+                'title' => '',
                 'action' => '/api/ex/save'
             ],
             'fieldset' => [
-                'name' => 'pictures',
-                'title' => 'Pictures'
+                'name' => 'static_test',
+                'title' => 'Static Test'
             ]
         ];
 
@@ -38,24 +40,23 @@ class Pictures extends Component
     {
         return [
             [
-                new Span('Rotation from NDE'),
-                new Input('cw', 'CW', 'checkbox'),
-                new Input('na', 'N/A', 'checkbox'),
-                new Input('ccw', 'CCW', 'checkbox'),
-                new Input('incoming_picture', 'INCOMING PICTURE', 'image'),
-                new Input('final_picture', 'FINAL PICTURE', 'image'),
-            ],
+                new Span('Ambient Temperature'),
+                new Input('incoming', 'Incoming'),
+                new Span('°C'),
+                new Input('final', 'Final'),
+                new Span('°C'),
+            ]
         ];
     }
+
     public static function loadData(FormElement $form): void
     {
         $data = [
-            'pictures' => [
+            'static_test' => [
                 [
-                    'cw' => true,
-                    'ccw' => true,
-                    'na' => true,
-                ],
+                    'incoming' => 'Incoming',
+                    'final' => 'Final',
+                ]
             ]
         ];
 
