@@ -7,15 +7,18 @@ use Jobsheet\Ex\Utils\RandomString;
 
 class Span extends FormElement
 {
-    public function __construct(string $title)
+    private string $class;
+
+    public function __construct(string $title, array $class = [])
     {
         parent::__construct(RandomString::generate(), $title);
+        $this->class = join(' ', $class);
     }
 
     public function render(): string
     {
         return <<<HTML
-                <span class="px-1 text-xs mr-1">{$this->title}</span>
+                <span class="px-1 text-xs mr-1 {$this->class}">{$this->title}</span>
             HTML;
     }
 }

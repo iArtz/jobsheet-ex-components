@@ -20,8 +20,9 @@ class Input extends FormElement
         switch ($this->type) {
             case 'text':
             case 'date':
+                $title = !empty($this->title) ? "{$this->title}:" : null;
                 $input = <<<HTML
-                            <label class="text-xs mt-2 mr-1" for="{$this->name}">{$this->title}:</label>
+                            <label class="text-xs mt-2 mr-1" for="{$this->name}">{$title}</label>
                             <input
                                 class="text-blue-900 text-center text-sm h-7"
                                 name="{$this->name}"

@@ -10,6 +10,7 @@ use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
 use Jobsheet\Ex\Type\A\Components\Pictures;
 use Jobsheet\Ex\Type\A\Components\PicturesDC;
+use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTest;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Utils\Helper;
 use stdClass;
@@ -18,14 +19,15 @@ class A
 {
     const TYPE = 'A';
     private static array $components = [
-        Header::class,
-        MachineDetails::class,
-        MachineDetailsSinglePhase::class,
-        MachineDetailsDC::class,
-        CertificationDetails::class,
-        Pictures::class,
-        PicturesDC::class,
-        StaticTest::class,
+        // Header::class,
+        // MachineDetails::class,
+        // MachineDetailsSinglePhase::class,
+        // MachineDetailsDC::class,
+        // CertificationDetails::class,
+        // Pictures::class,
+        // PicturesDC::class,
+        // StaticTest::class,
+        ResistanceInductanceTest::class,
     ];
     private static object $data;
 
