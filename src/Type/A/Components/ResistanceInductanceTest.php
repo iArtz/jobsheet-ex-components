@@ -9,12 +9,62 @@ use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
+use PHPUnit\TextUI\Help;
 
 class ResistanceInductanceTest extends Component
 {
     protected static array $compatibleWith = [
         MotorType::LV,
         MotorType::MV
+    ];
+
+    protected static array $data = [
+        'resistance_inductance_test' => [
+            [],
+            [
+                'resistance_incoming_values_unit' => 'Ω',
+                'inductance_incoming_values_unit' => 'mH',
+            ],
+            [
+                'resistance_incoming_marking_1' => '1',
+                'resistance_incoming_value_1' => '1',
+                'inductance_incoming_marking_1' => '1',
+                'inductance_incoming_value_1' => '1',
+
+                'resistance_final_marking_1' => '1',
+                'resistance_final_value_1' => '1',
+                'inductance_final_marking_1' => '1',
+                'inductance_final_value_1' => '1',
+            ],
+            [
+                'resistance_incoming_marking_2' => '2',
+                'resistance_incoming_value_2' => '2',
+                'inductance_incoming_marking_2' => '2',
+                'inductance_incoming_value_2' => '2',
+
+                'resistance_final_marking_2' => '2',
+                'resistance_final_value_2' => '2',
+                'inductance_final_marking_2' => '2',
+                'inductance_final_value_2' => '2',
+            ],
+            [
+                'resistance_incoming_marking_3' => '3',
+                'resistance_incoming_value_3' => '3',
+                'inductance_incoming_marking_3' => '3',
+                'inductance_incoming_value_3' => '3',
+
+                'resistance_final_marking_3' => '3',
+                'resistance_final_value_3' => '3',
+                'inductance_final_marking_3' => '3',
+                'inductance_final_value_3' => '3',
+            ],
+            [
+                'resistance_incoming_id_no' => 'Res incoming ID No.',
+                'inductance_incoming_id_no' => 'Ind incoming ID No.',
+                'resistance_final_id_no' => 'Res final ID No.',
+                'inductance_final_id_no' => 'Ind final ID No.',
+            ]
+        ]
     ];
 
     public static function build(): FormElement
@@ -27,7 +77,7 @@ class ResistanceInductanceTest extends Component
             ],
             'fieldset' => [
                 'name' => 'resistance_inductance_test',
-                'title' => 'Resistance Test'
+                'title' => 'Resistance & Inductance Test'
             ]
         ];
 
@@ -40,6 +90,8 @@ class ResistanceInductanceTest extends Component
             [
                 new Span('RESISTANCE TEST(Incoming)'),
                 new Span('INDUCTANCE TEST(Incoming)'),
+                new Span('RESISTANCE TEST(Final)'),
+                new Span('INDUCTANCE TEST(Final)'),
             ],
             [
                 new Span('Marking'),
@@ -48,20 +100,32 @@ class ResistanceInductanceTest extends Component
                     'resistance_incoming_values_unit',
                     '',
                     ['Ω', 'mΩ', 'MΩ', 'μΩ', 'GΩ'],
-                    ['-ml-20']
+                    ['-ml-10']
                 ),
                 new Span('Marking'),
                 new Span('Values', ['mr-1', 'pr-1']),
                 new Dropdown(
                     'inductance_incoming_values_unit',
                     '',
-                    [
-                        'H',
-                        'mH',
-                        'MH',
-                        'μH',
-                    ],
-                    ['-ml-20']
+                    ['H', 'mH', 'MH', 'μH',],
+                    ['-ml-10']
+                ),
+
+                new Span('Marking'),
+                new Span('Values', ['mr-1', 'pr-1']),
+                new Dropdown(
+                    'resistance_final_values_unit',
+                    '',
+                    ['Ω', 'mΩ', 'MΩ', 'μΩ', 'GΩ'],
+                    ['-ml-10']
+                ),
+                new Span('Marking'),
+                new Span('Values', ['mr-1', 'pr-1']),
+                new Dropdown(
+                    'inductance_final_values_unit',
+                    '',
+                    ['H', 'mH', 'MH', 'μH',],
+                    ['-ml-10']
                 ),
             ],
             [ // Row 1
@@ -125,59 +189,5 @@ class ResistanceInductanceTest extends Component
                 new Input('inductance_final_id_no', 'ID No.'),
             ]
         ];
-    }
-    public static function loadData(FormElement $form): void
-    {
-        // Get Data from data base or pass through from constructor ?
-        $data = [
-            'resistance_inductance_test' => [
-                [],
-                [
-                    'resistance_incoming_values_unit' => 'Ω',
-                    'inductance_incoming_values_unit' => 'mH',
-                ],
-                [
-                    'resistance_incoming_marking_1' => '1',
-                    'resistance_incoming_value_1' => '1',
-                    'inductance_incoming_marking_1' => '1',
-                    'inductance_incoming_value_1' => '1',
-
-                    'resistance_final_marking_1' => '1',
-                    'resistance_final_value_1' => '1',
-                    'inductance_final_marking_1' => '1',
-                    'inductance_final_value_1' => '1',
-                ],
-                [
-                    'resistance_incoming_marking_2' => '2',
-                    'resistance_incoming_value_2' => '2',
-                    'inductance_incoming_marking_2' => '2',
-                    'inductance_incoming_value_2' => '2',
-
-                    'resistance_final_marking_2' => '2',
-                    'resistance_final_value_2' => '2',
-                    'inductance_final_marking_2' => '2',
-                    'inductance_final_value_2' => '2',
-                ],
-                [
-                    'resistance_incoming_marking_3' => '3',
-                    'resistance_incoming_value_3' => '3',
-                    'inductance_incoming_marking_3' => '3',
-                    'inductance_incoming_value_3' => '3',
-
-                    'resistance_final_marking_3' => '3',
-                    'resistance_final_value_3' => '3',
-                    'inductance_final_marking_3' => '3',
-                    'inductance_final_value_3' => '3',
-                ],
-                [
-                    'resistance_incoming_id_no' => 'Res incoming ID No.',
-                    'inductance_incoming_id_no' => 'Ind incoming ID No.',
-                    'resistance_final_id_no' => 'Res final ID No.',
-                    'inductance_final_id_no' => 'Ind final ID No.',
-                ]
-            ]
-        ];
-
-        $form->setData($data);
     }
 }

@@ -6,9 +6,12 @@ use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Type\A\Containers\A;
 use Jobsheet\Ex\Utils\Helper;
 
+set_error_handler('Jobsheet\Ex\Core\Error::errorHandler');
+set_exception_handler('Jobsheet\Ex\Core\Error::exceptionHandler');
+
 $data = [
-    'motor_type' => MotorType::LV,
-    'debug' => true
+    'develop' => true
 ];
-A::setData(Helper::arrayToObject($data));
+
+A::setData($data);
 A::renderPage();

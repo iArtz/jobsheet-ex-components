@@ -18,6 +18,28 @@ class Header extends Component
         MotorType::DC
     ];
 
+    protected static array $data = [
+        'header' => [
+            [
+                'single_phase' => true,
+                '2_speed' => true,
+                'lv' => true,
+                'mv' => true,
+                'dc' => true,
+            ],
+            [
+                'job_no' => 'Job No',
+                'incoming_date' => '2024-01-01',
+                'delivery_date' => '2024-01-01',
+            ],
+            [
+                'customer' => 'Customer',
+                'tel' => '02-xxx-xxxx',
+                'fax' => '02-xxx-xxxx'
+            ]
+        ]
+    ];
+
     public static function build(): FormElement
     {
         $config = [
@@ -46,44 +68,15 @@ class Header extends Component
                 new Input('dc', 'DC', 'checkbox'),
             ],
             [
-                new Input('job_no', "Job No", 'text'),
+                new Input('job_no', "Job No"),
                 new Input('incoming_date', 'Incoming Date', 'date'),
                 new Input('delivery_date', 'Delivery Date', 'date'),
             ],
             [
-                new Input('customer', 'Customer', 'text'),
-                new Input('tel', 'Tel', 'text'),
-                new Input('fax', 'Fax', 'text'),
+                new Input('customer', 'Customer'),
+                new Input('tel', 'Tel'),
+                new Input('fax', 'Fax'),
             ]
         ];
-    }
-
-    public static function loadData(FormElement $form): void
-    {
-        define('DATE_FORMAT', 'Y-m-d');
-
-        $data = [
-            'header' => [
-                [ // Row Container
-                    'single_phase' => true,
-                    '2_speed' => true,
-                    'lv' => true,
-                    'mv' => true,
-                    'dc' => true,
-                ],
-                [
-                    'job_no' => 'Job No',
-                    'incoming_date' => date(DATE_FORMAT),
-                    'delivery_date' => date(DATE_FORMAT),
-                ],
-                [
-                    'customer' => 'Customer',
-                    'tel' => '02-xxx-xxxx',
-                    'fax' => '02-xxx-xxxx'
-                ]
-            ]
-        ];
-
-        $form->setData($data);
     }
 }

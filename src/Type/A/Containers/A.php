@@ -19,17 +19,17 @@ class A
 {
     const TYPE = 'A';
     private static array $components = [
-        // Header::class,
-        // MachineDetails::class,
-        // MachineDetailsSinglePhase::class,
-        // MachineDetailsDC::class,
-        // CertificationDetails::class,
-        // Pictures::class,
-        // PicturesDC::class,
-        // StaticTest::class,
+        Header::class,
+        MachineDetails::class,
+        MachineDetailsSinglePhase::class,
+        MachineDetailsDC::class,
+        CertificationDetails::class,
+        Pictures::class,
+        PicturesDC::class,
+        StaticTest::class,
         ResistanceInductanceTest::class,
     ];
-    private static object $data;
+    private static array $data;
 
     public static function initialForm()
     {
@@ -42,7 +42,17 @@ class A
     {
         foreach (static::$components as $key => $component) {
             if (is_subclass_of($component, Component::class)) {
-                $component::loadData($forms[$key]);
+                $fieldsetName = $forms[$key]->getFieldsetName();
+                if (isset($fieldsetName) && isset(static::$data[$fieldsetName])) {
+                    $component::loadData(
+                        $forms[$key],
+                        [$fieldsetName => static::$data[$fieldsetName]]
+                    );
+                } else {
+                    $component::loadData(
+                        $forms[$key]
+                    );
+                }
             }
         }
     }
@@ -99,32 +109,62 @@ class A
 
         $html = ob_get_clean();
 
-        if (isset($_GET['debug'])) {
-            Helper::export($forms);
+        if (
+            isset(static::$data['debug'])
+            && static::$data['debug']
+        ) {
+            Helper::export($forms); // debug
         }
 
         echo $html;
     }
 
-    public static function setData(object $data): void
+    public static function setData(array $data = []): void
     {
         static::$data = $data;
     }
 
-    protected static function filterComponentsByMotorType(): stdClass
+    protected static function filterComponentsByMotorType(): object
+    {
+        return static::classHandler(static::classFilter());
+    }
+
+    private static function classFilter(): array
     {
         $classes = [];
         $builders = [];
         foreach (static::$components as $component) {
             if (
-                in_array(static::$data->motor_type, $component::compatibleWith())
-                || (isset(static::$data->debug) && static::$data->debug)
+                (isset(static::$data['motor_type'])
+                    && in_array(static::$data['motor_type'], $component::compatibleWith()))
+                || (isset(static::$data['showAll'])
+                    && static::$data['showAll'])
             ) {
                 $classes[] = $component;
                 $builders[] = $component::build();
             }
         }
 
-        return (object) ['classes' => $classes, 'builders' => $builders];
+        return [$classes, $builders];
+    }
+
+    private static function classHandler(array $args): object
+    {
+        [$classes, $builders] = $args;
+        if (
+            isset(static::$data['develop'])
+            && static::$data['develop']
+        ) {
+            $latestComponent = end(static::$components);
+            return (object) [
+                'classes' => [$latestComponent],
+                'builders' => [$latestComponent::build()]
+            ];
+        }
+
+        return (object) [
+            'classes' => $classes,
+            'builders' => $builders
+        ];
     }
 }

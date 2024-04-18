@@ -3,6 +3,7 @@
 namespace Jobsheet\Ex\Classes;
 
 use Jobsheet\Ex\Classes\Abstracts\FieldComposite;
+use Jobsheet\Ex\Classes\Fieldset;
 
 class Form extends FieldComposite
 {
@@ -23,5 +24,14 @@ class Form extends FieldComposite
                     $output
                 </form>
                 HTML;
+    }
+
+    public function getFieldsetName()
+    {
+        foreach ($this->fields as $field) {
+            if ($field instanceof Fieldset) {
+                return $field->name;
+            }
+        }
     }
 }

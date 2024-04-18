@@ -2,6 +2,7 @@
 
 namespace Jobsheet\Ex\Classes\Abstracts;
 
+use Exception;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Container;
 use Jobsheet\Ex\Classes\Form;
@@ -10,13 +11,17 @@ use Jobsheet\Ex\Classes\Fieldset;
 abstract class Component
 {
     protected static array $compatibleWith = [];
+    protected static array $data = [];
+    protected static array $methods = [
+        'loadData'
+    ];
 
     public static function compatibleWith(): array
     {
         return static::$compatibleWith;
     }
 
-    protected static function combineElements(FormElement $container): FormElement
+    protected static function combineElements(Fieldset $container): FormElement
     {
         $containerClasses = ['flex', 'justify-around', 'justify-items-center'];
 
@@ -43,5 +48,23 @@ abstract class Component
 
     abstract public static function build(): FormElement;
 
-    abstract public static function loadData(FormElement $form): void;
+    public static function __callStatic($name, $arguments)
+    {
+        $count = count($arguments);
+
+        if (!in_array($name, static::$methods)) {
+            throw new Exception('Method ' . $name . ' is does not exist.');
+        }
+
+        if ($name == 'loadData') {
+            if ($count == 1) {
+                // Mock data
+                return $arguments[0]->setData(static::$data);
+            }
+            if ($count == 2) {
+                // Pass data
+                return $arguments[0]->setData($arguments[1]);
+            }
+        }
+    }
 }
