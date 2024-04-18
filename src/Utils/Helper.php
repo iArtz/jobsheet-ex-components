@@ -27,4 +27,9 @@ class Helper
     {
         return date('Y-m-d');
     }
+
+    public static function randomString(int $length = 6): string
+    {
+        return substr(md5(microtime()), 0, $length);
+    }
 }

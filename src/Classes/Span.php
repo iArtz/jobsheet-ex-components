@@ -3,7 +3,7 @@
 namespace Jobsheet\Ex\Classes;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
-use Jobsheet\Ex\Utils\RandomString;
+use Jobsheet\Ex\Utils\Helper;
 
 class Span extends FormElement
 {
@@ -11,7 +11,7 @@ class Span extends FormElement
 
     public function __construct(string $title, array $class = [])
     {
-        parent::__construct(RandomString::generate(), $title);
+        parent::__construct(Helper::randomString(), $title);
         $this->class = join(' ', $class);
     }
 
