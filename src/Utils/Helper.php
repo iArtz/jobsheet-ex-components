@@ -11,6 +11,13 @@ class Helper
         echo "</pre>";
     }
 
+    public static function prettyArray($data): void
+    {
+        echo "<pre>";
+        print_r($data);
+        echo "</pre>";
+    }
+
     public static function export($data): void
     {
         echo "<pre>";

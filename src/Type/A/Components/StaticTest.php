@@ -19,6 +19,15 @@ class StaticTest extends Component
         MotorType::TwoSpeed
     ];
 
+    public static array $data = [
+        'static_test' => [
+            [
+                'incoming' => 'Incoming',
+                'final' => 'Final',
+            ]
+        ]
+    ];
+
     public static function build(): FormElement
     {
         $config = [
@@ -47,19 +56,5 @@ class StaticTest extends Component
                 new Span('°C'),
             ]
         ];
-    }
-
-    public static function loadData(FormElement $form): void
-    {
-        $data = [
-            'static_test' => [
-                [
-                    'incoming' => 'Incoming',
-                    'final' => 'Final',
-                ]
-            ]
-        ];
-
-        $form->setData($data);
     }
 }
