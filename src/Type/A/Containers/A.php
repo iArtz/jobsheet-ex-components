@@ -11,6 +11,7 @@ use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
 use Jobsheet\Ex\Type\A\Components\Pictures;
 use Jobsheet\Ex\Type\A\Components\PicturesDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTest;
+use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
@@ -29,6 +30,7 @@ class A extends Container
         ResistanceInductanceTest::class,
         ResistanceInductanceTestTwoSpeed::class,
         ResistanceInductanceTestSinglePhase::class,
+        ResistanceInductanceTestDC::class,
     ];
 
     protected static function renderHTML(): string
