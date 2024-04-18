@@ -9,7 +9,6 @@ use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
-use PHPUnit\TextUI\Help;
 
 class ResistanceInductanceTest extends Component
 {

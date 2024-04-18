@@ -18,6 +18,45 @@ class MachineDetails extends Component
         MotorType::TwoSpeed
     ];
 
+    protected static array $data = [
+        'machine_details' => [
+            [
+                'frame' => 'Frame',
+                'type' => 'Type',
+            ],
+            [
+
+                'manufacture' => 'Manufacture',
+                'model' => 'Model',
+                'ser_no' => 'Ser.No',
+            ],
+            [
+
+                'power' => 'Power',
+                'power_unit' => 'kW',
+                'speed' => 'Speed',
+                'speed_unit' => 'Pole',
+                'insulation_class' => 'Insulation Class',
+                'design' => 'Design',
+            ],
+            [
+                'voltage' => 'Voltage',
+                'frequency' => 'Frequency',
+                'temp-rise_class' => 'Temp.Rise Class',
+                'duty' => 'Duty',
+            ],
+            [
+                'current' => 'Current',
+                'cos' => 'Cos.φ',
+                'ip' => 'IP',
+                'sf' => 'SF',
+            ],
+            [
+                'performance' => 'BS/IEC/Other (performance)'
+            ]
+        ]
+    ];
+
     public static function build(): FormElement
     {
         $config = [
@@ -74,49 +113,5 @@ class MachineDetails extends Component
                 new Input('performance', 'BS/IEC/Other (performance)'),
             ],
         ];
-    }
-
-    public static function loadData(FormElement $form): void
-    {
-        $data = [
-            'machine_details' => [
-                [
-                    'frame' => 'Frame',
-                    'type' => 'Type',
-                ],
-                [
-
-                    'manufacture' => 'Manufacture',
-                    'model' => 'Model',
-                    'ser_no' => 'Ser.No',
-                ],
-                [
-
-                    'power' => 'Power',
-                    'power_unit', '', ['kW', 'HP', 'Nm' => 'W'],
-                    'speed' => 'Speed',
-                    'speed_unit', '', ['RPM' => 'Pole'],
-                    'insulation_class' => 'Insulation Class',
-                    'design' => 'Design',
-                ],
-                [
-                    'voltage' => 'Voltage',
-                    'frequency' => 'Frequency',
-                    'temp-rise_class' => 'Temp.Rise Class',
-                    'duty' => 'Duty',
-                ],
-                [
-                    'current' => 'Current',
-                    'cos' => 'Cos.φ',
-                    'ip' => 'IP',
-                    'sf' => 'SF',
-                ],
-                [
-                    'performance' => 'BS/IEC/Other (performance)'
-                ]
-            ]
-        ];
-
-        $form->setData($data);
     }
 }

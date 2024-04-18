@@ -15,6 +15,33 @@ class PicturesDC extends Component
         MotorType::DC
     ];
 
+    protected static array $data = [
+        'pictures' => [
+            [
+                'cw' => true,
+                'ccw' => true,
+                'na' => true,
+            ],
+            [
+                'brush_arm_45' => true,
+                'brush_arm_90' => true,
+            ],
+            [
+                'sm-circle_135' => true,
+                'sm-circle_45' => true,
+                'sm-circle_315' => true,
+                'sm-circle_235' => true,
+            ],
+            [
+
+                'md-circle_90' => true,
+                'md-circle_360' => true,
+                'md-circle_270' => true,
+                'md-circle_180' => true,
+            ]
+        ]
+    ];
+
     public static function build(): FormElement
     {
         $config = [
@@ -59,36 +86,5 @@ class PicturesDC extends Component
                 new Input('md-circle_180', '180 °C', 'checkbox'),
             ]
         ];
-    }
-    public static function loadData(FormElement $form): void
-    {
-        $data = [
-            'pictures' => [
-                [
-                    'cw' => true,
-                    'ccw' => true,
-                    'na' => true,
-                ],
-                [
-                    'brush_arm_45' => true,
-                    'brush_arm_90' => true,
-                ],
-                [
-                    'sm-circle_135' => true,
-                    'sm-circle_45' => true,
-                    'sm-circle_315' => true,
-                    'sm-circle_235' => true,
-                ],
-                [
-
-                    'md-circle_90' => true,
-                    'md-circle_360' => true,
-                    'md-circle_270' => true,
-                    'md-circle_180' => true,
-                ]
-            ]
-        ];
-
-        $form->setData($data);
     }
 }

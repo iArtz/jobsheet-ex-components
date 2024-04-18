@@ -18,6 +18,16 @@ class Pictures extends Component
         MotorType::SinglePhase,
     ];
 
+    protected static array $data = [
+        'pictures' => [
+            [
+                'cw' => true,
+                'ccw' => true,
+                'na' => true,
+            ],
+        ]
+    ];
+
     public static function build(): FormElement
     {
         $config = [
@@ -46,19 +56,5 @@ class Pictures extends Component
                 new Input('final_picture', 'FINAL PICTURE', 'image'),
             ],
         ];
-    }
-    public static function loadData(FormElement $form): void
-    {
-        $data = [
-            'pictures' => [
-                [
-                    'cw' => true,
-                    'ccw' => true,
-                    'na' => true,
-                ],
-            ]
-        ];
-
-        $form->setData($data);
     }
 }
