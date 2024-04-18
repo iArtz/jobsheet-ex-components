@@ -4,6 +4,7 @@ namespace Jobsheet\Ex\Type\A\Containers;
 
 use Jobsheet\Ex\Classes\Abstracts\Container;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
+use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
@@ -33,6 +34,7 @@ class A extends Container
         ResistanceInductanceTestSinglePhase::class,
         ResistanceInductanceTestDC::class,
         IncomingArmatureBarToBarResistanceTest::class,
+        FinalArmatureBarToBarResistanceTest::class,
     ];
 
     protected static function renderHTML(): string
