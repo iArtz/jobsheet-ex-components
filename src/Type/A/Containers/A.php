@@ -13,7 +13,6 @@ use Jobsheet\Ex\Type\A\Components\PicturesDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTest;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Utils\Helper;
-use stdClass;
 
 class A
 {
@@ -30,6 +29,7 @@ class A
         ResistanceInductanceTest::class,
     ];
     private static array $data;
+    private static string $container = '';
 
     public static function initialForm()
     {
@@ -63,51 +63,10 @@ class A
 
         static::loadData($forms);
 
-        $container = '';
-
         foreach ($forms as $form) {
-            $container .= $form->render();
+            static::$container .= $form->render();
         }
 
-        ob_start();
-
-        $template = <<<HTML
-                    <html>
-                        <head>
-                            <meta charset="UTF-8">
-                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <link rel="stylesheet" href="assets/styles/app.css">
-                            <title>Ex d, Ex de</title>
-                        </head>
-                        <body>
-                            <div class="container">
-                                {$container}
-                            </div>
-                            <script src="https://cdn.tailwindcss.com"></script>
-                            <script>
-                            tailwind.config = {
-                                theme: {
-                                    container: {
-                                        center: true,
-                                        padding: {
-                                            DEFAULT: '1rem',
-                                            sm: '2rem',
-                                            lg: '4rem',
-                                            xl: '5rem',
-                                            '2xl': '6rem',
-                                        }
-                                    }
-                                }
-                            }
-                            </script>
-                        </body>
-                    </html>
-                    HTML;
-
-        echo $template;
-
-        $html = ob_get_clean();
 
         if (
             isset(static::$data['debug'])
@@ -116,7 +75,20 @@ class A
             Helper::export($forms); // debug
         }
 
-        echo $html;
+        echo static::renderHTML();
+    }
+
+
+    public function __toString(): string
+    {
+        return static::renderHTML();
+    }
+
+    private static function renderHTML(): string
+    {
+        ob_start();
+        require_once dirname(__DIR__) . '/Template/A.html';
+        return ob_get_clean();
     }
 
     public static function setData(array $data = []): void
