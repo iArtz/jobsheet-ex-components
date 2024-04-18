@@ -31,7 +31,7 @@ class IncomingArmatureBarToBarResistanceTest extends Component
         }
     }
 
-    public static array $data = [
+    protected static array $data = [
         'incoming_armature_bar_to_bar_resistance_test' => [
             ['total_bars' => 'total_bars'],
             [],

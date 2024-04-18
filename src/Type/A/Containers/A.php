@@ -8,6 +8,7 @@ use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
+use Jobsheet\Ex\Type\A\Components\InsulationTest;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
@@ -37,6 +38,7 @@ class A extends Container
         IncomingArmatureBarToBarResistanceTest::class,
         FinalArmatureBarToBarResistanceTest::class,
         Capacitor::class,
+        InsulationTest::class,
     ];
 
     protected static function renderHTML(): string

@@ -19,7 +19,7 @@ class StaticTest extends Component
         MotorType::TwoSpeed
     ];
 
-    public static array $data = [
+    protected static array $data = [
         'static_test' => [
             [
                 'incoming' => 'Incoming',
