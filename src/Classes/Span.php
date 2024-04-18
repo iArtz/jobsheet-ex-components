@@ -18,7 +18,7 @@ class Span extends FormElement
     public function render(): string
     {
         return <<<HTML
-                <span class="px-1 text-xs mr-1 {$this->class}">{$this->title}</span>
-            HTML;
+                    <span class="px-1 text-xs min-w-fit align-middle {$this->class}">{$this->title}</span>
+                HTML;
     }
 }

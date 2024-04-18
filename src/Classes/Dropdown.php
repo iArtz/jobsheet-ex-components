@@ -34,7 +34,7 @@ class Dropdown extends Input
     public function render(): string
     {
         return <<<HTML
-                    <select class="text-xs text-amber-500 mb-2 font-medium {$this->class}" name="{$this->name}" id="{$this->name}">
+                    <select class="text-xs text-amber-500 font-medium {$this->class}" name="{$this->name}" id="{$this->name}">
                         {$this->createList()}
                     </select>
                 HTML;
