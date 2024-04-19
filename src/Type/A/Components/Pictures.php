@@ -25,6 +25,10 @@ class Pictures extends Component
                 'ccw' => true,
                 'na' => true,
             ],
+            [
+                'incoming_picture' => 'https://placehold.co/300x200/orange/blue',
+                'final_picture' => 'https://placehold.co/300x200/orange/blue',
+            ]
         ]
     ];
 
@@ -52,9 +56,11 @@ class Pictures extends Component
                 new Input('cw', 'CW', 'checkbox'),
                 new Input('na', 'N/A', 'checkbox'),
                 new Input('ccw', 'CCW', 'checkbox'),
+            ],
+            [
                 new Input('incoming_picture', 'INCOMING PICTURE', 'image'),
                 new Input('final_picture', 'FINAL PICTURE', 'image'),
-            ],
+            ]
         ];
     }
 }
