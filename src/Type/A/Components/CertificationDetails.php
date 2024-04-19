@@ -7,7 +7,6 @@ use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Input;
-use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
 class CertificationDetails extends Component
@@ -18,6 +17,39 @@ class CertificationDetails extends Component
         MotorType::LV,
         MotorType::MV,
         MotorType::DC
+    ];
+
+    protected static array $data = [
+        'certification_details' => [
+            [
+                'ce_mark' => 'CE Mark',
+                'notified_body_no' => 'Notified Body no',
+                'certificate_no' => 'Certificate No'
+            ],
+            [
+
+                'motor_group' => 'I',
+                'gas_group' => 'A',
+                'equipment_category' => '1',
+                'environment' => 'GD (Gas and Dust)',
+                'equipment_protection_level' => 'a',
+                'protection_type' => 'Ex e',
+            ],
+            [
+                'ex' => 'Ex',
+                'te' => 'tE',
+                'ia-in' => 'IA/IN',
+                'ip' => 'IP',
+                'temperature_class' => 'Temperature class',
+            ],
+            [
+                'performance' => 'BS/IEC/Other (performance)',
+                'year_of_certificate' => 'Year of Certificate'
+            ],
+            [
+                'special_certificate' => 'Special certificate or manufacturer\'s requirements'
+            ]
+        ]
     ];
 
     public static function build(): FormElement
@@ -74,44 +106,5 @@ class CertificationDetails extends Component
                 new Input('special_certificate', 'Special certificate or manufacturer\'s requirements')
             ]
         ];
-    }
-
-    public static function loadData(FormElement $form): void
-    {
-        $data = [
-            'certification_details' => [
-                [
-                    'ce_mark' => 'CE Mark',
-                    'notified_body_no' => 'Notified Body no',
-                    'certificate_no' => 'Certificate No'
-                ],
-                [
-
-                    'motor_group' => 'I',
-                    'gas_group' => 'A',
-                    'equipment_category' => '1',
-                    'environment' => 'GD (Gas and Dust)',
-                    'equipment_protection_level' => 'a',
-                    'protection_type' => 'Ex e',
-                ],
-                [
-                    'ex' => 'Ex',
-                    'te' => 'tE',
-                    'ia-in' => 'IA/IN',
-                    'ip' => 'IP',
-                    'temperature_class' => 'Temperature class',
-                ],
-                [
-                    'performance' => 'BS/IEC/Other (performance)',
-                    'year_of_certificate' => 'Year of Certificate'
-                ],
-                [
-
-                    'special_certificate' => 'Special certificate or manufacturer\'s requirements'
-                ]
-            ]
-        ];
-
-        $form->setData($data);
     }
 }
