@@ -4,7 +4,7 @@ namespace Jobsheet\Ex\Classes;
 
 use Jobsheet\Ex\Classes\Abstracts\FieldComposite;
 
-class Container extends FieldComposite
+class ElementContainer extends FieldComposite
 {
     private string $class;
 
