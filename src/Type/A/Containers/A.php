@@ -20,6 +20,7 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
+use Jobsheet\Ex\Type\A\Components\TimeResistanceMethod;
 
 class A extends Container
 {
@@ -41,7 +42,8 @@ class A extends Container
         FinalArmatureBarToBarResistanceTest::class,
         Capacitor::class,
         InsulationTest::class,
-        PolarizationIndex::class
+        PolarizationIndex::class,
+        TimeResistanceMethod::class
     ];
 
     protected static function renderHTML(): string
