@@ -12,6 +12,9 @@ use Throwable;
  */
 class Error
 {
+
+    protected static string $title = 'Error';
+    protected static string $container = '';
     /**
      * Error handler. Convert all errors to Exceptions by throwing an ErrorException.
      * ตัวจัดการข้อผิดพลาด แปลงข้อผิดพลาดทั้งหมดส้งไปยังเอ็กเซ็พชั้น
@@ -49,13 +52,14 @@ class Error
         http_response_code($code);
 
         if (getenv('APP_ENV') == 'development') {
-            echo "<pre>";
-            echo "<h1>Fatal error</h1>";
-            echo "<p>Uncaught exception: '" . get_class($exception) . "'</p>";
-            echo "<p>Message: '" . $exception->getMessage() . "'</p>";
-            echo "<p>Stack trace:<pre>" . $exception->getTraceAsString() . "</pre></p>";
-            echo "<p>Thrown in '" . $exception->getFile() . "' on line " . $exception->getLine() . "</p>";
-            echo "</pre>";
+            static::$container .= "<pre class='text-xs leading-normal'>";
+            static::$container .= "<h1>Fatal error</h1>";
+            static::$container .= "<p>Uncaught exception: '" . get_class($exception) . "'</p>";
+            static::$container .= "<p>Message: '" . $exception->getMessage() . "'</p>";
+            static::$container .= "<p>Stack trace:<pre class='h-auto text-xs leading-normal overflow-auto border-4 rounded text-wrap'>" . $exception->getTraceAsString() . "</pre></p>";
+            static::$container .= "<p>Thrown in '" . $exception->getFile() . "' on line " . $exception->getLine() . "</p>";
+            static::$container .= "</pre>";
+            echo static::renderHTML();
         } else {
             $log = dirname(__DIR__) . '/logs/' . date('Y-m-d') . '.txt';
             ini_set('error_log', $log);
@@ -72,7 +76,13 @@ class Error
             } else {
                 echo "<h1>An error occurred</h1>";
             }
-            View::renderTemplate("$code.html");
         }
+    }
+
+    protected static function renderHTML()
+    {
+        ob_start();
+        require_once dirname(__DIR__) . '/Type/A/Template/A.html';
+        return ob_get_clean();
     }
 }
