@@ -2,27 +2,29 @@
 
 namespace Jobsheet\Ex\Classes\Abstracts;
 
+use Exception;
 use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Utils\Helper;
 
 abstract class Container
 {
-    const TYPE = 'A';
     protected static array $components = [];
     protected static array $data;
+    protected static string $title = '';
     protected static string $container = '';
 
     abstract protected static function renderHTML(): string;
 
-    public static function initialForm()
+    protected static function initialForm()
     {
         $components = static::filterComponentsByMotorType();
         static::$components = $components->classes;
         return $components->builders;
     }
 
-    public static function loadData(array $forms): void
+    protected static function loadData(array $forms): void
     {
+        if (empty($forms)) throw new Exception('Forms dose not exists.');
         foreach (static::$components as $key => $component) {
             if (is_subclass_of($component, Component::class)) {
                 $fieldsetName = $forms[$key]->getFieldsetName();
@@ -42,7 +44,21 @@ abstract class Container
 
     public static function setData(array $data = []): void
     {
+        if ((getenv('APP_ENV') != 'development')
+            && empty($data['motor_type'])
+        ) throw new Exception('Please set motor_type.');
         static::$data = $data;
+    }
+
+    public static function getData(): array
+    {
+        $data = [];
+        foreach (static::$components as $key => $component) {
+            if (is_subclass_of($component, Component::class)) {
+                $data[] = $component::getData();
+            }
+        }
+        return $data;
     }
 
     public static function renderPage(): void
@@ -55,14 +71,13 @@ abstract class Container
             static::$container .= $form->render();
         }
 
-
         if (
             isset(static::$data['debug'])
             && static::$data['debug']
         ) {
+            static::$title = 'Debug';
             Helper::export($forms); // debug
         }
-
         echo static::renderHTML();
     }
 

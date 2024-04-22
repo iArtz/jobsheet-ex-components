@@ -23,6 +23,7 @@ use Jobsheet\Ex\Type\A\Components\StaticTest;
 
 class A extends Container
 {
+    protected static string $title = 'A';
     protected static array $components = [
         Header::class,
         MachineDetails::class,

@@ -4,7 +4,7 @@ namespace Jobsheet\Ex\Classes\Abstracts;
 
 use Exception;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
-use Jobsheet\Ex\Classes\Container;
+use Jobsheet\Ex\Classes\ElementContainer;
 use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Fieldset;
 
@@ -13,7 +13,8 @@ abstract class Component
     protected static array $compatibleWith = [];
     protected static array $data = [];
     protected static array $methods = [
-        'loadData'
+        'loadData',
+        'getData'
     ];
 
     public static function compatibleWith(): array
@@ -26,7 +27,7 @@ abstract class Component
         $containerClasses = ['flex', 'justify-around', 'justify-items-center'];
 
         foreach (static::createElements() as $key => $element) {
-            $row = new Container($key, $containerClasses);
+            $row = new ElementContainer($key, $containerClasses);
             foreach ($element as $field) {
                 $row->add($field);
             }
@@ -45,26 +46,31 @@ abstract class Component
     }
 
     abstract protected static function createElements(): array;
-
     abstract public static function build(): FormElement;
 
     public static function __callStatic($name, $arguments)
     {
-        $count = count($arguments);
-
         if (!in_array($name, static::$methods)) {
             throw new Exception('Method ' . $name . ' is does not exist.');
         }
 
+        $count = count($arguments);
+
         if ($name == 'loadData') {
             if ($count == 1) {
+                [$form] = $arguments;
                 // Mock data
-                return $arguments[0]->setData(static::$data);
+                return $form->setData(static::$data);
             }
             if ($count == 2) {
                 // Pass data
-                return $arguments[0]->setData($arguments[1]);
+                [$form, $data] = $arguments;
+                return $form->setData($data);
             }
+        }
+
+        if ($name == 'getData') {
+            return (static::class)::$data;
         }
     }
 }
