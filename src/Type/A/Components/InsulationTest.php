@@ -155,10 +155,8 @@ class InsulationTest extends Component
                 new Span('2-5', ['w-1/4'])
             ],
             [
-                new Span('Instrument Incoming ID NO.'),
-                new Input('insulation_incoming_id_no', ''),
-                new Span('Instrument Final ID NO.'),
-                new Input('insulation_final_id_no', ''),
+                new Input('insulation_incoming_id_no', 'Instrument Incoming ID NO.'),
+                new Input('insulation_final_id_no', 'Instrument Final ID NO.'),
             ]
         ];
     }

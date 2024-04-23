@@ -179,11 +179,11 @@ class ResistanceInductanceTest extends Component
                 new Span('mH.', ['mt-3']),
             ],
             [ // Row 4
-                new Span('Instrument Incoming ID No.'),
+                new Span('Instrument Incoming'),
                 new Input('resistance_incoming_id_no', 'ID No.'),
                 new Input('inductance_incoming_id_no', 'ID No.'),
 
-                new Span('Instrument Final ID No.'),
+                new Span('Instrument Final'),
                 new Input('resistance_final_id_no', 'ID No.'),
                 new Input('inductance_final_id_no', 'ID No.'),
             ]
