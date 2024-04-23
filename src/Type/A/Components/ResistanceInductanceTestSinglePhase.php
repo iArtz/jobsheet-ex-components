@@ -36,17 +36,13 @@ class ResistanceInductanceTestSinglePhase extends Component
             [ // Row 2
                 'resistance_incoming_value_2' => '2',
                 'resistance_final_value_2' => '2',
-                'inductance_incoming_volt' => '2',
                 'inductance_incoming_value_2' => '2',
-                'inductance_final_volt' => '2',
                 'inductance_final_value_2' => '2',
             ],
             [ // Row 3
                 'resistance_incoming_value_3' => '3',
                 'resistance_final_value_3' => '3',
-                'inductance_incoming_volt' => '3',
                 'inductance_incoming_value_3' => '3',
-                'inductance_final_volt' => '3',
                 'inductance_final_value_3' => '3',
             ],
             [
@@ -143,11 +139,12 @@ class ResistanceInductanceTestSinglePhase extends Component
                 new Input('resistance_final_value_2', ''),
                 new Span(static::$data['resistance_inductance_test'][1]['resistance_final_unit'], ['mt-3']),
 
-                new Input('inductance_final_volt', ''),
+                new Span('', ['w-full']),
                 new Span('R-E'),
                 new Input('inductance_incoming_value_2', ''),
                 new Span(static::$data['resistance_inductance_test'][1]['inductance_incoming_unit'], ['mt-3']),
 
+                new Span('', ['w-full']),
                 new Span('R-E'),
                 new Input('inductance_final_value_2', ''),
                 new Span(static::$data['resistance_inductance_test'][1]['inductance_final_unit'], ['mt-3']),
@@ -159,11 +156,12 @@ class ResistanceInductanceTestSinglePhase extends Component
                 new Input('resistance_final_value_3', ''),
                 new Span(static::$data['resistance_inductance_test'][1]['resistance_final_unit'], ['mt-3']),
 
-                new Input('inductance_final_volt', ''),
+                new Span('', ['w-full']),
                 new Span('S-E'),
                 new Input('inductance_incoming_value_3', ''),
                 new Span(static::$data['resistance_inductance_test'][1]['inductance_incoming_unit'], ['mt-3']),
 
+                new Span('', ['w-full']),
                 new Span('S-E'),
                 new Input('inductance_final_value_3', ''),
                 new Span(static::$data['resistance_inductance_test'][1]['inductance_final_unit'], ['mt-3']),
