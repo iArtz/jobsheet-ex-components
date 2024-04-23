@@ -74,7 +74,7 @@ class Header extends Component
             ],
             [
                 new Input('customer', 'Customer'),
-                new Input('tel', 'Tel'),
+                new Input('tel', 'Tel', 'tel'),
                 new Input('fax', 'Fax'),
             ]
         ];
