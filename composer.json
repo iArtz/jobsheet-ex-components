@@ -3,6 +3,9 @@
   "description": "Report Explosion Proof Motor Components",
   "type": "library",
   "version": "1.0.0",
+  "scripts": {
+    "test": "phpunit tests"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
