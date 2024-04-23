@@ -20,7 +20,7 @@ class Helper
 
     public static function export($data): void
     {
-        echo "<pre>";
+        echo "<pre class='h-auto text-xs leading-normal overflow-auto border-4 rounded text-wrap'>";
         var_export($data);
         echo "</pre>";
     }
