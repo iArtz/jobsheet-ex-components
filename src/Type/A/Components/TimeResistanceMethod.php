@@ -17,8 +17,11 @@ class TimeResistanceMethod extends Component
     protected static array $data = [
         'time_resistance_method' => [
             [
-                'incoming' => 'Incoming',
-                'final' => 'Final',
+                'chart_01' => [
+                    'title' => 'Demo',
+                    'type' => 'line',
+                    'data' => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                ]
             ]
         ]
     ];
@@ -45,9 +48,7 @@ class TimeResistanceMethod extends Component
         return [
             [
                 new Chart([
-                    'title' => 'Insulation Value(MΩ)',
-                    'type' => 'line',
-                    'data' => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                    'name' => 'chart_01',
                 ]),
             ]
         ];
