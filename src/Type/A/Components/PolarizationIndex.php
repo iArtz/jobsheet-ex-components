@@ -54,6 +54,42 @@ class PolarizationIndex extends Component
                 'insulation_res_final_4_1' => 'insulation_res_final_4_1',
                 'insulation_res_final_4_2' => 'insulation_res_final_4_2',
                 'insulation_symbol_incoming_4' => 'insulation_symbol_incoming_4',
+            ],
+            [
+                'insulation_res_incoming_5_1' => 'insulation_res_incoming_5_1',
+                'insulation_res_incoming_5_2' => 'insulation_res_incoming_5_2',
+                'insulation_res_final_5_1' => 'insulation_res_final_5_1',
+                'insulation_res_final_5_2' => 'insulation_res_final_5_2',
+            ],
+            [
+                'insulation_res_incoming_6_1' => 'insulation_res_incoming_6_1',
+                'insulation_res_incoming_6_2' => 'insulation_res_incoming_6_2',
+                'insulation_res_final_6_1' => 'insulation_res_final_6_1',
+                'insulation_res_final_6_2' => 'insulation_res_final_6_2',
+            ],
+            [
+                'insulation_res_incoming_7_1' => 'insulation_res_incoming_7_1',
+                'insulation_res_incoming_7_2' => 'insulation_res_incoming_7_2',
+                'insulation_res_final_7_1' => 'insulation_res_final_7_1',
+                'insulation_res_final_7_2' => 'insulation_res_final_7_2',
+            ],
+            [
+                'insulation_res_incoming_8_1' => 'insulation_res_incoming_8_1',
+                'insulation_res_incoming_8_2' => 'insulation_res_incoming_8_2',
+                'insulation_res_final_8_1' => 'insulation_res_final_8_1',
+                'insulation_res_final_8_2' => 'insulation_res_final_8_2',
+            ],
+            [
+                'insulation_res_incoming_9_1' => 'insulation_res_incoming_9_1',
+                'insulation_res_incoming_9_2' => 'insulation_res_incoming_9_2',
+                'insulation_res_final_9_1' => 'insulation_res_final_9_1',
+                'insulation_res_final_9_2' => 'insulation_res_final_9_2',
+            ],
+            [
+                'insulation_res_incoming_10_1' => 'insulation_res_incoming_10_1',
+                'insulation_res_incoming_10_2' => 'insulation_res_incoming_10_2',
+                'insulation_res_final_10_1' => 'insulation_res_final_10_1',
+                'insulation_res_final_10_2' => 'insulation_res_final_10_2',
             ]
         ]
     ];
@@ -100,13 +136,8 @@ class PolarizationIndex extends Component
                 new Span('Insulation Resistance (Phase - Earth)'),
             ],
             [
-                new Span('Volt (Vdc.)'),
-                new Span('Time (min.)'),
-                new Span('Incoming'),
                 new Span('Incoming'),
                 new Span('Final'),
-                new Span('Final'),
-                new Span('Symbol'),
             ],
             [
                 new Span('Volt (Vdc.)'),
