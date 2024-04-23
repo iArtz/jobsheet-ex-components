@@ -78,20 +78,14 @@ class CertificationDetails extends Component
                 new Input('certificate_no', 'Certificate No')
             ],
             [
-                new Span('Motor Group'),
-                new Dropdown('motor_group', '', ['I', 'II', 'III']),
-                new Span('Gas Group'),
-                new Dropdown('gas_group', '', ['A', 'B', 'C']),
-                new Span('Equipment category'),
-                new Dropdown('equipment_category', '', ['1', '2', '3']),
+                new Dropdown('motor_group', 'Motor Group', ['I', 'II', 'III']),
+                new Dropdown('gas_group', 'Gas Group', ['A', 'B', 'C']),
+                new Dropdown('equipment_category', 'Equipment category', ['1', '2', '3']),
             ],
             [
-                new Span('Environment'),
-                new Dropdown('environment', '', ['G (Gas)', 'D (Dust)', 'GD (Gas and Dust)']),
-                new Span('Equipment protection level'),
-                new Dropdown('equipment_protection_level', '', ['a', 'b', 'c']),
-                new Span('Protection type'),
-                new Dropdown('protection_type', '', ['Ex e', 'Ex nA', 'Ex N', 'Ex eb', 'Ex ec'])
+                new Dropdown('environment', 'Environment', ['G (Gas)', 'D (Dust)', 'GD (Gas and Dust)']),
+                new Dropdown('equipment_protection_level', 'Equipment protection level', ['a', 'b', 'c']),
+                new Dropdown('protection_type', 'Protection type', ['Ex e', 'Ex nA', 'Ex N', 'Ex eb', 'Ex ec'])
             ],
             [
                 new Input('ex', 'Ex'),
