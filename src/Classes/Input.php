@@ -20,8 +20,10 @@ class Input extends FormElement
 		switch ($this->type) {
 			case 'text':
 			case 'date':
+			case 'tel':
 				$title = !empty($this->title) ? "{$this->title}:" : null;
 				$label = !empty($this->title) ? "<label class='text-xs mr-1' for='{$this->name}'>{$title}</label>" : null;
+				$tel = ($this->type == 'tel') ? "autocomplete='tel" : null;
 				$input = <<<HTML
 							{$label}
 							<input
@@ -30,6 +32,7 @@ class Input extends FormElement
 								id="{$this->name}"
 								type="{$this->type}"
 								value="{$this->data}"
+								{$tel}
 							>
 						HTML;
 				break;
