@@ -13,14 +13,14 @@ class Helper
 
     public static function prettyArray($data): void
     {
-        echo "<pre>";
+        echo "<pre class='h-auto text-xs leading-normal overflow-auto border-4 rounded text-wrap border-red-400'>";
         print_r($data);
         echo "</pre>";
     }
 
     public static function export($data): void
     {
-        echo "<pre class='h-auto text-xs leading-normal overflow-auto border-4 rounded text-wrap'>";
+        echo "<pre class='h-auto text-xs leading-normal overflow-auto border-4 rounded text-wrap border-green-400'>";
         var_export($data);
         echo "</pre>";
     }
