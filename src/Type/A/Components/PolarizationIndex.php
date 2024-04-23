@@ -136,8 +136,8 @@ class PolarizationIndex extends Component
                 new Span('Insulation Resistance (Phase - Earth)'),
             ],
             [
-                new Span('Incoming'),
-                new Span('Final'),
+                new Span('Incoming', ['!pl-[30%]']),
+                new Span('Final', ['!pr-[13%]']),
             ],
             [
                 new Span('Volt (Vdc.)'),
@@ -158,7 +158,7 @@ class PolarizationIndex extends Component
                 new Input('insulation_symbol_incoming_1', ''),
             ],
             [
-                new Span('-'),
+                new Span(''),
                 new Span('2'),
                 new Input('insulation_res_incoming_2_1', ''),
                 new Input('insulation_res_incoming_2_2', ''),
@@ -167,7 +167,7 @@ class PolarizationIndex extends Component
                 new Input('insulation_symbol_incoming_2', ''),
             ],
             [
-                new Span('-'),
+                new Span(''),
                 new Span('3'),
                 new Input('insulation_res_incoming_3_1', ''),
                 new Input('insulation_res_incoming_3_2', ''),
@@ -176,7 +176,7 @@ class PolarizationIndex extends Component
                 new Input('insulation_symbol_incoming_3', ''),
             ],
             [
-                new Span('-'),
+                new Span(''),
                 new Span('4'),
                 new Input('insulation_res_incoming_4_1', ''),
                 new Input('insulation_res_incoming_4_2', ''),
@@ -189,13 +189,13 @@ class PolarizationIndex extends Component
         for ($i = 5; $i <= 10; $i++) {
             $elements[] =
                 [
-                    new Span('-'),
+                    new Span(''),
                     new Span($i),
                     new Input('insulation_res_incoming_' . $i . '_1', ''),
                     new Input('insulation_res_incoming_' . $i . '_2', ''),
                     new Input('insulation_res_final_' . $i . '_1', ''),
                     new Input('insulation_res_final_' . $i . '_2', ''),
-                    new Span('-'),
+                    new Span(''),
                 ];
         }
 
