@@ -9,6 +9,7 @@ use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\InsulationTest;
+use Jobsheet\Ex\Type\A\Components\InsulationTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
@@ -43,7 +44,8 @@ class A extends Container
         Capacitor::class,
         InsulationTest::class,
         PolarizationIndex::class,
-        TimeResistanceMethod::class
+        TimeResistanceMethod::class,
+        InsulationTestTwoSpeed::class
     ];
 
     protected static function renderHTML(): string
