@@ -45,7 +45,7 @@ class TimeResistanceMethod extends Component
         return [
             [
                 new Chart([
-                    'title' => 'Time (min.)',
+                    'title' => 'Insulation Value(MΩ)',
                     'type' => 'line',
                     'data' => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
                 ]),
