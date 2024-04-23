@@ -3,6 +3,9 @@
   "description": "Report Explosion Proof Motor Components",
   "type": "library",
   "version": "1.0.0",
+  "scripts": {
+    "test": "phpunit tests"
+  },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
@@ -11,7 +14,7 @@
   "authors": [
     {
       "name": "iArt",
-      "email": "iart@aboutdev.id"
+      "email": "iart@aboutdev.io"
     }
   ],
   "autoload": {
