@@ -84,6 +84,8 @@ class CertificationDetails extends Component
                 new Dropdown('gas_group', '', ['A', 'B', 'C']),
                 new Span('Equipment category'),
                 new Dropdown('equipment_category', '', ['1', '2', '3']),
+            ],
+            [
                 new Span('Environment'),
                 new Dropdown('environment', '', ['G (Gas)', 'D (Dust)', 'GD (Gas and Dust)']),
                 new Span('Equipment protection level'),
