@@ -39,4 +39,9 @@ class Helper
     {
         return substr(md5(microtime()), 0, $length);
     }
+
+    public static function toJSON(array $array): string
+    {
+        return json_encode($array);
+    }
 }

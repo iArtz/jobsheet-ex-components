@@ -14,14 +14,10 @@ class Chart extends FormElement
         $this->data = $data;
     }
 
-    private function passArray(array $array): string
-    {
-        return json_encode($array);
-    }
-
     protected function handlerType(): string
     {
         $chart = '';
+        $data = Helper::toJSON($this->data['data']);
         if (empty($this->data['type'])) throw new Exception('Please specific chart type.');
         switch ($this->data['type']) {
             default:
@@ -38,7 +34,7 @@ class Chart extends FormElement
                                         labels: [1,2,3,4,5,6,7,8,9,10], // X Axis
                                         datasets: [{
                                             label: '# Time (min.)',
-                                            data: {$this->passArray($this->data['data'])}, // Y Axis
+                                            data: {$data}, // Y Axis
                                             backgroundColor: [
                                                 'rgba(0, 0, 255, 0.2)',
                                             ],
