@@ -2,14 +2,14 @@
   "name": "iartz/jobsheet-ex-components",
   "description": "Report Explosion Proof Motor Components",
   "type": "library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "test": "phpunit tests"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">= 7.4.33"
+    "php": ">= 7.4"
   },
   "authors": [
     {
