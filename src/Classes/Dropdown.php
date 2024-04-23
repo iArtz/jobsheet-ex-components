@@ -33,7 +33,9 @@ class Dropdown extends Input
 
     public function render(): string
     {
+        $label = !empty($this->title) ? "<label for='{$this->name}' class='text-xs text-center min-w-fit w-44'>{$this->title}</label>" : null;
         return <<<HTML
+                    {$label}
                     <select class="text-xs text-amber-500 font-medium {$this->class}" name="{$this->name}" id="{$this->name}">
                         {$this->createList()}
                     </select>
