@@ -22,7 +22,7 @@ class Input extends FormElement
 			case 'date':
 			case 'tel':
 				$title = !empty($this->title) ? "{$this->title}:" : null;
-				$label = !empty($this->title) ? "<label class='text-xs min-w-fit mr-1' for='{$this->name}'>{$title}</label>" : null;
+				$label = !empty($this->title) ? "<label class='text-xs min-w-fit mx-1' for='{$this->name}'>{$title}</label>" : null;
 				$tel = ($this->type == 'tel') ? "autocomplete='tel" : null;
 				$input = <<<HTML
 							{$label}

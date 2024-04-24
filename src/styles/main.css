@@ -14,13 +14,6 @@
     border-image: initial;
   }
   input {
-    @apply border-b-red-500 border-dashed border-b w-full;
-  }
-
-  #polarization_index_form {
-    input,
-    span {
-      @apply w-full h-5 px-0;
-    }
+    @apply border-b-red-500 border-dashed border-b w-full h-5;
   }
 }
