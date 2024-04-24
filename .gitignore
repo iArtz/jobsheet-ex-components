@@ -1,3 +1,5 @@
+.env
 vendor
 .DS_Store
 node_modules
+infra/docker/app/logs/*.log
