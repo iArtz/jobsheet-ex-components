@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="assets/js/chart.umd.js"></script>
-    <link rel="stylesheet" href="assets/styles/main.css" />
+    <script src="<?= getenv('PUBLIC_DIR') ?>assets/js/chart.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="<?= getenv('PUBLIC_DIR') ?>assets/styles/main.css"
+    />
     <title><?= static::$title ?></title>
   </head>
   <body>

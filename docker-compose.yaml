@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: ./infra/docker/app
+      dockerfile: Dockerfile
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 4G
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      APP_ENV: ${APP_ENV}
+      PUBLIC_DIR: ${PUBLIC_DIR}
+      APACHE_DOCUMENT_ROOT: ${APACHE_DOCUMENT_ROOT}
+      XDEBUG_MODE: ${XDEBUG_MODE}
+    volumes:
+      - .:/var/www/html
+      - ./infra/docker/app/logs:/tmp/logs
