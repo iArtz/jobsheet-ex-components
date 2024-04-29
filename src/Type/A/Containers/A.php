@@ -3,6 +3,7 @@
 namespace Jobsheet\Ex\Type\A\Containers;
 
 use Jobsheet\Ex\Classes\Abstracts\Container;
+use Jobsheet\Ex\Type\A\Components\AuxiliaryDevicesTest;
 use Jobsheet\Ex\Type\A\Components\Capacitor;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
@@ -51,7 +52,8 @@ class A extends Container
         InsulationTestTwoSpeed::class,
         InsulationTestDC::class,
         SurgeComparisonTest::class,
-        SurgeComparisonTestDC::class
+        SurgeComparisonTestDC::class,
+        AuxiliaryDevicesTest::class,
     ];
 
     protected static function renderHTML(): string

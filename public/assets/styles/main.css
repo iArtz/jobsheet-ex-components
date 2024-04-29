@@ -681,6 +681,10 @@ input {
   margin-right: 0.25rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -723,6 +727,22 @@ input {
 
 .w-full {
   width: 100%;
+}
+
+.w-64 {
+  width: 16rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.\!w-40 {
+  width: 10rem !important;
+}
+
+.\!w-80 {
+  width: 20rem !important;
 }
 
 .min-w-\[500px\] {
