@@ -16,4 +16,26 @@
   input {
     @apply border-b-red-500 border-dashed border-b w-full h-5;
   }
+
+  #surge_comparison_test_from {
+    .flex {
+      justify-content: space-between;
+    }
+
+    input[type="text"] {
+      flex-basis: 20%;
+    }
+    fieldset > div:nth-child(2) > span:first-child {
+      flex-basis: 20%;
+    }
+    fieldset > div:nth-child(2) > span:last-child {
+      flex-basis: 80%;
+    }
+    fieldset > div:nth-child(3) > span {
+      flex-basis: 10%;
+    }
+    fieldset > div:nth-child(4) > span {
+      flex-basis: 10%;
+    }
+  }
 }

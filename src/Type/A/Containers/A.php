@@ -22,6 +22,7 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
+use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\TimeResistanceMethod;
 
 class A extends Container
@@ -47,7 +48,8 @@ class A extends Container
         PolarizationIndex::class,
         TimeResistanceMethod::class,
         InsulationTestTwoSpeed::class,
-        InsulationTestDC::class
+        InsulationTestDC::class,
+        SurgeComparisonTest::class
     ];
 
     protected static function renderHTML(): string
