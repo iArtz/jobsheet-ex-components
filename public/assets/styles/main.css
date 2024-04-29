@@ -629,7 +629,7 @@ input {
   border-bottom-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
-#surge_comparison_test_from {
+#surge_comparison_test_form {
   .flex {
     justify-content: space-between;
   }
@@ -727,22 +727,6 @@ input {
 
 .w-full {
   width: 100%;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
-.w-40 {
-  width: 10rem;
-}
-
-.\!w-40 {
-  width: 10rem !important;
-}
-
-.\!w-80 {
-  width: 20rem !important;
 }
 
 .min-w-\[500px\] {

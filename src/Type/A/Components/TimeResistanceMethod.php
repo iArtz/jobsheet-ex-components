@@ -30,7 +30,7 @@ class TimeResistanceMethod extends Component
     {
         $config = [
             'form' => [
-                'name' => 'time_resistance_method_from',
+                'name' => 'time_resistance_method_form',
                 'title' => '',
                 'action' => '/api/ex/save'
             ],

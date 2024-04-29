@@ -17,7 +17,7 @@
     @apply border-b-red-500 border-dashed border-b w-full h-5;
   }
 
-  #surge_comparison_test_from {
+  #surge_comparison_test_form {
     .flex {
       justify-content: space-between;
     }

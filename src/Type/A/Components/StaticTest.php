@@ -32,7 +32,7 @@ class StaticTest extends Component
     {
         $config = [
             'form' => [
-                'name' => 'static_test_from',
+                'name' => 'static_test_form',
                 'title' => '',
                 'action' => '/api/ex/save'
             ],

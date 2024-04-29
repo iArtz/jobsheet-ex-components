@@ -83,7 +83,7 @@ class SurgeComparisonTestDC extends Component
     {
         $config = [
             'form' => [
-                'name' => 'surge_comparison_test_dc_from',
+                'name' => 'surge_comparison_test_dc_form',
                 'title' => '',
                 'action' => '/api/ex/save'
             ],
