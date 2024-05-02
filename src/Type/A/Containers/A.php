@@ -25,6 +25,7 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
+use Jobsheet\Ex\Type\A\Components\TemperatureSensorHeater;
 use Jobsheet\Ex\Type\A\Components\TimeResistanceMethod;
 
 class A extends Container
@@ -54,6 +55,7 @@ class A extends Container
         SurgeComparisonTest::class,
         SurgeComparisonTestDC::class,
         AuxiliaryDevicesTest::class,
+        TemperatureSensorHeater::class,
     ];
 
     protected static function renderHTML(): string
