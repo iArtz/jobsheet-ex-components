@@ -6,6 +6,7 @@ use Jobsheet\Ex\Classes\Abstracts\Container;
 use Jobsheet\Ex\Type\A\Components\AuxiliaryDevicesTest;
 use Jobsheet\Ex\Type\A\Components\Capacitor;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
+use Jobsheet\Ex\Type\A\Components\Connection;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
@@ -56,6 +57,7 @@ class A extends Container
         SurgeComparisonTestDC::class,
         AuxiliaryDevicesTest::class,
         TemperatureSensorHeater::class,
+        Connection::class,
     ];
 
     protected static function renderHTML(): string
