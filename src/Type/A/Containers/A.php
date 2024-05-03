@@ -23,6 +23,7 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTest;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
+use Jobsheet\Ex\Type\A\Components\RotationFromNDE;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
@@ -58,6 +59,7 @@ class A extends Container
         AuxiliaryDevicesTest::class,
         TemperatureSensorHeater::class,
         Connection::class,
+        RotationFromNDE::class,
     ];
 
     protected static function renderHTML(): string
