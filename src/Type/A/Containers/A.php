@@ -3,8 +3,10 @@
 namespace Jobsheet\Ex\Type\A\Containers;
 
 use Jobsheet\Ex\Classes\Abstracts\Container;
+use Jobsheet\Ex\Type\A\Components\AuxiliaryDevicesTest;
 use Jobsheet\Ex\Type\A\Components\Capacitor;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
+use Jobsheet\Ex\Type\A\Components\Connection;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
@@ -22,6 +24,9 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
+use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
+use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
+use Jobsheet\Ex\Type\A\Components\TemperatureSensorHeater;
 use Jobsheet\Ex\Type\A\Components\TimeResistanceMethod;
 
 class A extends Container
@@ -47,7 +52,12 @@ class A extends Container
         PolarizationIndex::class,
         TimeResistanceMethod::class,
         InsulationTestTwoSpeed::class,
-        InsulationTestDC::class
+        InsulationTestDC::class,
+        SurgeComparisonTest::class,
+        SurgeComparisonTestDC::class,
+        AuxiliaryDevicesTest::class,
+        TemperatureSensorHeater::class,
+        Connection::class,
     ];
 
     protected static function renderHTML(): string

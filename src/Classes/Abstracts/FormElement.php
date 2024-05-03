@@ -29,5 +29,4 @@ abstract class FormElement
     }
 
     abstract public function render(): string;
-
 }

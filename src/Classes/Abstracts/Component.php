@@ -4,7 +4,7 @@ namespace Jobsheet\Ex\Classes\Abstracts;
 
 use Exception;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
-use Jobsheet\Ex\Classes\ElementContainer;
+use Jobsheet\Ex\Classes\ContainerElement;
 use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Fieldset;
 
@@ -27,7 +27,7 @@ abstract class Component
         $containerClasses = ['flex', 'justify-around', 'justify-items-center'];
 
         foreach (static::createElements() as $key => $element) {
-            $row = new ElementContainer($key, $containerClasses);
+            $row = new ContainerElement($key, $containerClasses);
             foreach ($element as $field) {
                 $row->add($field);
             }

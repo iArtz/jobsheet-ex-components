@@ -65,7 +65,7 @@ class InsulationTest extends Component
     {
         $config = [
             'form' => [
-                'name' => 'insulation_test_from',
+                'name' => 'insulation_test_form',
                 'title' => '',
                 'action' => '/api/ex/save'
             ],
