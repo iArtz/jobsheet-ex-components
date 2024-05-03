@@ -49,4 +49,16 @@
       }
     }
   }
+
+  #rotation_from_nde_form {
+    fieldset {
+      div > span {
+        @apply w-full border border-black border-collapse;
+      }
+
+      div > div.inline-flex {
+        @apply w-full border border-black border-collapse justify-center ml-0 p-2;
+      }
+    }
+  }
 }

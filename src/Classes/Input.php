@@ -93,6 +93,25 @@ class Input extends FormElement
                             </div>
                         HTML;
                 break;
+            case 'checkbox-image':
+                $this->type = explode('-', $this->type)[0];
+                [$checkboxVal, $imageUrl] = $this->data;
+                $imageUrl = $imageUrl ?? 'https://placehold.co/20x20';
+                $input = <<<HTML
+                            <div class="inline-flex items-center ml-2">
+                                <input
+                                    class="form-checkbox h-5 w-5 text-sm accent-orange-400 bg-gray-100 border-gray-300 rounded focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                                    name="{$this->name}"
+                                    id="{$this->name}"
+                                    type="{$this->type}"
+                                    value="{$checkboxVal}"
+                                    {$this->handlerCheckbox()}
+                                >
+                                    <label class="mx-3 text-xs" for="{$this->name}">{$this->title}</label>
+                                    <img class="h-5 w-5" src="{$imageUrl}" onerror="">
+                            </div>
+                        HTML;
+                break;
         }
         return $input;
     }

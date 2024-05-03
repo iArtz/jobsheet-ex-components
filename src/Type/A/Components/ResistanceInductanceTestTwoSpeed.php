@@ -110,6 +110,14 @@ class ResistanceInductanceTestTwoSpeed extends Component
 
     protected static function createElements(): array
     {
+        $slowResistanceIncomingUnit = static::$data['resistance_inductance_test'][2]['slow_resistance_incoming_unit'] ?? '';
+        $slowResistanceFinalUnit = static::$data['resistance_inductance_test'][2]['slow_resistance_final_unit'] ?? '';
+        $slowInductanceIncomingUnit = static::$data['resistance_inductance_test'][2]['slow_inductance_incoming_unit'] ?? '';
+        $slowInductanceFinalUnit = static::$data['resistance_inductance_test'][2]['slow_inductance_final_unit'] ?? '';
+        $fastResistanceIncomingUnit = static::$data['resistance_inductance_test'][2]['fast_resistance_incoming_unit'] ?? '';
+        $fastResistanceFinalUnit = static::$data['resistance_inductance_test'][2]['fast_resistance_final_unit'] ?? '';
+        $fastInductanceIncomingUnit = static::$data['resistance_inductance_test'][2]['fast_inductance_incoming_unit'] ?? '';
+        $fastInductanceFinalUnit = static::$data['resistance_inductance_test'][2]['fast_inductance_final_unit'] ?? '';
         return [
             [
                 new Span('Slow'),
@@ -182,76 +190,76 @@ class ResistanceInductanceTestTwoSpeed extends Component
                 // Slow
                 new Input('slow_resistance_incoming_marking_1', ''),
                 new Input('slow_resistance_incoming_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_resistance_incoming_unit'], ['mt-3']),
+                new Span($slowResistanceIncomingUnit, ['mt-3']),
                 new Input('slow_resistance_final_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_resistance_final_unit'], ['mt-3']),
+                new Span($slowResistanceFinalUnit, ['mt-3']),
 
                 new Input('slow_inductance_incoming_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_inductance_incoming_unit'], ['mt-3']),
+                new Span($slowInductanceIncomingUnit, ['mt-3']),
                 new Input('slow_inductance_final_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_inductance_final_unit']),
+                new Span($slowResistanceFinalUnit, ['mt-3']),
 
                 // Fast
                 new Input('fast_resistance_incoming_marking_1', ''),
                 new Input('fast_resistance_incoming_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_resistance_incoming_unit'], ['mt-3']),
+                new Span($fastResistanceIncomingUnit, ['mt-3']),
                 new Input('fast_resistance_final_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_resistance_final_unit'], ['mt-3']),
+                new Span($fastResistanceFinalUnit, ['mt-3']),
 
                 new Input('fast_inductance_incoming_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_inductance_incoming_unit'], ['mt-3']),
+                new Span($fastResistanceIncomingUnit, ['mt-3']),
                 new Input('fast_inductance_final_value_1', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_inductance_final_unit'], ['mt-3']),
+                new Span($fastInductanceFinalUnit, ['mt-3']),
             ],
             [ // Row 2
                 // Slow
                 new Input('slow_resistance_incoming_marking_2', ''),
                 new Input('slow_resistance_incoming_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_resistance_incoming_unit'], ['mt-3']),
+                new Span($slowResistanceIncomingUnit, ['mt-3']),
                 new Input('slow_resistance_final_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_resistance_final_unit'], ['mt-3']),
+                new Span($slowResistanceFinalUnit, ['mt-3']),
 
                 new Input('slow_inductance_incoming_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_inductance_incoming_unit'], ['mt-3']),
+                new Span($slowInductanceIncomingUnit, ['mt-3']),
                 new Input('slow_inductance_final_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_inductance_final_unit']),
+                new Span($slowInductanceFinalUnit),
 
                 // Fast
                 new Input('fast_resistance_incoming_marking_2', ''),
                 new Input('fast_resistance_incoming_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_resistance_incoming_unit'], ['mt-3']),
+                new Span($fastResistanceIncomingUnit, ['mt-3']),
                 new Input('fast_resistance_final_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_resistance_final_unit'], ['mt-3']),
+                new Span($fastResistanceFinalUnit, ['mt-3']),
 
                 new Input('fast_inductance_incoming_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_inductance_incoming_unit'], ['mt-3']),
+                new Span($fastInductanceIncomingUnit, ['mt-3']),
                 new Input('fast_inductance_final_value_2', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_inductance_final_unit'], ['mt-3']),
+                new Span($fastResistanceFinalUnit, ['mt-3']),
             ],
             [ // Row 3
                 // Slow
                 new Input('slow_resistance_incoming_marking_3', ''),
                 new Input('slow_resistance_incoming_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_resistance_incoming_unit'], ['mt-3']),
+                new Span($slowResistanceIncomingUnit, ['mt-3']),
                 new Input('slow_resistance_final_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_resistance_final_unit'], ['mt-3']),
+                new Span($slowResistanceFinalUnit, ['mt-3']),
 
                 new Input('slow_inductance_incoming_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_inductance_incoming_unit'], ['mt-3']),
+                new Span($slowInductanceIncomingUnit, ['mt-3']),
                 new Input('slow_inductance_final_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['slow_inductance_final_unit']),
+                new Span($slowInductanceFinalUnit),
 
                 // Fast
                 new Input('fast_resistance_incoming_marking_3', ''),
                 new Input('fast_resistance_incoming_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_resistance_incoming_unit'], ['mt-3']),
+                new Span($fastResistanceIncomingUnit, ['mt-3']),
                 new Input('fast_resistance_final_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_resistance_final_unit'], ['mt-3']),
+                new Span($fastResistanceFinalUnit, ['mt-3']),
 
                 new Input('fast_inductance_incoming_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_inductance_incoming_unit'], ['mt-3']),
+                new Span($fastInductanceIncomingUnit, ['mt-3']),
                 new Input('fast_inductance_final_value_3', ''),
-                new Span(static::$data['resistance_inductance_test'][2]['fast_inductance_final_unit'], ['mt-3']),
+                new Span($fastInductanceFinalUnit, ['mt-3']),
             ],
             [ // Row 4
                 new Span('Instrument Incoming'),

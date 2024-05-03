@@ -58,14 +58,18 @@ abstract class Component
 
         if ($name == 'loadData') {
             if ($count == 1) {
-                [$form] = $arguments;
-                // Mock data
-                return $form->setData(static::$data);
-            }
-            if ($count == 2) {
-                // Pass data
-                [$form, $data] = $arguments;
-                return $form->setData($data);
+                [$data] = $arguments;
+                $componentName = array_key_first(static::$data);
+                if (!is_array($data)) throw new Exception('Data must be array');
+                $dataFiltered = array_filter($data, function ($tuple) use ($componentName) {
+                    return $tuple == $componentName;
+                }, ARRAY_FILTER_USE_KEY);
+                if (!empty($dataFiltered)) {
+                    static::$data = $dataFiltered; // Pass data
+                }
+                $form = static::build();
+                $form->setData(static::$data); // Mock data
+                return $form;
             }
         }
 
