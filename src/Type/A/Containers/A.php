@@ -14,6 +14,7 @@ use Jobsheet\Ex\Type\A\Components\InsulationTest;
 use Jobsheet\Ex\Type\A\Components\InsulationTestDC;
 use Jobsheet\Ex\Type\A\Components\InsulationTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\LockedRotorTest;
+use Jobsheet\Ex\Type\A\Components\LockedRotorTestDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
@@ -62,6 +63,7 @@ class A extends Container
         Connection::class,
         RotationFromNDE::class,
         LockedRotorTest::class,
+        LockedRotorTestDC::class,
     ];
 
     protected static function renderHTML(): string

@@ -70,4 +70,19 @@
       }
     }
   }
+
+  #locked_rotor_dc_test_form > fieldset {
+    div {
+      @apply justify-between;
+    }
+    div:nth-child(2) > span {
+      @apply w-full border border-collapse border-black;
+    }
+    div:nth-child(3) {
+      @apply border border-collapse border-black;
+    }
+    div:nth-child(3) > span:first-child {
+      @apply w-2/6 border border-black;
+    }
+  }
 }
