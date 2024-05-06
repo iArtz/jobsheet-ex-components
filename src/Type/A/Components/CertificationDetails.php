@@ -27,10 +27,11 @@ class CertificationDetails extends Component
                 'certificate_no' => 'Certificate No'
             ],
             [
-
                 'motor_group' => 'I',
                 'gas_group' => 'A',
                 'equipment_category' => '1',
+            ],
+            [
                 'environment' => 'GD (Gas and Dust)',
                 'equipment_protection_level' => 'a',
                 'protection_type' => 'Ex e',
