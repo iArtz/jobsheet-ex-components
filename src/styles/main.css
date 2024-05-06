@@ -61,4 +61,13 @@
       }
     }
   }
+
+  #locked_rotor_test_form {
+    fieldset {
+      span,
+      input {
+        @apply border border-collapse border-black w-full border-solid;
+      }
+    }
+  }
 }

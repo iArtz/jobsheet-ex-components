@@ -13,6 +13,7 @@ use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\InsulationTest;
 use Jobsheet\Ex\Type\A\Components\InsulationTestDC;
 use Jobsheet\Ex\Type\A\Components\InsulationTestTwoSpeed;
+use Jobsheet\Ex\Type\A\Components\LockedRotorTest;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
@@ -60,6 +61,7 @@ class A extends Container
         TemperatureSensorHeater::class,
         Connection::class,
         RotationFromNDE::class,
+        LockedRotorTest::class,
     ];
 
     protected static function renderHTML(): string
