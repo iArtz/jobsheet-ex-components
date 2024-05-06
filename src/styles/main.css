@@ -92,4 +92,17 @@
       @apply w-full border border-black border-collapse;
     }
   }
+
+  #dynamic_test_incoming_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
+  #dynamic_test_final_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }
