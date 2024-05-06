@@ -9,6 +9,7 @@ use Jobsheet\Ex\Utils\Helper;
 abstract class Container
 {
     protected static array $components = [];
+    protected static array $forms = [];
     protected static array $data;
     protected static string $title = '';
     protected static string $container = '';
@@ -19,25 +20,13 @@ abstract class Container
     {
         $components = static::filterComponentsByMotorType();
         static::$components = $components->classes;
-        return $components->builders;
     }
 
-    protected static function loadData(array $forms): void
+    protected static function loadData(): void
     {
-        if (empty($forms)) throw new Exception('Forms dose not exists.');
         foreach (static::$components as $key => $component) {
             if (is_subclass_of($component, Component::class)) {
-                $fieldsetName = $forms[$key]->getFieldsetName();
-                if (isset($fieldsetName) && isset(static::$data[$fieldsetName])) {
-                    $component::loadData(
-                        $forms[$key],
-                        [$fieldsetName => static::$data[$fieldsetName]]
-                    );
-                } else {
-                    $component::loadData(
-                        $forms[$key]
-                    );
-                }
+                static::$forms[] = $component::loadData(static::$data);
             }
         }
     }
@@ -63,11 +52,11 @@ abstract class Container
 
     public static function renderPage(): void
     {
-        $forms = static::initialForm();
+        static::initialForm();
 
-        static::loadData($forms);
+        static::loadData();
 
-        foreach ($forms as $form) {
+        foreach (static::$forms as $form) {
             static::$container .= $form->render();
         }
 
@@ -76,20 +65,19 @@ abstract class Container
             && static::$data['debug']
         ) {
             static::$title = 'Debug';
-            Helper::export($forms); // debug
+            Helper::export(static::$components); // debug
         }
         echo static::renderHTML();
     }
 
     protected static function filterComponentsByMotorType(): object
     {
-        return static::classHandler(static::classFilter());
+        return static::componentsDTO(static::componentsFilterByMotorType());
     }
 
-    private static function classFilter(): array
+    private static function componentsFilterByMotorType(): array
     {
         $classes = [];
-        $builders = [];
         foreach (static::$components as $component) {
             if (
                 (isset(static::$data['motor_type'])
@@ -98,16 +86,14 @@ abstract class Container
                     && static::$data['showAll'])
             ) {
                 $classes[] = $component;
-                $builders[] = $component::build();
             }
         }
 
-        return [$classes, $builders];
+        return $classes;
     }
 
-    private static function classHandler(array $args): object
+    private static function componentsDTO(array $components): object
     {
-        [$classes, $builders] = $args;
         if (
             isset(static::$data['develop'])
             && static::$data['develop']
@@ -115,13 +101,11 @@ abstract class Container
             $latestComponent = end(static::$components);
             return (object) [
                 'classes' => [$latestComponent],
-                'builders' => [$latestComponent::build()]
             ];
         }
 
         return (object) [
-            'classes' => $classes,
-            'builders' => $builders
+            'classes' => $components
         ];
     }
 

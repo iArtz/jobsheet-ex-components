@@ -7,12 +7,16 @@ use Jobsheet\Ex\Type\A\Components\AuxiliaryDevicesTest;
 use Jobsheet\Ex\Type\A\Components\Capacitor;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\Connection;
+use Jobsheet\Ex\Type\A\Components\DynamicTestFinal;
+use Jobsheet\Ex\Type\A\Components\DynamicTestIncoming;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\InsulationTest;
 use Jobsheet\Ex\Type\A\Components\InsulationTestDC;
 use Jobsheet\Ex\Type\A\Components\InsulationTestTwoSpeed;
+use Jobsheet\Ex\Type\A\Components\LockedRotorTest;
+use Jobsheet\Ex\Type\A\Components\LockedRotorTestDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
@@ -23,6 +27,8 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTest;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
+use Jobsheet\Ex\Type\A\Components\RotationFromNDE;
+use Jobsheet\Ex\Type\A\Components\RunningTest;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
@@ -58,6 +64,12 @@ class A extends Container
         AuxiliaryDevicesTest::class,
         TemperatureSensorHeater::class,
         Connection::class,
+        RotationFromNDE::class,
+        LockedRotorTest::class,
+        LockedRotorTestDC::class,
+        RunningTest::class,
+        DynamicTestIncoming::class,
+        DynamicTestFinal::class,
     ];
 
     protected static function renderHTML(): string

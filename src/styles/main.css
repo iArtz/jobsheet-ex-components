@@ -49,4 +49,60 @@
       }
     }
   }
+
+  #rotation_from_nde_form {
+    fieldset {
+      div > span {
+        @apply w-full border border-black border-collapse;
+      }
+
+      div > div.inline-flex {
+        @apply w-full border border-black border-collapse justify-center ml-0 p-2;
+      }
+    }
+  }
+
+  #locked_rotor_test_form {
+    fieldset {
+      span,
+      input {
+        @apply border border-collapse border-black w-full border-solid;
+      }
+    }
+  }
+
+  #locked_rotor_dc_test_form > fieldset {
+    div {
+      @apply justify-between;
+    }
+    div:nth-child(2) > span {
+      @apply w-full border border-collapse border-black;
+    }
+    div:nth-child(3) {
+      @apply border border-collapse border-black;
+    }
+    div:nth-child(3) > span:first-child {
+      @apply w-2/6 border border-black;
+    }
+  }
+
+  #running_test_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
+
+  #dynamic_test_incoming_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
+  #dynamic_test_final_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }

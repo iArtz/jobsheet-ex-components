@@ -16,9 +16,10 @@ class Chart extends FormElement
 
     protected function handlerType(): string
     {
+        if (empty($this->data['data'])) throw new Exception('Undefined data');
+        if (empty($this->data['type'])) throw new Exception('Please specific chart type.');
         $chart = '';
         $data = Helper::toJSON($this->data['data']);
-        if (empty($this->data['type'])) throw new Exception('Please specific chart type.');
         switch ($this->data['type']) {
             default:
                 $chart = <<<HTML
