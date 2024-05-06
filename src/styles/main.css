@@ -85,4 +85,11 @@
       @apply w-2/6 border border-black;
     }
   }
+
+  #running_test_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }
