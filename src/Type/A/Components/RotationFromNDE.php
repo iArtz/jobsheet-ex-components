@@ -41,7 +41,7 @@ class RotationFromNDE extends Component
             'form' => [
                 'name' => 'rotation_from_nde_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'rotation_from_nde',

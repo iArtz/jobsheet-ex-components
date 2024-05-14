@@ -21,37 +21,37 @@ class InsulationTest extends Component
             [],
             [],
             [
-                'insulation_incoming_volt' => '1',
-                'insulation_incoming_mark_1' => '1',
-                'insulation_incoming_1_min_1' => '1',
-                'insulation_incoming_10_min_1' => '1',
-                'insulation_incoming_pi' => '1',
-                'insulation_final_volt' => '1',
-                'insulation_final_mark_1' => '1',
-                'insulation_final_1_min_1' => '1',
-                'insulation_final_10_min_1' => '1',
-                'insulation_final_pi' => '1',
+                'insulation_incoming_volt' => '-',
+                'insulation_incoming_mark_1' => '-',
+                'insulation_incoming_1_min_1' => '-',
+                'insulation_incoming_10_min_1' => '-',
+                'insulation_incoming_pi' => '-',
+                'insulation_final_volt' => '-',
+                'insulation_final_mark_1' => '-',
+                'insulation_final_1_min_1' => '-',
+                'insulation_final_10_min_1' => '-',
+                'insulation_final_pi' => '-',
             ],
             [
-                'insulation_incoming_mark_2' => '2',
-                'insulation_incoming_1_min_2' => '2',
-                'insulation_incoming_10_min_2' => '2',
-                'insulation_final_mark_2' => '2',
-                'insulation_final_1_min_2' => '2',
-                'insulation_final_10_min_2' => '2'
+                'insulation_incoming_mark_2' => '-',
+                'insulation_incoming_1_min_2' => '-',
+                'insulation_incoming_10_min_2' => '-',
+                'insulation_final_mark_2' => '-',
+                'insulation_final_1_min_2' => '-',
+                'insulation_final_10_min_2' => '-'
             ], [
-                'insulation_incoming_mark_3' => '3',
-                'insulation_incoming_1_min_3' => '3',
-                'insulation_incoming_10_min_3' => '3',
-                'insulation_final_mark_3' => '3',
-                'insulation_final_1_min_3' => '3',
-                'insulation_final_10_min_3' => '3'
+                'insulation_incoming_mark_3' => '-',
+                'insulation_incoming_1_min_3' => '-',
+                'insulation_incoming_10_min_3' => '-',
+                'insulation_final_mark_3' => '-',
+                'insulation_final_1_min_3' => '-',
+                'insulation_final_10_min_3' => '-'
             ],
             [
-                'insulation_incoming_1_min_4' => '4',
-                'insulation_incoming_10_min_4' => '4',
-                'insulation_final_1_min_4' => '4',
-                'insulation_final_10_min_4' => '4'
+                'insulation_incoming_1_min_4' => '-',
+                'insulation_incoming_10_min_4' => '-',
+                'insulation_final_1_min_4' => '-',
+                'insulation_final_10_min_4' => '-'
             ],
             [],
             [
@@ -67,7 +67,7 @@ class InsulationTest extends Component
             'form' => [
                 'name' => 'insulation_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'insulation_test',

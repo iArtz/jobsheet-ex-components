@@ -50,7 +50,7 @@ class LockedRotorTest extends Component
             'form' => [
                 'name' => 'locked_rotor_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'locked_rotor_test',

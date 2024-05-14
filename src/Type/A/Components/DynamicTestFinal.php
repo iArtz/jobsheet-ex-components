@@ -23,38 +23,36 @@ class DynamicTestFinal extends Component
             [],
             [
                 // Final
-                'final_running_test_min' => '1',
-                'final_marking_supply_r' => '1',
-                'final_marking_motor_r' => '1',
-                'final_voltage_supply_value_r-s' => '1',
-                'final_current_value_r-s' => '1',
-                'final_speed_1_min' => '1',
-                'final_shaft' => '1',
-                'final_de' => '1',
-                'final_frame' => '1',
-                'final_nde' => '1',
-                'final_amb' => '1',
+                'final_running_test_min' => '-',
+                'final_marking_supply_r' => '-',
+                'final_marking_motor_r' => '-',
+                'final_voltage_supply_value_r-s' => '-',
+                'final_current_value_r-s' => '-',
+                'final_speed_1_min' => '-',
+                'final_shaft' => '-',
+                'final_de' => '-',
+                'final_frame' => '-',
+                'final_nde' => '-',
+                'final_amb' => '-',
             ],
             [
                 // Final
-                'final_marking_supply_s' => '1',
-                'final_marking_motor_s' => '1',
-                'final_voltage_supply_value_r-t' => '1',
-                'final_current_value_r-t' => '1',
-                'final_speed_1_min' => '1',
+                'final_marking_supply_s' => '-',
+                'final_marking_motor_s' => '-',
+                'final_voltage_supply_value_r-t' => '-',
+                'final_current_value_r-t' => '-',
             ],
             [
                 // Final
-                'final_marking_supply_t' => '1',
-                'final_marking_motor_t' => '1',
-                'final_voltage_supply_value_s-t' => '1',
-                'final_current_value_s-t' => '1',
-                'final_speed_1_min' => '1',
+                'final_marking_supply_t' => '-',
+                'final_marking_motor_t' => '-',
+                'final_voltage_supply_value_s-t' => '-',
+                'final_current_value_s-t' => '-',
             ],
             [
-                'final_id_no_1' => '1',
-                'final_id_no_2' => '1',
-                'final_id_no_3' => '1',
+                'final_id_no_1' => '-',
+                'final_id_no_2' => '-',
+                'final_id_no_3' => '-',
             ]
         ]
     ];
@@ -65,7 +63,7 @@ class DynamicTestFinal extends Component
             'form' => [
                 'name' => 'dynamic_test_final_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'dynamic_test_final',
@@ -133,7 +131,7 @@ class DynamicTestFinal extends Component
                 new Span('R-T'),
                 new Input('final_voltage_supply_value_r-t', ''),
                 new Input('final_current_value_r-t', ''),
-                new Input('final_speed_1_min', ''),
+                new Span(''),
                 new Span(''),
                 new Span(''),
                 new Span(''),
@@ -150,7 +148,7 @@ class DynamicTestFinal extends Component
                 new Span('S-T'),
                 new Input('final_voltage_supply_value_s-t', ''),
                 new Input('final_current_value_s-t', ''),
-                new Input('final_speed_1_min', ''),
+                new Span(''),
                 new Span(''),
                 new Span(''),
                 new Span(''),

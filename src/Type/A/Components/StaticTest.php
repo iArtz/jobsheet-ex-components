@@ -34,7 +34,7 @@ class StaticTest extends Component
             'form' => [
                 'name' => 'static_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'static_test',

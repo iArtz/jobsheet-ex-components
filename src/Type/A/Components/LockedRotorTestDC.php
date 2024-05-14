@@ -2,14 +2,13 @@
 
 namespace Jobsheet\Ex\Type\A\Components;
 
-use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class LockedRotorTestDC extends Component
+class LockedRotorTestDC extends LockedRotorTest
 {
     protected static array $compatibleWith = [
         MotorType::DC,
@@ -21,10 +20,10 @@ class LockedRotorTestDC extends Component
             [
                 // Incoming
                 'incoming_application' => true,
-                'incoming_na' => 'N/A', true,
+                'incoming_na' => true,
                 // Final
                 'final_application' => true,
-                'final_na' => 'N/A', true,
+                'final_na' => true,
             ],
             [
 
@@ -42,7 +41,7 @@ class LockedRotorTestDC extends Component
             'form' => [
                 'name' => 'locked_rotor_dc_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'locked_rotor_dc_test',

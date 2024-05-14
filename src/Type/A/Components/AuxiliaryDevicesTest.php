@@ -128,7 +128,7 @@ class AuxiliaryDevicesTest extends Component
             'form' => [
                 'name' => 'auxiliary_devices_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'auxiliary_devices_test',

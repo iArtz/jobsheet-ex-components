@@ -74,7 +74,7 @@ class TemperatureSensorHeater extends Component
             'form' => [
                 'name' => 'temperature_sensor_heater_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'temperature_sensor_heater',

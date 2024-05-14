@@ -21,10 +21,12 @@ class IncomingArmatureBarToBarResistanceTest extends Component
             $col = [];
             for ($j = 1; $j <= 12; $j++) // Col
             {
+                $name = $i . '_' . $j;
+                $value = '-';
                 if ($j % 2 != 0) {
-                    $col['bar_no_' . $i . '_' . $j] = $i . '_' . $j;
+                    $col['bar_no_' . $name] = $value;
                 } else {
-                    $col['val_no_' . $i . '_' . $j] = $i . '_' . $j;
+                    $col['val_no_' . $name] = $value;
                 }
             }
             static::$data['incoming_armature_bar_to_bar_resistance_test'][] = $col;
@@ -45,7 +47,7 @@ class IncomingArmatureBarToBarResistanceTest extends Component
             'form' => [
                 'name' => 'incoming_armature_bar_to_bar_resistance_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'incoming_armature_bar_to_bar_resistance_test',

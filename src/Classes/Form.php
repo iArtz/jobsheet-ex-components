@@ -9,10 +9,11 @@ class Form extends FieldComposite
 {
     protected $url;
 
-    public function __construct(string $name, string $title, string $url)
+    public function __construct(string $name, string $title, string $url, string $method = 'POST')
     {
         parent::__construct($name, $title);
         $this->url = $url;
+        $this->method = $method;
     }
 
     private function titleHandler()
@@ -24,7 +25,7 @@ class Form extends FieldComposite
     {
         $output = parent::render();
         return <<<HTML
-                <form action="{$this->url}" name="{$this->name}" id="{$this->name}">
+                <form action="{$this->url}" name="{$this->name}" id="{$this->name}" method="{$this->method}">
                     {$this->titleHandler()}
                     $output
                 </form>

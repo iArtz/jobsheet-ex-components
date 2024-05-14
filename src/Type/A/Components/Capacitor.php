@@ -19,23 +19,23 @@ class Capacitor extends Component
         'capacitor' => [
             [],
             [
-                'incoming_start_value' => 'incoming_start_val',
+                'incoming_start_value' => '-',
                 'incoming_start_good' => true,
                 'incoming_start_fail' => true,
                 'incoming_start_na' => true,
 
-                'final_start_value' => 'final_start_val',
+                'final_start_value' => '-',
                 'final_start_good' => true,
                 'final_start_fail' => true,
                 'final_start_na' => true,
             ],
             [
-                'incoming_run_value' => 'incoming_run_val',
+                'incoming_run_value' => '-',
                 'incoming_run_good' => true,
                 'incoming_run_fail' => true,
                 'incoming_run_na' => true,
 
-                'final_run_value' => 'final_run_val',
+                'final_run_value' => '-',
                 'final_run_good' => true,
                 'final_run_fail' => true,
                 'final_run_na' => true,
@@ -49,7 +49,7 @@ class Capacitor extends Component
             'form' => [
                 'name' => 'capacitor_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name'        => 'capacitor',

@@ -36,8 +36,9 @@ class Pictures extends Component
     {
         $config = [
             'form' => [
-                'name' => 'pictures_form', 'title' => '',
-                'action' => '/api/ex/save'
+                'name' => 'pictures_form',
+                'title' => '',
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'pictures',

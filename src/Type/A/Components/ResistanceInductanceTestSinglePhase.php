@@ -3,21 +3,20 @@
 namespace Jobsheet\Ex\Type\A\Components;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
-use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class ResistanceInductanceTestSinglePhase extends Component
+class ResistanceInductanceTestSinglePhase extends ResistanceInductanceTest
 {
     protected static array $compatibleWith = [
         MotorType::SinglePhase,
     ];
 
     protected static array $data = [
-        'resistance_inductance_test' => [
+        'resistance_inductance_test_single_phase' => [
             [],
             [
                 'resistance_incoming_unit' => 'mΩ',
@@ -26,30 +25,30 @@ class ResistanceInductanceTestSinglePhase extends Component
                 'inductance_final_unit' => 'mΩ',
             ],
             [ // Row 1
-                'resistance_incoming_value_1' => '1',
-                'resistance_final_value_1' => '1',
-                'inductance_incoming_volt' => '1',
-                'inductance_incoming_value_1' => '1',
-                'inductance_final_volt' => '1',
-                'inductance_final_value_1' => '1',
+                'resistance_incoming_value_1' => '-',
+                'resistance_final_value_1' => '-',
+                'inductance_incoming_volt' => '-',
+                'inductance_incoming_value_1' => '-',
+                'inductance_final_volt' => '-',
+                'inductance_final_value_1' => '-',
             ],
             [ // Row 2
-                'resistance_incoming_value_2' => '2',
-                'resistance_final_value_2' => '2',
-                'inductance_incoming_value_2' => '2',
-                'inductance_final_value_2' => '2',
+                'resistance_incoming_value_2' => '-',
+                'resistance_final_value_2' => '-',
+                'inductance_incoming_value_2' => '-',
+                'inductance_final_value_2' => '-',
             ],
             [ // Row 3
-                'resistance_incoming_value_3' => '3',
-                'resistance_final_value_3' => '3',
-                'inductance_incoming_value_3' => '3',
-                'inductance_final_value_3' => '3',
+                'resistance_incoming_value_3' => '-',
+                'resistance_final_value_3' => '-',
+                'inductance_incoming_value_3' => '-',
+                'inductance_final_value_3' => '-',
             ],
             [
-                'resistance_incoming_id_no' => 'Res incoming ID No.',
-                'inductance_incoming_id_no' => 'Ind incoming ID No.',
-                'resistance_final_id_no' => 'Res final ID No.',
-                'inductance_final_id_no' => 'Ind final ID No.',
+                'resistance_incoming_id_no' => '-',
+                'inductance_incoming_id_no' => '-',
+                'resistance_final_id_no' => '-',
+                'inductance_final_id_no' => '-',
             ]
         ]
     ];
@@ -58,12 +57,12 @@ class ResistanceInductanceTestSinglePhase extends Component
     {
         $config = [
             'form' => [
-                'name' => 'resistance_inductance_test_form',
+                'name' => 'resistance_inductance_test_single_phase_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'resistance_inductance_test',
+                'name' => 'resistance_inductance_test_single_phase',
                 'title' => 'Resistance & Inductance Test'
             ]
         ];

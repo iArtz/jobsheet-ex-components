@@ -32,7 +32,7 @@ class TimeResistanceMethod extends Component
             'form' => [
                 'name' => 'time_resistance_method_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'time_resistance_method',

@@ -25,7 +25,6 @@ class MachineDetails extends Component
                 'type' => 'Type',
             ],
             [
-
                 'manufacture' => 'Manufacture',
                 'model' => 'Model',
                 'ser_no' => 'Ser.No',
@@ -63,7 +62,7 @@ class MachineDetails extends Component
             'form' => [
                 'name' => 'machine_details_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'machine_details',

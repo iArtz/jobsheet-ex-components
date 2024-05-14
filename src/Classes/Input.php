@@ -112,6 +112,20 @@ class Input extends FormElement
                             </div>
                         HTML;
                 break;
+            case 'submit':
+                $input = <<<HTML
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-amber-500 text-xs hover:bg-amber-700 text-white font-bold py-2 px-4 mt-2 rounded"
+                                type="{$this->type}"
+                                name="{$this->name}"
+                                value="{$this->data}"
+                            >
+                            {$this->title}
+                            </button>
+                        </div>
+                    HTML;
+                break;
         }
         return $input;
     }

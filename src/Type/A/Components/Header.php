@@ -45,8 +45,8 @@ class Header extends Component
         $config = [
             'form' => [
                 'name' => 'header_form',
-                'title' => "TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)",
-                'action' => "/header_exd/save"
+                'title' => 'TEST REPORT FOR LV. EXPLOSION PROOF MOTOR (For Ex d, Ex de)',
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'header',
