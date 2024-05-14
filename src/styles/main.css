@@ -125,4 +125,10 @@
       @apply w-full border border-black border-collapse;
     }
   }
+  #running_test_single_phase_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }

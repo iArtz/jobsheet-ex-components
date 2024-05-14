@@ -32,6 +32,7 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\RotationFromNDE;
 use Jobsheet\Ex\Type\A\Components\RunningTest;
 use Jobsheet\Ex\Type\A\Components\RunningTestFinalMV;
+use Jobsheet\Ex\Type\A\Components\RunningTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
@@ -76,6 +77,7 @@ class A extends Container
         RunningTestFinalMV::class,
         DynamicTestRunningTestSlow::class,
         DynamicTestRunningTestFast::class,
+        RunningTestSinglePhase::class,
     ];
 
     protected static function renderHTML(): string
