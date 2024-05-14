@@ -9,14 +9,10 @@ use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class DynamicTestRunningTestSlow extends Component
+class DynamicTestRunningTestFast extends DynamicTestRunningTestSlow
 {
-    protected static array $compatibleWith = [
-        MotorType::TwoSpeed,
-    ];
-
     protected static array $data = [
-        'dynamic_test_running_test_slow' => [
+        'dynamic_test_running_test_fast' => [
             [],
             [],
             [],
@@ -88,12 +84,12 @@ class DynamicTestRunningTestSlow extends Component
     {
         $config = [
             'form' => [
-                'name' => 'dynamic_test_running_test_slow_form',
+                'name' => 'dynamic_test_running_test_fast_form',
                 'title' => '',
                 'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'dynamic_test_running_test_slow',
+                'name' => 'dynamic_test_running_test_fast',
                 'title' => 'Dynamic Test'
             ]
         ];
@@ -105,7 +101,7 @@ class DynamicTestRunningTestSlow extends Component
     {
         return [
             [
-                new Span('RUNNING TEST SLOW'),
+                new Span('RUNNING TEST FAST'),
             ],
             [
                 new Span(''),

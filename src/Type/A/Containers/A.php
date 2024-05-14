@@ -9,6 +9,7 @@ use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\Connection;
 use Jobsheet\Ex\Type\A\Components\DynamicTestFinal;
 use Jobsheet\Ex\Type\A\Components\DynamicTestIncoming;
+use Jobsheet\Ex\Type\A\Components\DynamicTestRunningTestFast;
 use Jobsheet\Ex\Type\A\Components\DynamicTestRunningTestSlow;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
@@ -74,6 +75,7 @@ class A extends Container
         DynamicTestFinal::class,
         RunningTestFinalMV::class,
         DynamicTestRunningTestSlow::class,
+        DynamicTestRunningTestFast::class,
     ];
 
     protected static function renderHTML(): string

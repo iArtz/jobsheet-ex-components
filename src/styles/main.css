@@ -118,4 +118,11 @@
       @apply w-full border border-black border-collapse;
     }
   }
+
+  #dynamic_test_running_test_fast_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }
