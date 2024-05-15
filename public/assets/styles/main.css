@@ -935,6 +935,26 @@ input {
   }
 }
 
+#dynamic_test_dc_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
 .static {
   position: static;
 }

@@ -131,4 +131,10 @@
       @apply w-full border border-black border-collapse;
     }
   }
+  #dynamic_test_dc_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }

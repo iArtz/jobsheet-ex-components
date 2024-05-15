@@ -7,6 +7,7 @@ use Jobsheet\Ex\Type\A\Components\AuxiliaryDevicesTest;
 use Jobsheet\Ex\Type\A\Components\Capacitor;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\Connection;
+use Jobsheet\Ex\Type\A\Components\DynamicTestDC;
 use Jobsheet\Ex\Type\A\Components\DynamicTestFinal;
 use Jobsheet\Ex\Type\A\Components\DynamicTestIncoming;
 use Jobsheet\Ex\Type\A\Components\DynamicTestRunningTestFast;
@@ -78,6 +79,7 @@ class A extends Container
         DynamicTestRunningTestSlow::class,
         DynamicTestRunningTestFast::class,
         RunningTestSinglePhase::class,
+        DynamicTestDC::class,
     ];
 
     protected static function renderHTML(): string
