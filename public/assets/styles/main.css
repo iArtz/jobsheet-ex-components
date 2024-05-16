@@ -630,23 +630,23 @@ input {
 }
 
 #surge_comparison_test_form {
-  .flex {
+  fieldset {
     justify-content: space-between;
-  }
-  input[type="text"] {
-    flex-basis: 20%;
-  }
-  fieldset > div:nth-child(2) > span:first-child {
-    flex-basis: 20%;
-  }
-  fieldset > div:nth-child(2) > span:last-child {
-    flex-basis: 80%;
-  }
-  fieldset > div:nth-child(3) > span {
-    flex-basis: 10%;
-  }
-  fieldset > div:nth-child(4) > span {
-    flex-basis: 10%;
+    input[type="text"] {
+      flex-basis: 20%;
+    }
+    div:nth-child(2) > span:first-child {
+      flex-basis: 20%;
+    }
+    div:nth-child(2) > span:last-child {
+      flex-basis: 80%;
+    }
+    div:nth-child(3) > span {
+      flex-basis: 10%;
+    }
+    div:nth-child(4) > span {
+      flex-basis: 10%;
+    }
   }
 }
 
@@ -855,6 +855,206 @@ input {
   }
 }
 
+#running_test_final_mv_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#dynamic_test_running_test_slow_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#dynamic_test_running_test_fast_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#running_test_single_phase_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#dynamic_test_dc_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#vibration_test_bearing_test_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#vibration_test_bearing_test_incoming_mv_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#vibration_test_bearing_test_incoming_time_mv_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#vibration_test_bearing_test_final_time_mv_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
+#mechanical_repairing_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
 .static {
   position: static;
 }
@@ -888,6 +1088,10 @@ input {
 
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .mt-3 {
@@ -956,6 +1160,10 @@ input {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -984,6 +1192,22 @@ input {
   border-width: 4px;
 }
 
+.\!border-b-0 {
+  border-bottom-width: 0px !important;
+}
+
+.border-b-0 {
+  border-bottom-width: 0px;
+}
+
+.border-t-0 {
+  border-top-width: 0px;
+}
+
+.\!border-t-0 {
+  border-top-width: 0px !important;
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -999,13 +1223,38 @@ input {
   border-color: rgb(248 113 113 / var(--tw-border-opacity));
 }
 
+.bg-amber-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 158 11 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .p-4 {
   padding: 1rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .\!pl-\[30\%\] {
@@ -1038,6 +1287,51 @@ input {
   line-height: 1rem;
 }
 
+.\!text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.text-xs\/\[18px\] {
+  font-size: 0.75rem;
+  line-height: 18px;
+}
+
+.\!text-xs\/\[18px\] {
+  font-size: 0.75rem !important;
+  line-height: 18px !important;
+}
+
+.\!text-xs\/\[10px\] {
+  font-size: 0.75rem !important;
+  line-height: 10px !important;
+}
+
+.\!text-xs\/\[8px\] {
+  font-size: 0.75rem !important;
+  line-height: 8px !important;
+}
+
+.\!text-\[10px\] {
+  font-size: 10px !important;
+}
+
+.\!text-\[8px\] {
+  font-size: 8px !important;
+}
+
+.\!text-\[0px\] {
+  font-size: 0px !important;
+}
+
+.\!text-\[9px\] {
+  font-size: 9px !important;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1061,12 +1355,26 @@ input {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!text-\[9-px\] {
+  color: 9-px !important;
+}
+
 .accent-orange-400 {
   accent-color: #fb923c;
 }
 
 .\[writing-mode\:vertical-lr\] {
   writing-mode: vertical-lr;
+}
+
+.hover\:bg-amber-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(180 83 9 / var(--tw-bg-opacity));
 }
 
 .focus\:ring-2:focus {

@@ -21,19 +21,19 @@ class SurgeComparisonTest extends Component
             [],
             [
                 'incoming_volt' => 'i_volt',
-                'incoming_na' => 'N/A',
-                'incoming_good' => 'Good',
-                'incoming_ground' => 'Ground',
-                'incoming_short_turn' => 'Short turn',
-                'incoming_short_phase' => 'Short Phase',
+                'incoming_na' => true,
+                'incoming_good' => true,
+                'incoming_ground' => true,
+                'incoming_short_turn' => true,
+                'incoming_short_phase' => true,
             ],
             [
                 'final_volt' => 'f_volt',
-                'final_na' => 'N/A',
-                'final_good' => 'Good',
-                'final_ground' => 'Ground',
-                'final_short_turn' => 'Short Turn',
-                'final_short_phase' => 'Short Phase',
+                'final_na' => true,
+                'final_good' => true,
+                'final_ground' => true,
+                'final_short_turn' => true,
+                'final_short_phase' => true,
             ],
         ]
     ];
@@ -44,7 +44,7 @@ class SurgeComparisonTest extends Component
             'form' => [
                 'name' => 'surge_comparison_test_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'surge_comparison_test',
@@ -63,7 +63,7 @@ class SurgeComparisonTest extends Component
                 new Span('SURGE COMPARISON TEST WAVE FORM')
             ],
             [
-                new Input('incoming_volt', ''),
+                new Input('incoming_volt'),
                 new Span('Incoming'),
                 new Input('incoming_na', 'N/A', 'checkbox-l'),
                 new Input('incoming_good', 'Good', 'checkbox-l'),
@@ -72,7 +72,7 @@ class SurgeComparisonTest extends Component
                 new Input('incoming_short_phase', 'Short Phase', 'checkbox-l'),
             ],
             [
-                new Input('final_volt', ''),
+                new Input('final_volt'),
                 new Span('Final'),
                 new Input('final_na', 'N/A', 'checkbox-l'),
                 new Input('final_good', 'Good', 'checkbox-l'),

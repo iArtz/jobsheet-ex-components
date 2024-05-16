@@ -3,35 +3,34 @@
 namespace Jobsheet\Ex\Type\A\Components;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
-use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class ResistanceInductanceTestDC extends Component
+class ResistanceInductanceTestDC extends ResistanceInductanceTest
 {
     protected static array $compatibleWith = [
         MotorType::DC,
     ];
 
     protected static array $data = [
-        'resistance_inductance_test' => [
+        'resistance_inductance_test_dc' => [
             [],
             [],
             [
-                'resistance_incoming_shunt_field' => 'resistance_incoming_shunt_field',
-                'resistance_incoming_interpole' => 'resistance_incoming_interpole',
-                'resistance_incoming_series_field' => 'resistance_incoming_series_field',
-                'resistance_incoming_interpole_compensate' => 'resistance_incoming_interpole_compensate',
+                'resistance_incoming_shunt_field' => '-',
+                'resistance_incoming_interpole' => '-',
+                'resistance_incoming_series_field' => '-',
+                'resistance_incoming_interpole_compensate' => '-',
             ],
             [],
             [],
             [
-                'resistance_final_shunt_field' => 'resistance_final_shunt_field',
-                'resistance_final_interpole' => 'resistance_final_interpole',
-                'resistance_final_series_field' => 'resistance_final_series_field',
-                'resistance_final_interpole_compensate' => 'resistance_final_interpole_compensate',
+                'resistance_final_shunt_field' => '-',
+                'resistance_final_interpole' => '-',
+                'resistance_final_series_field' => '-',
+                'resistance_final_interpole_compensate' => '-',
             ]
         ]
     ];
@@ -40,12 +39,12 @@ class ResistanceInductanceTestDC extends Component
     {
         $config = [
             'form' => [
-                'name' => 'resistance_inductance_test_form',
+                'name' => 'resistance_inductance_test_dc_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'resistance_inductance_test',
+                'name' => 'resistance_inductance_test_dc',
                 'title' => 'Resistance & Inductance Test'
             ]
         ];
@@ -66,10 +65,10 @@ class ResistanceInductanceTestDC extends Component
             ],
             [
                 new Span('Resistance Values'),
-                new Input('resistance_incoming_shunt_field', ''),
-                new Input('resistance_incoming_interpole', ''),
-                new Input('resistance_incoming_series_field', ''),
-                new Input('resistance_incoming_interpole_compensate', ''),
+                new Input('resistance_incoming_shunt_field'),
+                new Input('resistance_incoming_interpole'),
+                new Input('resistance_incoming_series_field'),
+                new Input('resistance_incoming_interpole_compensate'),
             ],
             [new Span('FINAL RESISTANCE TEST', ['text-red-500', 'text-left', 'w-full'])],
             [
@@ -81,10 +80,10 @@ class ResistanceInductanceTestDC extends Component
             ],
             [
                 new Span('Resistance Values'),
-                new Input('resistance_final_shunt_field', ''),
-                new Input('resistance_final_interpole', ''),
-                new Input('resistance_final_series_field', ''),
-                new Input('resistance_final_interpole_compensate', ''),
+                new Input('resistance_final_shunt_field'),
+                new Input('resistance_final_interpole'),
+                new Input('resistance_final_series_field'),
+                new Input('resistance_final_interpole_compensate'),
             ]
         ];
     }

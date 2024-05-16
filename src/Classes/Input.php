@@ -8,7 +8,7 @@ class Input extends FormElement
 {
     private $type;
 
-    public function __construct(string $name, string $title, string $type = 'text')
+    public function __construct(string $name, string $title = '', string $type = 'text')
     {
         parent::__construct($name, $title);
         $this->type = $type;
@@ -111,6 +111,20 @@ class Input extends FormElement
                                     <img class="h-5 w-5" src="{$imageUrl}" onerror="">
                             </div>
                         HTML;
+                break;
+            case 'submit':
+                $input = <<<HTML
+                        <div class="flex justify-center">
+                            <button
+                                class="bg-amber-500 text-xs hover:bg-amber-700 text-white font-bold py-2 px-4 mt-2 rounded"
+                                type="{$this->type}"
+                                name="{$this->name}"
+                                value="{$this->data}"
+                            >
+                            {$this->title}
+                            </button>
+                        </div>
+                    HTML;
                 break;
         }
         return $input;

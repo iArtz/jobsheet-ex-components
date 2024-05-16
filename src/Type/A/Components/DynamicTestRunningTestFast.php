@@ -9,18 +9,41 @@ use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class DynamicTestFinal extends Component
+class DynamicTestRunningTestFast extends DynamicTestRunningTestSlow
 {
-    protected static array $compatibleWith = [
-        MotorType::MV,
-    ];
-
     protected static array $data = [
-
-        'dynamic_test_final' => [
+        'dynamic_test_running_test_fast' => [
             [],
             [],
             [],
+            [
+                // Incoming
+                'incoming_running_test_min' => '-',
+                'incoming_marking_supply_r' => '-',
+                'incoming_marking_motor_r' => '-',
+                'incoming_voltage_supply_value_r-s' => '-',
+                'incoming_current_value_r-s' => '-',
+                'incoming_speed_1_min' => '-',
+                'incoming_shaft' => '-',
+                'incoming_de' => '-',
+                'incoming_frame' => '-',
+                'incoming_nde' => '-',
+                'incoming_amb' => '-',
+            ],
+            [
+                // Incoming
+                'incoming_marking_supply_s' => '-',
+                'incoming_marking_motor_s' => '-',
+                'incoming_voltage_supply_value_r-t' => '-',
+                'incoming_current_value_r-t' => '-',
+            ],
+            [
+                // Incoming
+                'incoming_marking_supply_t' => '-',
+                'incoming_marking_motor_t' => '-',
+                'incoming_voltage_supply_value_s-t' => '-',
+                'incoming_current_value_s-t' => '-',
+            ],
             [
                 // Final
                 'final_running_test_min' => '-',
@@ -50,9 +73,9 @@ class DynamicTestFinal extends Component
                 'final_current_value_s-t' => '-',
             ],
             [
-                'final_id_no_1' => '-',
-                'final_id_no_2' => '-',
-                'final_id_no_3' => '-',
+                'incoming_id_no_1' => '-',
+                'incoming_id_no_2' => '-',
+                'incoming_id_no_3' => '-',
             ]
         ]
     ];
@@ -61,13 +84,13 @@ class DynamicTestFinal extends Component
     {
         $config = [
             'form' => [
-                'name' => 'dynamic_test_final_form',
+                'name' => 'dynamic_test_running_test_fast_form',
                 'title' => '',
                 'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'dynamic_test_final',
-                'title' => 'Dynamic Test Final'
+                'name' => 'dynamic_test_running_test_fast',
+                'title' => 'Dynamic Test'
             ]
         ];
 
@@ -78,7 +101,7 @@ class DynamicTestFinal extends Component
     {
         return [
             [
-                new Span('RUNNING TEST (FINAL)'),
+                new Span('RUNNING TEST FAST'),
             ],
             [
                 new Span(''),
@@ -103,6 +126,57 @@ class DynamicTestFinal extends Component
                 new Span('FRAME'),
                 new Span('NDE'),
                 new Span('AMB.'),
+            ],
+            [
+                // Incoming
+                new Input('incoming_running_test_min'),
+                new Span('Incoming'),
+                new Span('R'),
+                new Input('incoming_marking_supply_r'),
+                new Input('incoming_marking_motor_r'),
+                new Span('R-S'),
+                new Input('incoming_voltage_supply_value_r-s'),
+                new Input('incoming_current_value_r-s'),
+                new Input('incoming_speed_1_min'),
+                new Input('incoming_shaft'),
+                new Input('incoming_de'),
+                new Input('incoming_frame'),
+                new Input('incoming_nde'),
+                new Input('incoming_amb'),
+            ],
+            [
+                // Incoming
+                new Span(''),
+                new Span('Incoming'),
+                new Span('S'),
+                new Input('incoming_marking_supply_s'),
+                new Input('incoming_marking_motor_s'),
+                new Span('R-T'),
+                new Input('incoming_voltage_supply_value_r-t'),
+                new Input('incoming_current_value_r-t'),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+            ],
+            [
+                // Incoming
+                new Span(''),
+                new Span('Incoming'),
+                new Span('T'),
+                new Input('incoming_marking_supply_t'),
+                new Input('incoming_marking_motor_t'),
+                new Span('S-T'),
+                new Input('incoming_voltage_supply_value_s-t'),
+                new Input('incoming_current_value_s-t'),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+                new Span(''),
+                new Span(''),
             ],
             [
                 // Final
@@ -156,9 +230,9 @@ class DynamicTestFinal extends Component
                 new Span(''),
             ],
             [
-                new Input('final_id_no_1', 'Instrument Final ID NO.'),
-                new Input('final_id_no_2', 'ID NO.'),
-                new Input('final_id_no_3', 'ID NO.'),
+                new Input('incoming_id_no_1', 'Instrument Incoming ID NO.'),
+                new Input('incoming_id_no_2', 'ID NO.'),
+                new Input('incoming_id_no_3', 'ID NO.'),
             ]
         ];
     }

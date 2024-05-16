@@ -7,6 +7,7 @@ use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\ContainerElement;
 use Jobsheet\Ex\Classes\Form;
 use Jobsheet\Ex\Classes\Fieldset;
+use Jobsheet\Ex\Classes\Input;
 
 abstract class Component
 {
@@ -42,6 +43,9 @@ abstract class Component
         $group = new Fieldset($config->fieldset->name, $config->fieldset->title . ' (' . join(', ', static::$compatibleWith) . ')');
         static::combineElements($group);
         $form->add($group);
+        $button = new Input('component', 'Save', 'submit');
+        $button->setData($config->fieldset->name);
+        $form->add($button);
         return $form;
     }
 

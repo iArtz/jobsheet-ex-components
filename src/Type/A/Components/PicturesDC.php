@@ -2,21 +2,20 @@
 
 namespace Jobsheet\Ex\Type\A\Components;
 
-use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Utils\Helper;
 
-class PicturesDC extends Component
+class PicturesDC extends Pictures
 {
     protected static array $compatibleWith = [
         MotorType::DC
     ];
 
     protected static array $data = [
-        'pictures' => [
+        'pictures_dc' => [
             [
                 'cw' => true,
                 'ccw' => true,
@@ -46,12 +45,12 @@ class PicturesDC extends Component
     {
         $config = [
             'form' => [
-                'name' => 'pictures_form',
+                'name' => 'pictures_dc_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'pictures',
+                'name' => 'pictures_dc',
                 'title' => 'Pictures'
             ]
         ];

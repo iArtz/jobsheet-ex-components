@@ -27,10 +27,11 @@ class CertificationDetails extends Component
                 'certificate_no' => 'Certificate No'
             ],
             [
-
                 'motor_group' => 'I',
                 'gas_group' => 'A',
                 'equipment_category' => '1',
+            ],
+            [
                 'environment' => 'GD (Gas and Dust)',
                 'equipment_protection_level' => 'a',
                 'protection_type' => 'Ex e',
@@ -58,7 +59,7 @@ class CertificationDetails extends Component
             'form' => [
                 'name' => 'certification_details_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'certification_details',

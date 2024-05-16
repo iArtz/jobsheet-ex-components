@@ -3,21 +3,20 @@
 namespace Jobsheet\Ex\Type\A\Components;
 
 use Jobsheet\Ex\Classes\Abstracts\FormElement;
-use Jobsheet\Ex\Classes\Abstracts\Component;
 use Jobsheet\Ex\Classes\Abstracts\MotorType;
 use Jobsheet\Ex\Classes\Dropdown;
 use Jobsheet\Ex\Classes\Input;
 use Jobsheet\Ex\Classes\Span;
 use Jobsheet\Ex\Utils\Helper;
 
-class ResistanceInductanceTestTwoSpeed extends Component
+class ResistanceInductanceTestTwoSpeed extends ResistanceInductanceTest
 {
     protected static array $compatibleWith = [
         MotorType::TwoSpeed,
     ];
 
     protected static array $data = [
-        'resistance_inductance_test' => [
+        'resistance_inductance_test_two_speed' => [
             [],
             [],
             [
@@ -33,60 +32,60 @@ class ResistanceInductanceTestTwoSpeed extends Component
             ],
             [
                 // Slow
-                'slow_resistance_incoming_marking_1' => '1',
-                'slow_resistance_incoming_value_1' => '1',
-                'slow_resistance_final_value_1' => '1',
+                'slow_resistance_incoming_marking_1' => '-',
+                'slow_resistance_incoming_value_1' => '-',
+                'slow_resistance_final_value_1' => '-',
 
-                'slow_inductance_incoming_value_1' => '1',
-                'slow_inductance_final_value_1' => '1',
+                'slow_inductance_incoming_value_1' => '-',
+                'slow_inductance_final_value_1' => '-',
 
                 // Fast
-                'fast_resistance_incoming_marking_1' => '1',
-                'fast_resistance_incoming_value_1' => '1',
-                'fast_resistance_final_value_1' => '1',
+                'fast_resistance_incoming_marking_1' => '-',
+                'fast_resistance_incoming_value_1' => '-',
+                'fast_resistance_final_value_1' => '-',
 
-                'fast_inductance_incoming_value_1' => '1',
-                'fast_inductance_final_value_1' => '1',
+                'fast_inductance_incoming_value_1' => '-',
+                'fast_inductance_final_value_1' => '-',
             ],
             [
                 // Slow
-                'slow_resistance_incoming_marking_2' => '2',
-                'slow_resistance_incoming_value_2' => '2',
-                'slow_resistance_final_value_2' => '2',
+                'slow_resistance_incoming_marking_2' => '-',
+                'slow_resistance_incoming_value_2' => '-',
+                'slow_resistance_final_value_2' => '-',
 
-                'slow_inductance_incoming_value_2' => '2',
-                'slow_inductance_final_value_2' => '2',
+                'slow_inductance_incoming_value_2' => '-',
+                'slow_inductance_final_value_2' => '-',
 
                 // Fast
-                'fast_resistance_incoming_marking_2' => '2',
-                'fast_resistance_incoming_value_2' => '2',
-                'fast_resistance_final_value_2' => '2',
+                'fast_resistance_incoming_marking_2' => '-',
+                'fast_resistance_incoming_value_2' => '-',
+                'fast_resistance_final_value_2' => '-',
 
-                'fast_inductance_incoming_value_2' => '2',
-                'fast_inductance_final_value_2' => '2',
+                'fast_inductance_incoming_value_2' => '-',
+                'fast_inductance_final_value_2' => '-',
             ],
             [
                 // Slow
-                'slow_resistance_incoming_marking_3' => '3',
-                'slow_resistance_incoming_value_3' => '3',
-                'slow_resistance_final_value_3' => '3',
+                'slow_resistance_incoming_marking_3' => '-',
+                'slow_resistance_incoming_value_3' => '-',
+                'slow_resistance_final_value_3' => '-',
 
-                'slow_inductance_incoming_value_3' => '3',
-                'slow_inductance_final_value_3' => '3',
+                'slow_inductance_incoming_value_3' => '-',
+                'slow_inductance_final_value_3' => '-',
 
                 // Fast
-                'fast_resistance_incoming_marking_3' => '3',
-                'fast_resistance_incoming_value_3' => '3',
-                'fast_resistance_final_value_3' => '3',
+                'fast_resistance_incoming_marking_3' => '-',
+                'fast_resistance_incoming_value_3' => '-',
+                'fast_resistance_final_value_3' => '-',
 
-                'fast_inductance_incoming_value_3' => '3',
-                'fast_inductance_final_value_3' => '3',
+                'fast_inductance_incoming_value_3' => '-',
+                'fast_inductance_final_value_3' => '-',
             ],
             [
-                'resistance_incoming_id_no' => 'Res incoming ID No.',
-                'inductance_incoming_id_no' => 'Ind incoming ID No.',
-                'resistance_final_id_no' => 'Res final ID No.',
-                'inductance_final_id_no' => 'Ind final ID No.',
+                'resistance_incoming_id_no' => '-',
+                'inductance_incoming_id_no' => '-',
+                'resistance_final_id_no' => '-',
+                'inductance_final_id_no' => '-',
             ]
         ]
     ];
@@ -95,12 +94,12 @@ class ResistanceInductanceTestTwoSpeed extends Component
     {
         $config = [
             'form' => [
-                'name' => 'resistance_inductance_test_form',
+                'name' => 'resistance_inductance_test_two_speed_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'resistance_inductance_test',
+                'name' => 'resistance_inductance_test_two_speed',
                 'title' => 'Resistance & Inductance Test'
             ]
         ];
@@ -188,77 +187,77 @@ class ResistanceInductanceTestTwoSpeed extends Component
             ],
             [ // Row 1
                 // Slow
-                new Input('slow_resistance_incoming_marking_1', ''),
-                new Input('slow_resistance_incoming_value_1', ''),
+                new Input('slow_resistance_incoming_marking_1'),
+                new Input('slow_resistance_incoming_value_1'),
                 new Span($slowResistanceIncomingUnit, ['mt-3']),
-                new Input('slow_resistance_final_value_1', ''),
+                new Input('slow_resistance_final_value_1'),
                 new Span($slowResistanceFinalUnit, ['mt-3']),
 
-                new Input('slow_inductance_incoming_value_1', ''),
+                new Input('slow_inductance_incoming_value_1'),
                 new Span($slowInductanceIncomingUnit, ['mt-3']),
-                new Input('slow_inductance_final_value_1', ''),
+                new Input('slow_inductance_final_value_1'),
                 new Span($slowResistanceFinalUnit, ['mt-3']),
 
                 // Fast
-                new Input('fast_resistance_incoming_marking_1', ''),
-                new Input('fast_resistance_incoming_value_1', ''),
+                new Input('fast_resistance_incoming_marking_1'),
+                new Input('fast_resistance_incoming_value_1'),
                 new Span($fastResistanceIncomingUnit, ['mt-3']),
-                new Input('fast_resistance_final_value_1', ''),
+                new Input('fast_resistance_final_value_1'),
                 new Span($fastResistanceFinalUnit, ['mt-3']),
 
-                new Input('fast_inductance_incoming_value_1', ''),
+                new Input('fast_inductance_incoming_value_1'),
                 new Span($fastResistanceIncomingUnit, ['mt-3']),
-                new Input('fast_inductance_final_value_1', ''),
+                new Input('fast_inductance_final_value_1'),
                 new Span($fastInductanceFinalUnit, ['mt-3']),
             ],
             [ // Row 2
                 // Slow
-                new Input('slow_resistance_incoming_marking_2', ''),
-                new Input('slow_resistance_incoming_value_2', ''),
+                new Input('slow_resistance_incoming_marking_2'),
+                new Input('slow_resistance_incoming_value_2'),
                 new Span($slowResistanceIncomingUnit, ['mt-3']),
-                new Input('slow_resistance_final_value_2', ''),
+                new Input('slow_resistance_final_value_2'),
                 new Span($slowResistanceFinalUnit, ['mt-3']),
 
-                new Input('slow_inductance_incoming_value_2', ''),
+                new Input('slow_inductance_incoming_value_2'),
                 new Span($slowInductanceIncomingUnit, ['mt-3']),
-                new Input('slow_inductance_final_value_2', ''),
+                new Input('slow_inductance_final_value_2'),
                 new Span($slowInductanceFinalUnit),
 
                 // Fast
-                new Input('fast_resistance_incoming_marking_2', ''),
-                new Input('fast_resistance_incoming_value_2', ''),
+                new Input('fast_resistance_incoming_marking_2'),
+                new Input('fast_resistance_incoming_value_2'),
                 new Span($fastResistanceIncomingUnit, ['mt-3']),
-                new Input('fast_resistance_final_value_2', ''),
+                new Input('fast_resistance_final_value_2'),
                 new Span($fastResistanceFinalUnit, ['mt-3']),
 
-                new Input('fast_inductance_incoming_value_2', ''),
+                new Input('fast_inductance_incoming_value_2'),
                 new Span($fastInductanceIncomingUnit, ['mt-3']),
-                new Input('fast_inductance_final_value_2', ''),
+                new Input('fast_inductance_final_value_2'),
                 new Span($fastResistanceFinalUnit, ['mt-3']),
             ],
             [ // Row 3
                 // Slow
-                new Input('slow_resistance_incoming_marking_3', ''),
-                new Input('slow_resistance_incoming_value_3', ''),
+                new Input('slow_resistance_incoming_marking_3'),
+                new Input('slow_resistance_incoming_value_3'),
                 new Span($slowResistanceIncomingUnit, ['mt-3']),
-                new Input('slow_resistance_final_value_3', ''),
+                new Input('slow_resistance_final_value_3'),
                 new Span($slowResistanceFinalUnit, ['mt-3']),
 
-                new Input('slow_inductance_incoming_value_3', ''),
+                new Input('slow_inductance_incoming_value_3'),
                 new Span($slowInductanceIncomingUnit, ['mt-3']),
-                new Input('slow_inductance_final_value_3', ''),
+                new Input('slow_inductance_final_value_3'),
                 new Span($slowInductanceFinalUnit),
 
                 // Fast
-                new Input('fast_resistance_incoming_marking_3', ''),
-                new Input('fast_resistance_incoming_value_3', ''),
+                new Input('fast_resistance_incoming_marking_3'),
+                new Input('fast_resistance_incoming_value_3'),
                 new Span($fastResistanceIncomingUnit, ['mt-3']),
-                new Input('fast_resistance_final_value_3', ''),
+                new Input('fast_resistance_final_value_3'),
                 new Span($fastResistanceFinalUnit, ['mt-3']),
 
-                new Input('fast_inductance_incoming_value_3', ''),
+                new Input('fast_inductance_incoming_value_3'),
                 new Span($fastInductanceIncomingUnit, ['mt-3']),
-                new Input('fast_inductance_final_value_3', ''),
+                new Input('fast_inductance_final_value_3'),
                 new Span($fastInductanceFinalUnit, ['mt-3']),
             ],
             [ // Row 4

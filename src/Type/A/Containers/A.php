@@ -7,8 +7,11 @@ use Jobsheet\Ex\Type\A\Components\AuxiliaryDevicesTest;
 use Jobsheet\Ex\Type\A\Components\Capacitor;
 use Jobsheet\Ex\Type\A\Components\CertificationDetails;
 use Jobsheet\Ex\Type\A\Components\Connection;
+use Jobsheet\Ex\Type\A\Components\DynamicTestDC;
 use Jobsheet\Ex\Type\A\Components\DynamicTestFinal;
 use Jobsheet\Ex\Type\A\Components\DynamicTestIncoming;
+use Jobsheet\Ex\Type\A\Components\DynamicTestRunningTestFast;
+use Jobsheet\Ex\Type\A\Components\DynamicTestRunningTestSlow;
 use Jobsheet\Ex\Type\A\Components\FinalArmatureBarToBarResistanceTest;
 use Jobsheet\Ex\Type\A\Components\Header;
 use Jobsheet\Ex\Type\A\Components\IncomingArmatureBarToBarResistanceTest;
@@ -20,6 +23,7 @@ use Jobsheet\Ex\Type\A\Components\LockedRotorTestDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
+use Jobsheet\Ex\Type\A\Components\MechanicalRepairing;
 use Jobsheet\Ex\Type\A\Components\Pictures;
 use Jobsheet\Ex\Type\A\Components\PicturesDC;
 use Jobsheet\Ex\Type\A\Components\PolarizationIndex;
@@ -29,11 +33,17 @@ use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestTwoSpeed;
 use Jobsheet\Ex\Type\A\Components\RotationFromNDE;
 use Jobsheet\Ex\Type\A\Components\RunningTest;
+use Jobsheet\Ex\Type\A\Components\RunningTestFinalMV;
+use Jobsheet\Ex\Type\A\Components\RunningTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
 use Jobsheet\Ex\Type\A\Components\TemperatureSensorHeater;
 use Jobsheet\Ex\Type\A\Components\TimeResistanceMethod;
+use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTest;
+use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTestFinalTimeMV;
+use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTestIncomingMV;
+use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTestIncomingTimeMV;
 
 class A extends Container
 {
@@ -70,6 +80,16 @@ class A extends Container
         RunningTest::class,
         DynamicTestIncoming::class,
         DynamicTestFinal::class,
+        RunningTestFinalMV::class,
+        DynamicTestRunningTestSlow::class,
+        DynamicTestRunningTestFast::class,
+        RunningTestSinglePhase::class,
+        DynamicTestDC::class,
+        VibrationTestBearingTest::class,
+        VibrationTestBearingTestIncomingMV::class,
+        VibrationTestBearingTestIncomingTimeMV::class,
+        VibrationTestBearingTestFinalTimeMV::class,
+        MechanicalRepairing::class,
     ];
 
     protected static function renderHTML(): string

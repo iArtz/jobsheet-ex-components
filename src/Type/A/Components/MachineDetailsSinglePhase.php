@@ -57,9 +57,9 @@ class MachineDetailsSinglePhase extends MachineDetails
     {
         $config = [
             'form' => [
-                'name' => 'machine_details_dc_form',
+                'name' => 'machine_details_single_phase_form',
                 'title' => '',
-                'action' => '/api/ex/save'
+                'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
                 'name' => 'machine_details_single_phase',
