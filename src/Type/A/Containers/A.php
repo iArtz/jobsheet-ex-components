@@ -40,7 +40,9 @@ use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
 use Jobsheet\Ex\Type\A\Components\TemperatureSensorHeater;
 use Jobsheet\Ex\Type\A\Components\TimeResistanceMethod;
 use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTest;
+use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTestFinalTimeMV;
 use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTestIncomingMV;
+use Jobsheet\Ex\Type\A\Components\VibrationTestBearingTestIncomingTimeMV;
 
 class A extends Container
 {
@@ -84,6 +86,8 @@ class A extends Container
         DynamicTestDC::class,
         VibrationTestBearingTest::class,
         VibrationTestBearingTestIncomingMV::class,
+        VibrationTestBearingTestIncomingTimeMV::class,
+        VibrationTestBearingTestFinalTimeMV::class,
     ];
 
     protected static function renderHTML(): string

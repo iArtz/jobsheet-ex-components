@@ -8,7 +8,7 @@ class Input extends FormElement
 {
     private $type;
 
-    public function __construct(string $name, string $title, string $type = 'text')
+    public function __construct(string $name, string $title = '', string $type = 'text')
     {
         parent::__construct($name, $title);
         $this->type = $type;
