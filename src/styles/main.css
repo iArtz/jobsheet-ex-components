@@ -161,4 +161,10 @@
       @apply w-full border border-black border-collapse;
     }
   }
+  #mechanical_repairing_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }

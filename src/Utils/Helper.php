@@ -37,7 +37,7 @@ class Helper
 
     public static function randomString(int $length = 6): string
     {
-        return substr(md5(microtime()), 0, $length);
+        return substr(md5(openssl_random_pseudo_bytes(20)), 0, $length);
     }
 
     public static function toJSON(array $array): string

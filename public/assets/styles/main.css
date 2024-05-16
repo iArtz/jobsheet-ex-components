@@ -1035,6 +1035,26 @@ input {
   }
 }
 
+#mechanical_repairing_form > fieldset {
+  input,
+    span {
+    width: 100%;
+  }
+  input,
+    span {
+    border-collapse: collapse;
+  }
+  input,
+    span {
+    border-width: 1px;
+  }
+  input,
+    span {
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  }
+}
+
 .static {
   position: static;
 }
@@ -1172,6 +1192,22 @@ input {
   border-width: 4px;
 }
 
+.\!border-b-0 {
+  border-bottom-width: 0px !important;
+}
+
+.border-b-0 {
+  border-bottom-width: 0px;
+}
+
+.border-t-0 {
+  border-top-width: 0px;
+}
+
+.\!border-t-0 {
+  border-top-width: 0px !important;
+}
+
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1195,6 +1231,16 @@ input {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-green-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 252 231 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .p-4 {
@@ -1241,6 +1287,47 @@ input {
   line-height: 1rem;
 }
 
+.\!text-xs {
+  font-size: 0.75rem !important;
+  line-height: 1rem !important;
+}
+
+.text-xs\/\[18px\] {
+  font-size: 0.75rem;
+  line-height: 18px;
+}
+
+.\!text-xs\/\[18px\] {
+  font-size: 0.75rem !important;
+  line-height: 18px !important;
+}
+
+.\!text-xs\/\[10px\] {
+  font-size: 0.75rem !important;
+  line-height: 10px !important;
+}
+
+.\!text-xs\/\[8px\] {
+  font-size: 0.75rem !important;
+  line-height: 8px !important;
+}
+
+.\!text-\[10px\] {
+  font-size: 10px !important;
+}
+
+.\!text-\[8px\] {
+  font-size: 8px !important;
+}
+
+.\!text-\[0px\] {
+  font-size: 0px !important;
+}
+
+.\!text-\[9px\] {
+  font-size: 9px !important;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -1271,6 +1358,10 @@ input {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.\!text-\[9-px\] {
+  color: 9-px !important;
 }
 
 .accent-orange-400 {

@@ -23,6 +23,7 @@ use Jobsheet\Ex\Type\A\Components\LockedRotorTestDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
+use Jobsheet\Ex\Type\A\Components\MechanicalRepairing;
 use Jobsheet\Ex\Type\A\Components\Pictures;
 use Jobsheet\Ex\Type\A\Components\PicturesDC;
 use Jobsheet\Ex\Type\A\Components\PolarizationIndex;
@@ -88,6 +89,7 @@ class A extends Container
         VibrationTestBearingTestIncomingMV::class,
         VibrationTestBearingTestIncomingTimeMV::class,
         VibrationTestBearingTestFinalTimeMV::class,
+        MechanicalRepairing::class,
     ];
 
     protected static function renderHTML(): string
