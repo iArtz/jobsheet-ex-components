@@ -63,7 +63,7 @@ class SurgeComparisonTest extends Component
                 new Span('SURGE COMPARISON TEST WAVE FORM')
             ],
             [
-                new Input('incoming_volt', ''),
+                new Input('incoming_volt'),
                 new Span('Incoming'),
                 new Input('incoming_na', 'N/A', 'checkbox-l'),
                 new Input('incoming_good', 'Good', 'checkbox-l'),
@@ -72,7 +72,7 @@ class SurgeComparisonTest extends Component
                 new Input('incoming_short_phase', 'Short Phase', 'checkbox-l'),
             ],
             [
-                new Input('final_volt', ''),
+                new Input('final_volt'),
                 new Span('Final'),
                 new Input('final_na', 'N/A', 'checkbox-l'),
                 new Input('final_good', 'Good', 'checkbox-l'),

@@ -65,10 +65,10 @@ class ResistanceInductanceTestDC extends ResistanceInductanceTest
             ],
             [
                 new Span('Resistance Values'),
-                new Input('resistance_incoming_shunt_field', ''),
-                new Input('resistance_incoming_interpole', ''),
-                new Input('resistance_incoming_series_field', ''),
-                new Input('resistance_incoming_interpole_compensate', ''),
+                new Input('resistance_incoming_shunt_field'),
+                new Input('resistance_incoming_interpole'),
+                new Input('resistance_incoming_series_field'),
+                new Input('resistance_incoming_interpole_compensate'),
             ],
             [new Span('FINAL RESISTANCE TEST', ['text-red-500', 'text-left', 'w-full'])],
             [
@@ -80,10 +80,10 @@ class ResistanceInductanceTestDC extends ResistanceInductanceTest
             ],
             [
                 new Span('Resistance Values'),
-                new Input('resistance_final_shunt_field', ''),
-                new Input('resistance_final_interpole', ''),
-                new Input('resistance_final_series_field', ''),
-                new Input('resistance_final_interpole_compensate', ''),
+                new Input('resistance_final_shunt_field'),
+                new Input('resistance_final_interpole'),
+                new Input('resistance_final_series_field'),
+                new Input('resistance_final_interpole_compensate'),
             ]
         ];
     }
