@@ -104,6 +104,10 @@ class DynamicTestDC extends RunningTest
     {
         return [
             [
+                new Input('incoming_time_test_running', 'Time Test Running'),
+                new Span('min.')
+            ],
+            [
                 new Span('RUNNING TEST (Incoming)'),
             ],
             [
@@ -157,6 +161,10 @@ class DynamicTestDC extends RunningTest
                 new Input('incoming_id_no_1', 'Instrument Incoming ID NO.'),
                 new Input('incoming_id_no_2', 'ID NO.'),
                 new Input('incoming_id_no_3', 'ID NO.'),
+            ],
+            [
+                new Input('final_time_test_running', 'Time Test Running'),
+                new Span('min.')
             ],
             [
                 new Span('RUNNING TEST (Final)'),
