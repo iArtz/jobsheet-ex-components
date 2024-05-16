@@ -15,7 +15,7 @@ class LockedRotorTestDC extends LockedRotorTest
     ];
 
     protected static array $data = [
-        'locked_rotor_dc_test' => [
+        'locked_rotor_test_dc' => [
             [],
             [
                 // Incoming
@@ -39,12 +39,12 @@ class LockedRotorTestDC extends LockedRotorTest
     {
         $config = [
             'form' => [
-                'name' => 'locked_rotor_dc_test_form',
+                'name' => 'locked_rotor_test_dc_form',
                 'title' => '',
                 'action' => getenv('API_ENDPOINTS_EX_COMPONENTS')
             ],
             'fieldset' => [
-                'name' => 'locked_rotor_dc_test',
+                'name' => 'locked_rotor_test_dc',
                 'title' => 'LOCKED ROTOR TEST'
             ]
         ];

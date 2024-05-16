@@ -143,4 +143,10 @@
       @apply w-full border border-black border-collapse;
     }
   }
+  #vibration_test_bearing_test_incoming_mv_form > fieldset {
+    input,
+    span {
+      @apply w-full border border-black border-collapse;
+    }
+  }
 }

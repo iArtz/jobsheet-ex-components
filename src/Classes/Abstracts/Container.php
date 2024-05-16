@@ -113,4 +113,9 @@ abstract class Container
     {
         return static::renderHTML();
     }
+
+    public static function getComponents()
+    {
+        return static::$components;
+    }
 }
