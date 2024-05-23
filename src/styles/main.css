@@ -167,4 +167,12 @@
       @apply w-full border border-black border-collapse;
     }
   }
+  #summary_of_electrical_work_form > fieldset {
+    * {
+      @apply w-full my-[0.05rem];
+    }
+    div:nth-child(2) > span {
+      @apply text-center font-bold;
+    }
+  }
 }

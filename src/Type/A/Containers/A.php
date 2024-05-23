@@ -36,6 +36,7 @@ use Jobsheet\Ex\Type\A\Components\RunningTest;
 use Jobsheet\Ex\Type\A\Components\RunningTestFinalMV;
 use Jobsheet\Ex\Type\A\Components\RunningTestSinglePhase;
 use Jobsheet\Ex\Type\A\Components\StaticTest;
+use Jobsheet\Ex\Type\A\Components\SummaryOfElectricalWork;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTest;
 use Jobsheet\Ex\Type\A\Components\SurgeComparisonTestDC;
 use Jobsheet\Ex\Type\A\Components\TemperatureSensorHeater;
@@ -90,6 +91,7 @@ class A extends Container
         VibrationTestBearingTestIncomingTimeMV::class,
         VibrationTestBearingTestFinalTimeMV::class,
         MechanicalRepairing::class,
+        SummaryOfElectricalWork::class,
     ];
 
     protected static function renderHTML(): string

@@ -20,7 +20,32 @@ class MechanicalRepairing extends Component
     ];
 
     protected static array $data = [
-        'mechanical_repairing' => []
+        'mechanical_repairing' => [
+            [], [], [],
+            [
+                'housing_incoming_de' => '-',
+                'housing_incoming_nde' => '-',
+                'housing_final_de' => '-',
+                'housing_final_nde' => '-',
+
+                'shaft_incoming_de' => '-',
+                'shaft_incoming_nde' => '-',
+                'shaft_final_de' => '-',
+                'shaft_final_nde' => '-',
+            ],
+            [
+                'housing_final_de_max' => '-',
+                'housing_final_nde_max' => '-',
+                'shaft_final_de_max' => '-',
+                'shaft_final_nde_max' => '-',
+            ],
+            [
+                'housing_final_de_min' => '-',
+                'housing_final_nde_min' => '-',
+                'shaft_final_de_min' => '-',
+                'shaft_final_nde_min' => '-',
+            ], []
+        ]
     ];
 
     public static function build(): FormElement
