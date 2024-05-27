@@ -4,7 +4,7 @@
 
 @layer components {
   .container {
-    @apply min-w-[870px];
+    @apply min-w-[900px];
   }
   fieldset {
     @apply block ms-1 me-1 ps-2 pe-2 pb-2 contain-inline-size;
@@ -37,18 +37,7 @@
       }
     }
   }
-  #connection_form {
-    fieldset {
-      div > span {
-        @apply w-full border border-black border-collapse;
-      }
-
-      div > div.inline-flex {
-        @apply w-full border border-black border-collapse justify-center ml-0 p-2;
-      }
-    }
-  }
-
+  #connection_form,
   #rotation_from_nde_form {
     fieldset {
       div > span {
@@ -85,94 +74,73 @@
     }
   }
 
-  #running_test_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-
-  #dynamic_test_incoming_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #dynamic_test_final_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-
-  #running_test_final_mv_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-
-  #dynamic_test_running_test_slow_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-
-  #dynamic_test_running_test_fast_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #running_test_single_phase_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #dynamic_test_dc_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #vibration_test_bearing_test_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #vibration_test_bearing_test_incoming_mv_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #vibration_test_bearing_test_incoming_time_mv_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
-  #vibration_test_bearing_test_final_time_mv_form > fieldset {
-    input,
-    span {
-      @apply w-full border border-black border-collapse;
-    }
-  }
+  #insulation_test_form > fieldset,
+  #polarization_index_form > fieldset,
+  #running_test_form > fieldset,
+  #dynamic_test_incoming_form > fieldset,
+  #dynamic_test_final_form > fieldset,
+  #running_test_final_mv_form > fieldset,
+  #dynamic_test_running_test_slow_form > fieldset,
+  #dynamic_test_running_test_fast_form > fieldset,
+  #running_test_single_phase_form > fieldset,
+  #dynamic_test_dc_form > fieldset,
+  #vibration_test_bearing_test_form > fieldset,
+  #vibration_test_bearing_test_incoming_mv_form > fieldset,
+  #vibration_test_bearing_test_incoming_time_mv_form > fieldset,
+  #vibration_test_bearing_test_final_time_mv_form > fieldset,
   #mechanical_repairing_form > fieldset {
     input,
     span {
       @apply w-full border border-black border-collapse;
     }
   }
+
   #summary_of_electrical_work_form > fieldset {
     * {
       @apply w-full my-[0.05rem];
     }
+  }
+  #summary_of_mechanical_work_form > fieldset {
+    > div {
+      @apply my-1;
+    }
+  }
+
+  #summary_of_electrical_work_form > fieldset {
     div:nth-child(2) > span {
       @apply text-center font-bold;
+    }
+  }
+
+  #summary_of_mechanical_work_form > fieldset {
+    div:nth-child(2) > span {
+      @apply text-left font-bold;
+    }
+    div:nth-child(3) > span {
+      @apply text-center font-bold;
+    }
+    div:nth-child(n + 4) > span {
+      @apply w-full;
+    }
+    #bearing_de_value,
+    #bearing_nde_value {
+      @apply w-24;
+    }
+    div:nth-child(9) > label + input,
+    div:nth-child(10) > label + input {
+      @apply w-20;
+    }
+    div:nth-child(11) > span {
+      @apply mr-2;
+    }
+    div:nth-child(12) > span {
+      @apply mr-2;
+    }
+    div:nth-child(n + 17) > span {
+      @apply text-left ml-6 -mr-6;
+    }
+    div:nth-child(n + 32) > span {
+      @apply text-left w-full ml-0 mr-0;
     }
   }
 }
