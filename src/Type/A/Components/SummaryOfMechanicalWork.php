@@ -254,6 +254,89 @@ class SummaryOfMechanicalWork extends SummaryOfElectricalWork
                 new Input('stator_core_accept', 'Accept', 'checkbox-l'),
                 new Input('stator_core_accept_note')
             ],
+            [
+                new Span('- Rotor core'),
+                new Input('rotor_core_pass', 'Pass', 'checkbox-l'),
+                new Input('rotor_core_fail', 'Fail', 'checkbox-l'),
+                new Input('rotor_core_note'),
+                new Input('rotor_core_accept', 'Accept', 'checkbox-l'),
+                new Input('rotor_core_accept_note')
+            ], [
+                new Span('- Mountings'),
+                new Input('mountings_pass', 'Pass', 'checkbox-l'),
+                new Input('mountings_fail', 'Fail', 'checkbox-l'),
+                new Input('mountings_note'),
+                new Input('mountings_accept', 'Accept', 'checkbox-l'),
+                new Input('mountings_accept_note')
+            ],
+            [
+                new Span('Feet'),
+                new Input('feet_pass', 'Pass', 'checkbox-l'),
+                new Input('feet_fail', 'Fail', 'checkbox-l'),
+                new Input('feet_note'),
+                new Input('feet_accept', 'Accept', 'checkbox-l'),
+                new Input('feet_accept_note')
+            ],
+            [
+                new Span('Flange'),
+                new Input('flange_pass', 'Pass', 'checkbox-l'),
+                new Input('flange_fail', 'Fail', 'checkbox-l'),
+                new Input('flange_note'),
+                new Input('flange_accept', 'Accept', 'checkbox-l'),
+                new Input('flange_accept_note')
+            ],
+            [
+                new Span('- Fixing bolts & threads'),
+                new Input('fixing_bolts_pass', 'Pass', 'checkbox-l'),
+                new Input('fixing_bolts_fail', 'Fail', 'checkbox-l'),
+                new Input('fixing_bolts_note'),
+                new Input('fixing_bolts_accept', 'Accept', 'checkbox-l'),
+                new Input('fixing_bolts_accept_note')
+            ],
+            [
+                new Span('- Lifting facilities & threads'),
+                new Input('lifting_pass', 'Pass', 'checkbox-l'),
+                new Input('lifting_fail', 'Fail', 'checkbox-l'),
+                new Input('lifting_note'),
+                new Input('lifting_accept', 'Accept', 'checkbox-l'),
+                new Input('lifting_accept_note')
+            ], [
+                new Span('- Enclosure protection', ['text-blue-700']),
+                new Input('enclosure_protect_pass', 'Pass', 'checkbox-l'),
+                new Input('enclosure_protect_fail', 'Fail', 'checkbox-l'),
+                new Input('enclosure_protect_note'),
+                new Input('enclosure_protect_accept', 'Accept', 'checkbox-l'),
+                new Input('enclosure_protect_accept_note')
+            ],
+            [
+                new Span('Sealing arrangements', ['text-blue-700', 'pl-2'])
+            ],
+            [
+                new Span('- Ancillaries'),
+                new Input('ancillaries_pass', 'Pass', 'checkbox-l'),
+                new Input('ancillaries_fail', 'Fail', 'checkbox-l'),
+                new Input('ancillaries_note'),
+                new Input('ancillaries_accept', 'Accept', 'checkbox-l'),
+                new Input('ancillaries_accept_note')
+            ], [
+                new Span('- Rotor Balance'),
+                new Input('rotor_balance_pass', 'Pass', 'checkbox-l'),
+                new Input('rotor_balance_fail', 'Fail', 'checkbox-l'),
+                new Input('rotor_balance_note'),
+                new Input('rotor_balance_accept', 'Accept', 'checkbox-l'),
+                new Input('rotor_balance_accept_note')
+            ],
+            [
+                new Span('- Surface finish & painting'),
+                new Input('surface_finish_pass', 'Pass', 'checkbox-l'),
+                new Input('surface_finish_fail', 'Fail', 'checkbox-l'),
+                new Input('surface_finish_note'),
+                new Input('surface_finish_accept', 'Accept', 'checkbox-l'),
+                new Input('surface_finish_thickness', 'Thickness')
+            ],
+            [
+                new Input('other', 'Other'),
+            ]
         ];
     }
 }

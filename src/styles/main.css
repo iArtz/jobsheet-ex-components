@@ -113,14 +113,12 @@
   }
 
   #summary_of_mechanical_work_form > fieldset {
-    div:nth-child(2) > span {
-      @apply text-left font-bold;
-    }
-    div:nth-child(3) > span {
-      @apply text-center font-bold;
-    }
-    div:nth-child(n + 4) > span {
+    div > span {
       @apply w-full;
+    }
+    div:nth-child(2) > span,
+    div:nth-child(3) > span {
+      @apply text-left font-bold;
     }
     #bearing_de_value,
     #bearing_nde_value {
@@ -130,17 +128,30 @@
     div:nth-child(10) > label + input {
       @apply w-20;
     }
-    div:nth-child(11) > span {
-      @apply mr-2;
-    }
+    div:nth-child(11) > span,
     div:nth-child(12) > span {
       @apply mr-2;
     }
-    div:nth-child(n + 17) > span {
+    div:nth-child(n + 17) > span,
+    div:nth-child(35) > span,
+    div:nth-child(36) > span {
       @apply text-left ml-6 -mr-6;
     }
-    div:nth-child(n + 32) > span {
-      @apply text-left w-full ml-0 mr-0;
+    div:nth-child(32) > span,
+    div:nth-child(33) > span,
+    div:nth-child(34) > span,
+    div:nth-child(n + 37) > span {
+      @apply text-left ml-0 mr-0;
+    }
+    div:nth-child(43) > span {
+      @apply pr-10;
+    }
+
+    #surface_finish_note {
+      @apply pr-20;
+    }
+    div:last-child {
+      @apply py-5;
     }
   }
 }
