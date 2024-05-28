@@ -8,7 +8,7 @@ set_error_handler('Jobsheet\Ex\Core\Error::errorHandler');
 set_exception_handler('Jobsheet\Ex\Core\Error::exceptionHandler');
 
 $data = [
-    'showAll' => true,
+    'develop' => true,
 ];
 
 A::setData($data);
