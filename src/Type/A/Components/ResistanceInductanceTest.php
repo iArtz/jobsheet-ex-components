@@ -137,52 +137,52 @@ class ResistanceInductanceTest extends Component
                 // Incoming
                 new Input('resistance_incoming_marking_1'),
                 new Input('resistance_incoming_value_1'),
-                new Span($resistanceIncomingUnit, ['mt-3']),
+                new Span($resistanceIncomingUnit, ['mt-1']),
                 new Input('inductance_incoming_marking_1'),
                 new Input('inductance_incoming_value_1'),
-                new Span($inductanceIncomingUnit, ['mt-3']),
+                new Span($inductanceIncomingUnit, ['mt-1']),
 
                 // Final
                 new Input('resistance_final_marking_1'),
                 new Input('resistance_final_value_1'),
-                new Span($resistanceFinalUnit, ['mt-3']),
+                new Span($resistanceFinalUnit, ['mt-1']),
                 new Input('inductance_final_marking_1'),
                 new Input('inductance_final_value_1'),
-                new Span($inductanceFinalUnit, ['mt-3']),
+                new Span($inductanceFinalUnit, ['mt-1']),
             ],
             [ // Row 2
                 // Incoming
                 new Input('resistance_incoming_marking_2'),
                 new Input('resistance_incoming_value_2'),
-                new Span($resistanceIncomingUnit, ['mt-3']),
+                new Span($resistanceIncomingUnit, ['mt-1']),
                 new Input('inductance_incoming_marking_2'),
                 new Input('inductance_incoming_value_2'),
-                new Span($inductanceIncomingUnit, ['mt-3']),
+                new Span($inductanceIncomingUnit, ['mt-1']),
 
                 // Final
                 new Input('resistance_final_marking_2'),
                 new Input('resistance_final_value_2'),
-                new Span($resistanceFinalUnit, ['mt-3']),
+                new Span($resistanceFinalUnit, ['mt-1']),
                 new Input('inductance_final_marking_2'),
                 new Input('inductance_final_value_2'),
-                new Span($inductanceFinalUnit, ['mt-3']),
+                new Span($inductanceFinalUnit, ['mt-1']),
             ],
             [ // Row 3
                 // Incoming
                 new Input('resistance_incoming_marking_3'),
                 new Input('resistance_incoming_value_3'),
-                new Span($resistanceIncomingUnit, ['mt-3']),
+                new Span($resistanceIncomingUnit, ['mt-1']),
                 new Input('inductance_incoming_marking_3'),
                 new Input('inductance_incoming_value_3'),
-                new Span($inductanceIncomingUnit, ['mt-3']),
+                new Span($inductanceIncomingUnit, ['mt-1']),
 
                 // Final
                 new Input('resistance_final_marking_3'),
                 new Input('resistance_final_value_3'),
-                new Span($resistanceFinalUnit, ['mt-3']),
+                new Span($resistanceFinalUnit, ['mt-1']),
                 new Input('inductance_final_marking_3'),
                 new Input('inductance_final_value_3'),
-                new Span($inductanceFinalUnit, ['mt-3']),
+                new Span($inductanceFinalUnit, ['mt-1']),
             ],
             [ // Row 4
                 new Span('Instrument Incoming'),
