@@ -27,6 +27,7 @@ use Jobsheet\Ex\Type\A\Components\MechanicalRepairing;
 use Jobsheet\Ex\Type\A\Components\Pictures;
 use Jobsheet\Ex\Type\A\Components\PicturesDC;
 use Jobsheet\Ex\Type\A\Components\PolarizationIndex;
+use Jobsheet\Ex\Type\A\Components\RadialAirGabCalculation;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTest;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestDC;
 use Jobsheet\Ex\Type\A\Components\ResistanceInductanceTestSinglePhase;
@@ -94,6 +95,7 @@ class A extends Container
         MechanicalRepairing::class,
         SummaryOfElectricalWork::class,
         SummaryOfMechanicalWork::class,
+        RadialAirGabCalculation::class,
     ];
 
     protected static function renderHTML(): string

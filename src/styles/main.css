@@ -154,4 +154,51 @@
       @apply py-5;
     }
   }
+  #radial_air_gab_calculation_form > fieldset {
+    div {
+      @apply my-4;
+    }
+    div > span {
+      @apply w-full font-bold;
+    }
+    div > input {
+      @apply w-24 mx-2 bg-yellow-100 border-black border-2 border-solid;
+    }
+    div > span:not(span:first-child) {
+      @apply text-red-500 font-extrabold italic w-1/6 justify-end;
+    }
+
+    div:nth-child(3) > span,
+    div:nth-child(n + 5) > span {
+      @apply text-left;
+    }
+
+    div:nth-child(6) {
+      @apply w-3/4 items-center;
+    }
+    div:nth-child(6) > input {
+      @apply h-full py-4;
+    }
+    div:nth-child(11) {
+      @apply w-full items-center;
+    }
+    div:nth-child(11) > input {
+      @apply h-full py-4;
+    }
+    div:nth-child(15) {
+      input {
+        @apply bg-blue-100;
+      }
+      span:last-child {
+        @apply text-transparent;
+      }
+    }
+    div:nth-child(16) {
+      @apply -mx-2 my-10 border border-black;
+    }
+
+    div:nth-child(n + 18) {
+      @apply pl-10;
+    }
+  }
 }
