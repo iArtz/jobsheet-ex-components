@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .container {
-    @apply min-w-[900px];
-  }
   fieldset {
     @apply block ms-1 me-1 ps-2 pe-2 pb-2 contain-inline-size;
     border-width: 2px;
@@ -199,6 +196,84 @@
 
     div:nth-child(n + 18) {
       @apply pl-10;
+    }
+  }
+  #radial_air_gap_calc_group_2_form > fieldset {
+    div:nth-child(2) > span {
+      @apply font-extrabold text-left;
+    }
+    #img_1 {
+      @apply max-w-md;
+    }
+
+    div:nth-child(6) {
+      span {
+        @apply w-4/12;
+      }
+      span:nth-child(even) {
+        @apply w-24 border border-solid border-black border-collapse border-b-0 text-red-500 font-bold;
+      }
+    }
+
+    div:nth-child(7) {
+      span {
+        @apply w-4/12;
+      }
+
+      span:nth-child(odd) {
+        @apply text-left;
+      }
+      span:nth-child(even) {
+        @apply w-24 border border-solid border-black border-collapse border-t-0;
+        font-size: 8px;
+      }
+    }
+
+    div:nth-child(n + 8) > span {
+      @apply w-4/12 text-left px-1;
+    }
+
+    div > span + input {
+      @apply w-24 border border-black border-solid bg-yellow-100;
+    }
+    div:nth-child(10) > span + input,
+    div:nth-child(14) > span + input,
+    div:nth-child(18) > span + input {
+      @apply bg-green-100;
+    }
+    div:nth-child(18) > span + input {
+      @apply h-8 justify-items-center;
+    }
+    div:nth-child(n + 19) {
+      @apply justify-end mr-1;
+    }
+
+    div:nth-child(n + 19) > span {
+      @apply w-1/2;
+    }
+    div:nth-child(n + 19) > span {
+      @apply text-center font-bold;
+    }
+    div:nth-child(n + 19) > span:not(:first-child) {
+      @apply w-24 text-red-500 border border-black mt-4;
+    }
+    div:nth-child(n + 19) > input {
+      @apply w-24 border border-black border-solid;
+    }
+    div:nth-child(20) > input {
+      @apply bg-yellow-100;
+    }
+    div:nth-child(21) > span {
+      @apply font-normal;
+    }
+    div:nth-child(n + 21) > span > span {
+      @apply font-bold;
+    }
+    div:nth-child(n + 21) > input {
+      @apply bg-green-100;
+    }
+    div:nth-child(21) > input {
+      @apply h-8;
     }
   }
 }
