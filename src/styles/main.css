@@ -171,7 +171,7 @@
     }
 
     div:nth-child(6) {
-      @apply w-3/4 items-center;
+      @apply w-3/4 max-w-[71%] min-w-min items-center;
     }
     div:nth-child(6) > input {
       @apply h-full py-4;
