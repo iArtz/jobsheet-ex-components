@@ -254,7 +254,7 @@
     div:nth-child(n + 19) > span {
       @apply text-center font-bold;
     }
-    div:nth-child(n + 19) > span:not(:first-child) {
+    div:nth-child(19) > span:not(:first-child) {
       @apply w-24 text-red-500 border border-black mt-4;
     }
     div:nth-child(n + 19) > input {
@@ -274,6 +274,21 @@
     }
     div:nth-child(21) > input {
       @apply h-8;
+    }
+    div:nth-child(n + 24) > span {
+      @apply w-full text-left;
+    }
+    div:nth-child(25) > span {
+      @apply font-normal ml-4;
+    }
+    div:nth-child(25) {
+      @apply border-b-2 pb-4 border-black -mx-2;
+    }
+    div:nth-child(26) {
+      @apply justify-around;
+    }
+    div:nth-child(26) > span:last-child {
+      @apply font-normal;
     }
   }
 }

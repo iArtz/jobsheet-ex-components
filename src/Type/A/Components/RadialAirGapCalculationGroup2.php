@@ -42,8 +42,8 @@ class RadialAirGapCalculationGroup2 extends Component
             ],
             [],
             [
-                'bearing_housing_min_nde' => '-',
-                'bearing_housing_min_de' => '-',
+                'bearing_housing_max_nde' => '-',
+                'bearing_housing_max_de' => '-',
             ],
             [
                 'bearing_housing_min_nde' => '-',
@@ -71,8 +71,8 @@ class RadialAirGapCalculationGroup2 extends Component
                 'bearing_tolerance_de' => '-',
             ],
             [
-                'agcl_nde' => '-',
-                'agcl_de' => '-',
+                'actual_min_radial_air_gap_nde' => '-',
+                'actual_min_radial_air_gap_de' => '-',
             ],
             [
                 'calc_min_radial_air_gap_nde' => '-',
@@ -153,9 +153,9 @@ class RadialAirGapCalculationGroup2 extends Component
             ],
             [
                 new Span('Max  bearing housing dia  <span class="font-bold text-red-500">NDE</span>'),
-                new Input('bearing_housing_min_nde'),
+                new Input('bearing_housing_max_nde'),
                 new Span('Max  bearing housing dia  <span class="font-bold text-red-500">DE</span>'),
-                new Input('bearing_housing_min_de'),
+                new Input('bearing_housing_max_de'),
             ],
             [
                 new Span('Min outer bearing  dia <span class="font-bold text-red-500">NDE</span>'),
@@ -204,8 +204,8 @@ class RadialAirGapCalculationGroup2 extends Component
             ],
             [
                 new Span('<span class="text-red-500">Actual (Measured) Minimum Radial Air Gap</span><br />=   AGcl   -   (  Ecl  +  Bearing Tolerance   +  Hcl  )'),
-                new Input('agcl_nde'),
-                new Input('agcl_de'),
+                new Input('actual_min_radial_air_gap_nde'),
+                new Input('actual_min_radial_air_gap_de'),
             ],
             [
                 new Span('Calculated Minimum Radial Air Gap from Sheet 4'),
@@ -215,6 +215,18 @@ class RadialAirGapCalculationGroup2 extends Component
                 new Span('Pass or Fail each end'),
                 new Input('is_pass_nde'),
                 new Input('is_pass_de'),
+            ],
+            [
+                new Span('General remarks :'),
+            ], [
+
+                new Span('Note When cartiridge housing include additional clearance.')
+            ], [
+                new Span('Drawing :'),
+                new Span('For equipment of special design configurations, please complete a sketch using extra pages as required.
+                <br />
+                Show dimensions, calculated gaps, max/min permissible gaps,  pass / fail.
+                ')
             ]
         ];
     }
