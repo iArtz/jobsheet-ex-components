@@ -71,7 +71,7 @@ class Input extends FormElement
                 $imageUrl = htmlspecialchars($this->data ?? 'https://placehold.co/300x200');
                 $input = <<<HTML
                             <div class="flex flex-col justify-between p-4">
-                                    <img src="{$imageUrl}">
+                                    <img src="{$imageUrl}" id="{$this->name}">
                                     <span class="text-center text-xs">{$this->title}</span>
                             </div>
                         HTML;

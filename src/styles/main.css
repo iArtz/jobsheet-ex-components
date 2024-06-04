@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-  .container {
-    @apply min-w-[900px];
-  }
   fieldset {
     @apply block ms-1 me-1 ps-2 pe-2 pb-2 contain-inline-size;
     border-width: 2px;
@@ -152,6 +149,146 @@
     }
     div:last-child {
       @apply py-5;
+    }
+  }
+  #radial_air_gab_calculation_form > fieldset {
+    div {
+      @apply my-4;
+    }
+    div > span {
+      @apply w-full font-bold;
+    }
+    div > input {
+      @apply w-24 mx-2 bg-yellow-100 border-black border-2 border-solid;
+    }
+    div > span:not(span:first-child) {
+      @apply text-red-500 font-extrabold italic w-1/6 justify-end;
+    }
+
+    div:nth-child(3) > span,
+    div:nth-child(n + 5) > span {
+      @apply text-left;
+    }
+
+    div:nth-child(6) {
+      @apply w-3/4 max-w-[71%] min-w-min items-center;
+    }
+    div:nth-child(6) > input {
+      @apply h-full py-4;
+    }
+    div:nth-child(11) {
+      @apply w-full items-center;
+    }
+    div:nth-child(11) > input {
+      @apply h-full py-4;
+    }
+    div:nth-child(15) {
+      input {
+        @apply bg-blue-100;
+      }
+      span:last-child {
+        @apply text-transparent;
+      }
+    }
+    div:nth-child(16) {
+      @apply -mx-2 my-10 border border-black;
+    }
+
+    div:nth-child(n + 18) {
+      @apply pl-10;
+    }
+  }
+  #radial_air_gap_calc_group_2_form > fieldset {
+    div:nth-child(2) > span {
+      @apply font-extrabold text-left;
+    }
+    #img_1 {
+      @apply max-w-md;
+    }
+
+    div:nth-child(6) {
+      span {
+        @apply w-4/12;
+      }
+      span:nth-child(even) {
+        @apply w-24 border border-solid border-black border-collapse border-b-0 text-red-500 font-bold;
+      }
+    }
+
+    div:nth-child(7) {
+      span {
+        @apply w-4/12;
+      }
+
+      span:nth-child(odd) {
+        @apply text-left;
+      }
+      span:nth-child(even) {
+        @apply w-24 border border-solid border-black border-collapse border-t-0;
+        font-size: 8px;
+      }
+    }
+
+    div:nth-child(n + 8) > span {
+      @apply w-4/12 text-left px-1;
+    }
+
+    div > span + input {
+      @apply w-24 border border-black border-solid bg-yellow-100;
+    }
+    div:nth-child(10) > span + input,
+    div:nth-child(14) > span + input,
+    div:nth-child(18) > span + input {
+      @apply bg-green-100;
+    }
+    div:nth-child(18) > span + input {
+      @apply h-8 justify-items-center;
+    }
+    div:nth-child(n + 19) {
+      @apply justify-end mr-1;
+    }
+
+    div:nth-child(n + 19) > span {
+      @apply w-1/2;
+    }
+    div:nth-child(n + 19) > span {
+      @apply text-center font-bold;
+    }
+    div:nth-child(19) > span:not(:first-child) {
+      @apply w-24 text-red-500 border border-black mt-4;
+    }
+    div:nth-child(n + 19) > input {
+      @apply w-24 border border-black border-solid;
+    }
+    div:nth-child(20) > input {
+      @apply bg-yellow-100;
+    }
+    div:nth-child(21) > span {
+      @apply font-normal;
+    }
+    div:nth-child(n + 21) > span > span {
+      @apply font-bold;
+    }
+    div:nth-child(n + 21) > input {
+      @apply bg-green-100;
+    }
+    div:nth-child(21) > input {
+      @apply h-8;
+    }
+    div:nth-child(n + 24) > span {
+      @apply w-full text-left;
+    }
+    div:nth-child(25) > span {
+      @apply font-normal ml-4;
+    }
+    div:nth-child(25) {
+      @apply border-b-2 pb-4 border-black -mx-2;
+    }
+    div:nth-child(26) {
+      @apply justify-around;
+    }
+    div:nth-child(26) > span:last-child {
+      @apply font-normal;
     }
   }
 }

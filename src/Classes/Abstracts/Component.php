@@ -25,7 +25,7 @@ abstract class Component
 
     protected static function combineElements(Fieldset $container): FormElement
     {
-        $containerClasses = ['flex', 'justify-around', 'justify-items-center'];
+        $containerClasses = ['flex', 'justify-around'];
 
         foreach (static::createElements() as $key => $element) {
             $row = new ContainerElement($key, $containerClasses);

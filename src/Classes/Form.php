@@ -7,13 +7,19 @@ use Jobsheet\Ex\Classes\Fieldset;
 
 class Form extends FieldComposite
 {
-    protected $url;
+    protected string $url;
+    protected string $method;
 
     public function __construct(string $name, string $title, string $url, string $method = 'POST')
     {
         parent::__construct($name, $title);
-        $this->url = $url;
+        $this->url = static::hasId() ? join('', [$url, $_GET['id']]) : $url;
         $this->method = $method;
+    }
+
+    private static function hasId()
+    {
+        return !empty($_GET['id']) ? true : false;
     }
 
     private function titleHandler()
