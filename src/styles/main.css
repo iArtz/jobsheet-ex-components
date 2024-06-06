@@ -309,4 +309,104 @@
       @apply w-full ml-0;
     }
   }
+
+  #measuring_devices_and_instruments_form > fieldset {
+    .flex > * {
+      @apply content-center;
+    }
+    span,
+    input {
+      @apply w-full border border-black border-solid text-xs/3;
+    }
+    div:nth-child(2) > span:first-child {
+      @apply bg-red-100;
+    }
+    div:nth-child(2) > span:last-child {
+      @apply bg-green-100;
+    }
+    div:nth-child(n + 3) > span:first-child,
+    div:nth-child(n + 3) > span:nth-child(5) {
+      @apply min-w-fit max-w-7;
+    }
+    div:nth-child(n + 3) > span:nth-child(2),
+    div:nth-child(n + 3) > span:nth-child(6) {
+      @apply min-w-10 max-w-full w-[50rem];
+    }
+    div:nth-child(n + 4) > span:nth-child(2),
+    div:nth-child(n + 4) > span:nth-child(6) {
+      @apply text-left pl-0.5;
+    }
+    div:nth-child(n + 3) > span:nth-child(3),
+    div:nth-child(n + 3) > span:nth-child(7) {
+      @apply min-w-10 max-w-full w-96;
+    }
+    div:nth-child(n + 4) > input:nth-child(3),
+    div:nth-child(n + 4) > input:nth-child(7) {
+      @apply min-w-10 max-w-full w-96;
+    }
+    div:nth-child(n + 3) > span:nth-child(4),
+    div:nth-child(n + 3) > span:nth-child(8) {
+      @apply min-w-10 max-w-full w-96;
+    }
+    div:nth-child(n + 4) > input:nth-child(4),
+    div:nth-child(n + 4) > input:nth-child(8) {
+      @apply min-w-10 max-w-full w-96;
+    }
+
+    div > label + input {
+      @apply my-2;
+    }
+    div:nth-child(22) {
+      @apply border-t-2 border-black -mx-2 justify-start;
+    }
+    div:nth-child(22) > span {
+      @apply border-none mt-1 ml-6 font-bold;
+    }
+    div:nth-child(23) {
+      @apply justify-start border-black -mx-2;
+    }
+    div:nth-child(23) > label {
+      @apply ml-10;
+    }
+    div:nth-child(23) > label + input {
+      @apply w-20 border-x-0 border-t-0;
+    }
+    div:nth-child(23) > span {
+      @apply border-none !w-10;
+    }
+    div:nth-child(24) {
+      @apply border-t-2 border-black -mx-2 justify-start;
+    }
+    div:nth-child(24) > span {
+      @apply border-none mt-1 ml-6 font-bold;
+    }
+    div:nth-child(25) {
+      @apply justify-evenly items-center;
+    }
+    div:nth-child(25) > span:nth-child(even) {
+      @apply border-none;
+    }
+    div:nth-child(25) span:nth-child(odd) {
+      @apply mx-12 p-5 !w-20 font-extrabold;
+    }
+    div:nth-child(26) > span:first-child {
+      @apply -ml-10 items-end;
+    }
+    div:nth-child(26) > span:last-child {
+      @apply ml-10 items-end;
+    }
+    div:nth-child(26) span {
+      @apply border-none !w-fit min-w-fit max-w-fit;
+    }
+    div:nth-child(27) > div {
+      @apply justify-end items-center;
+    }
+    div:nth-child(27) > div:nth-child(1),
+    div:nth-child(27) > div:nth-child(2) {
+      @apply w-fit;
+    }
+    div:nth-child(27) > div > input {
+      @apply h-8 w-8;
+    }
+  }
 }

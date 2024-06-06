@@ -23,6 +23,7 @@ use Jobsheet\Ex\Type\A\Components\LockedRotorTestDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetails;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsDC;
 use Jobsheet\Ex\Type\A\Components\MachineDetailsSinglePhase;
+use Jobsheet\Ex\Type\A\Components\MeasuringDevicesAndInstruments;
 use Jobsheet\Ex\Type\A\Components\MechanicalRepairing;
 use Jobsheet\Ex\Type\A\Components\OthersComponents;
 use Jobsheet\Ex\Type\A\Components\Pictures;
@@ -100,6 +101,7 @@ class A extends Container
         RadialAirGabCalculation::class,
         RadialAirGapCalculationGroup2::class,
         OthersComponents::class,
+        MeasuringDevicesAndInstruments::class,
     ];
 
     protected static function renderHTML(): string
