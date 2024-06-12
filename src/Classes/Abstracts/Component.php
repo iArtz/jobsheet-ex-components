@@ -78,7 +78,7 @@ abstract class Component
         }
 
         if ($name == 'getData') {
-            return (static::class)::$data;
+            return static::$data;
         }
     }
 }

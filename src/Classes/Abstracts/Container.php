@@ -44,7 +44,8 @@ abstract class Container
         $data = [];
         foreach (static::$components as $key => $component) {
             if (is_subclass_of($component, Component::class)) {
-                $data[] = $component::getData();
+                $componentName = array_key_first($component::getData());
+                $data[$componentName] = $component::getData()[$componentName];
             }
         }
         return $data;
