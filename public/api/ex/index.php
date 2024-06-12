@@ -10,18 +10,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
         Helper::export($_POST);
         break;
 
-    default:
+    default: // GET Request
         if (empty($_SERVER['PATH_INFO'])) return;
         preg_match('/\d.*/', $_SERVER['PATH_INFO'], $id);
-        $data = [
-            'id' => array_pop($id),
-            'data' => [
-                'D' => '',
-                'component' => 'radial_air_gab_calculation',
-            ]
-        ];
-
+        $mockData['id'] = $id;
+        // Get data from DB
+        $json = <<<JSON
+                {"header":[{"single_phase":true,"2_speed":true,"lv":true,"mv":true,"dc":true},{"job_no":"Job No","incoming_date":"2024-01-01","delivery_date":"2024-01-01"},{"customer":"Ei-Ei","tel":"02-xxx-xxxx","fax":"02-xxx-xxxx"}]}
+                JSON;
+        $mockData = json_decode($json, true);
         header('Content-Type: application/json');
-        echo json_encode($data);
+        echo json_encode($mockData);
         break;
 }

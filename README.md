@@ -50,7 +50,7 @@ $data = [
     'showAll' => true,
     // 'develop' => true,
     // 'debug' => true,
-    // 'motorType' => MotorType::DC,
+    // 'motor_type' => MotorType::DC,
 ];
 
 A::setData($data);
