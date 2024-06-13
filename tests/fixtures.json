@@ -1,0 +1,3175 @@
+{
+  "header": [
+    {
+      "single_phase": true,
+      "2_speed": true,
+      "lv": true,
+      "mv": true,
+      "dc": true
+    },
+    {
+      "job_no": "Job No",
+      "incoming_date": "2024-01-01",
+      "delivery_date": "2024-01-01"
+    },
+    { "customer": "Customer", "tel": "02-xxx-xxxx", "fax": "02-xxx-xxxx" }
+  ],
+  "machine_details": [
+    { "frame": "Frame", "type": "Type" },
+    { "manufacture": "Manufacture", "model": "Model", "ser_no": "Ser.No" },
+    {
+      "power": "Power",
+      "power_unit": "kW",
+      "speed": "Speed",
+      "speed_unit": "Pole",
+      "insulation_class": "Insulation Class",
+      "design": "Design"
+    },
+    {
+      "voltage": "Voltage",
+      "frequency": "Frequency",
+      "temp-rise_class": "Temp.Rise Class",
+      "duty": "Duty"
+    },
+    { "current": "Current", "cos": "Cos.\u03c6", "ip": "IP", "sf": "SF" },
+    { "performance": "BS/IEC/Other (performance)" }
+  ],
+  "machine_details_single_phase": [
+    { "frame": "Frame", "type": "Type" },
+    { "manufacture": "Manufacture", "model": "Model", "ser_no": "Ser.No" },
+    {
+      "power": "Power",
+      "power_unit": "W",
+      "speed": "Speed",
+      "speed_unit": "Pole",
+      "insulation_class": "Insulation Class",
+      "ip": "IP"
+    },
+    {
+      "voltage": "Voltage",
+      "frequency": "Frequency",
+      "temp-rise_class": "Temp.Rise Class",
+      "cos": "Cos.\u03c6"
+    },
+    {
+      "current_a": "Current",
+      "cap-start_uF": "Cap.Start",
+      "cap-start_v": "V.",
+      "cap-run": "Cap.Run",
+      "cap-run_v": "V."
+    },
+    { "performance": "BS/IEC/Other (performance)" }
+  ],
+  "machine_details_dc": [
+    { "frame": "Frame", "type": "Type" },
+    { "manufacture": "Manufacture", "model": "Model", "ser_no": "Ser.No" },
+    {
+      "power": "Power",
+      "power_unit": "W",
+      "speed": "Speed",
+      "speed_unit": "Pole",
+      "insulation_class": "Insulation Class",
+      "ip": "IP"
+    },
+    {
+      "arm-voltage": "Arm.Voltage",
+      "arm-current": "Arm.Current",
+      "temp-rise_class": "Temp.Rise Class",
+      "duty": "Duty"
+    },
+    {
+      "field_voltage": "Field Voltage",
+      "field_current": "Field Current",
+      "ip": "IP",
+      "sf": "SF"
+    },
+    { "performance": "BS/IEC/Other (performance)" }
+  ],
+  "certification_details": [
+    {
+      "ce_mark": "CE Mark",
+      "notified_body_no": "Notified Body no",
+      "certificate_no": "Certificate No"
+    },
+    { "motor_group": "I", "gas_group": "A", "equipment_category": "1" },
+    {
+      "environment": "GD (Gas and Dust)",
+      "equipment_protection_level": "a",
+      "protection_type": "Ex e"
+    },
+    {
+      "ex": "Ex",
+      "te": "tE",
+      "ia-in": "IA/IN",
+      "ip": "IP",
+      "temperature_class": "Temperature class"
+    },
+    {
+      "performance": "BS/IEC/Other (performance)",
+      "year_of_certificate": "Year of Certificate"
+    },
+    {
+      "special_certificate": "Special certificate or manufacturer's requirements"
+    }
+  ],
+  "pictures": [
+    { "cw": true, "ccw": true, "na": true },
+    {
+      "incoming_picture": "https://placehold.co/300x200/orange/blue",
+      "final_picture": "https://placehold.co/300x200/orange/blue"
+    }
+  ],
+  "pictures_dc": [
+    { "cw": true, "ccw": true, "na": true },
+    { "brush_arm_45": true, "brush_arm_90": true },
+    {
+      "sm-circle_135": true,
+      "sm-circle_45": true,
+      "sm-circle_315": true,
+      "sm-circle_235": true
+    },
+    {
+      "md-circle_90": true,
+      "md-circle_360": true,
+      "md-circle_270": true,
+      "md-circle_180": true
+    }
+  ],
+  "static_test": [{ "incoming": "Incoming", "final": "Final" }],
+  "resistance_inductance_test": [
+    [],
+    {
+      "resistance_incoming_values_unit": "\u03a9",
+      "inductance_incoming_values_unit": "mH",
+      "resistance_final_values_unit": "\u03a9",
+      "inductance_final_values_unit": "mH"
+    },
+    {
+      "resistance_incoming_marking_1": "*",
+      "resistance_incoming_value_1": "*",
+      "inductance_incoming_marking_1": "*",
+      "inductance_incoming_value_1": "*",
+      "resistance_final_marking_1": "*",
+      "resistance_final_value_1": "*",
+      "inductance_final_marking_1": "*",
+      "inductance_final_value_1": "*"
+    },
+    {
+      "resistance_incoming_marking_2": "*",
+      "resistance_incoming_value_2": "*",
+      "inductance_incoming_marking_2": "*",
+      "inductance_incoming_value_2": "*",
+      "resistance_final_marking_2": "*",
+      "resistance_final_value_2": "*",
+      "inductance_final_marking_2": "*",
+      "inductance_final_value_2": "*"
+    },
+    {
+      "resistance_incoming_marking_3": "*",
+      "resistance_incoming_value_3": "*",
+      "inductance_incoming_marking_3": "*",
+      "inductance_incoming_value_3": "*",
+      "resistance_final_marking_3": "*",
+      "resistance_final_value_3": "*",
+      "inductance_final_marking_3": "*",
+      "inductance_final_value_3": "*"
+    },
+    {
+      "resistance_incoming_id_no": "*",
+      "inductance_incoming_id_no": "*",
+      "resistance_final_id_no": "*",
+      "inductance_final_id_no": "*"
+    }
+  ],
+  "resistance_inductance_test_two_speed": [
+    [],
+    [],
+    {
+      "slow_resistance_incoming_unit": "m\u03a9",
+      "slow_resistance_final_unit": "mH",
+      "slow_inductance_incoming_unit": "m\u03a9",
+      "slow_inductance_final_unit": "mH",
+      "fast_resistance_incoming_unit": "m\u03a9",
+      "fast_resistance_final_unit": "mH",
+      "fast_inductance_incoming_unit": "m\u03a9",
+      "fast_inductance_final_unit": "mH"
+    },
+    {
+      "slow_resistance_incoming_marking_1": "*",
+      "slow_resistance_incoming_value_1": "*",
+      "slow_resistance_final_value_1": "*",
+      "slow_inductance_incoming_value_1": "*",
+      "slow_inductance_final_value_1": "*",
+      "fast_resistance_incoming_marking_1": "*",
+      "fast_resistance_incoming_value_1": "*",
+      "fast_resistance_final_value_1": "*",
+      "fast_inductance_incoming_value_1": "*",
+      "fast_inductance_final_value_1": "*"
+    },
+    {
+      "slow_resistance_incoming_marking_2": "*",
+      "slow_resistance_incoming_value_2": "*",
+      "slow_resistance_final_value_2": "*",
+      "slow_inductance_incoming_value_2": "*",
+      "slow_inductance_final_value_2": "*",
+      "fast_resistance_incoming_marking_2": "*",
+      "fast_resistance_incoming_value_2": "*",
+      "fast_resistance_final_value_2": "*",
+      "fast_inductance_incoming_value_2": "*",
+      "fast_inductance_final_value_2": "*"
+    },
+    {
+      "slow_resistance_incoming_marking_3": "*",
+      "slow_resistance_incoming_value_3": "*",
+      "slow_resistance_final_value_3": "*",
+      "slow_inductance_incoming_value_3": "*",
+      "slow_inductance_final_value_3": "*",
+      "fast_resistance_incoming_marking_3": "*",
+      "fast_resistance_incoming_value_3": "*",
+      "fast_resistance_final_value_3": "*",
+      "fast_inductance_incoming_value_3": "*",
+      "fast_inductance_final_value_3": "*"
+    },
+    {
+      "resistance_incoming_id_no": "*",
+      "inductance_incoming_id_no": "*",
+      "resistance_final_id_no": "*",
+      "inductance_final_id_no": "*"
+    }
+  ],
+  "resistance_inductance_test_single_phase": [
+    [],
+    {
+      "resistance_incoming_unit": "m\u03a9",
+      "resistance_final_unit": "m\u03a9",
+      "inductance_incoming_unit": "m\u03a9",
+      "inductance_final_unit": "m\u03a9"
+    },
+    {
+      "resistance_incoming_value_1": "*",
+      "resistance_final_value_1": "*",
+      "inductance_incoming_volt": "*",
+      "inductance_incoming_value_1": "*",
+      "inductance_final_volt": "*",
+      "inductance_final_value_1": "*"
+    },
+    {
+      "resistance_incoming_value_2": "*",
+      "resistance_final_value_2": "*",
+      "inductance_incoming_value_2": "*",
+      "inductance_final_value_2": "*"
+    },
+    {
+      "resistance_incoming_value_3": "*",
+      "resistance_final_value_3": "*",
+      "inductance_incoming_value_3": "*",
+      "inductance_final_value_3": "*"
+    },
+    {
+      "resistance_incoming_id_no": "*",
+      "inductance_incoming_id_no": "*",
+      "resistance_final_id_no": "*",
+      "inductance_final_id_no": "*"
+    }
+  ],
+  "resistance_inductance_test_dc": [
+    [],
+    [],
+    {
+      "resistance_incoming_shunt_field": "*",
+      "resistance_incoming_interpole": "*",
+      "resistance_incoming_series_field": "*",
+      "resistance_incoming_interpole_compensate": "*"
+    },
+    [],
+    [],
+    {
+      "resistance_final_shunt_field": "*",
+      "resistance_final_interpole": "*",
+      "resistance_final_series_field": "*",
+      "resistance_final_interpole_compensate": "*"
+    }
+  ],
+  "incoming_armature_bar_to_bar_resistance_test": [
+    { "total_bars": "total_bars" },
+    [],
+    [],
+    {
+      "bar_no_1_1": "*",
+      "val_no_1_2": "*",
+      "bar_no_1_3": "*",
+      "val_no_1_4": "*",
+      "bar_no_1_5": "*",
+      "val_no_1_6": "*",
+      "bar_no_1_7": "*",
+      "val_no_1_8": "*",
+      "bar_no_1_9": "*",
+      "val_no_1_10": "*",
+      "bar_no_1_11": "*",
+      "val_no_1_12": "*"
+    },
+    {
+      "bar_no_2_1": "*",
+      "val_no_2_2": "*",
+      "bar_no_2_3": "*",
+      "val_no_2_4": "*",
+      "bar_no_2_5": "*",
+      "val_no_2_6": "*",
+      "bar_no_2_7": "*",
+      "val_no_2_8": "*",
+      "bar_no_2_9": "*",
+      "val_no_2_10": "*",
+      "bar_no_2_11": "*",
+      "val_no_2_12": "*"
+    },
+    {
+      "bar_no_3_1": "*",
+      "val_no_3_2": "*",
+      "bar_no_3_3": "*",
+      "val_no_3_4": "*",
+      "bar_no_3_5": "*",
+      "val_no_3_6": "*",
+      "bar_no_3_7": "*",
+      "val_no_3_8": "*",
+      "bar_no_3_9": "*",
+      "val_no_3_10": "*",
+      "bar_no_3_11": "*",
+      "val_no_3_12": "*"
+    },
+    {
+      "bar_no_4_1": "*",
+      "val_no_4_2": "*",
+      "bar_no_4_3": "*",
+      "val_no_4_4": "*",
+      "bar_no_4_5": "*",
+      "val_no_4_6": "*",
+      "bar_no_4_7": "*",
+      "val_no_4_8": "*",
+      "bar_no_4_9": "*",
+      "val_no_4_10": "*",
+      "bar_no_4_11": "*",
+      "val_no_4_12": "*"
+    },
+    {
+      "bar_no_5_1": "*",
+      "val_no_5_2": "*",
+      "bar_no_5_3": "*",
+      "val_no_5_4": "*",
+      "bar_no_5_5": "*",
+      "val_no_5_6": "*",
+      "bar_no_5_7": "*",
+      "val_no_5_8": "*",
+      "bar_no_5_9": "*",
+      "val_no_5_10": "*",
+      "bar_no_5_11": "*",
+      "val_no_5_12": "*"
+    },
+    {
+      "bar_no_6_1": "*",
+      "val_no_6_2": "*",
+      "bar_no_6_3": "*",
+      "val_no_6_4": "*",
+      "bar_no_6_5": "*",
+      "val_no_6_6": "*",
+      "bar_no_6_7": "*",
+      "val_no_6_8": "*",
+      "bar_no_6_9": "*",
+      "val_no_6_10": "*",
+      "bar_no_6_11": "*",
+      "val_no_6_12": "*"
+    },
+    {
+      "bar_no_7_1": "*",
+      "val_no_7_2": "*",
+      "bar_no_7_3": "*",
+      "val_no_7_4": "*",
+      "bar_no_7_5": "*",
+      "val_no_7_6": "*",
+      "bar_no_7_7": "*",
+      "val_no_7_8": "*",
+      "bar_no_7_9": "*",
+      "val_no_7_10": "*",
+      "bar_no_7_11": "*",
+      "val_no_7_12": "*"
+    },
+    {
+      "bar_no_8_1": "*",
+      "val_no_8_2": "*",
+      "bar_no_8_3": "*",
+      "val_no_8_4": "*",
+      "bar_no_8_5": "*",
+      "val_no_8_6": "*",
+      "bar_no_8_7": "*",
+      "val_no_8_8": "*",
+      "bar_no_8_9": "*",
+      "val_no_8_10": "*",
+      "bar_no_8_11": "*",
+      "val_no_8_12": "*"
+    },
+    {
+      "bar_no_9_1": "*",
+      "val_no_9_2": "*",
+      "bar_no_9_3": "*",
+      "val_no_9_4": "*",
+      "bar_no_9_5": "*",
+      "val_no_9_6": "*",
+      "bar_no_9_7": "*",
+      "val_no_9_8": "*",
+      "bar_no_9_9": "*",
+      "val_no_9_10": "*",
+      "bar_no_9_11": "*",
+      "val_no_9_12": "*"
+    },
+    {
+      "bar_no_10_1": "*",
+      "val_no_10_2": "*",
+      "bar_no_10_3": "*",
+      "val_no_10_4": "*",
+      "bar_no_10_5": "*",
+      "val_no_10_6": "*",
+      "bar_no_10_7": "*",
+      "val_no_10_8": "*",
+      "bar_no_10_9": "*",
+      "val_no_10_10": "*",
+      "bar_no_10_11": "*",
+      "val_no_10_12": "*"
+    },
+    {
+      "bar_no_11_1": "*",
+      "val_no_11_2": "*",
+      "bar_no_11_3": "*",
+      "val_no_11_4": "*",
+      "bar_no_11_5": "*",
+      "val_no_11_6": "*",
+      "bar_no_11_7": "*",
+      "val_no_11_8": "*",
+      "bar_no_11_9": "*",
+      "val_no_11_10": "*",
+      "bar_no_11_11": "*",
+      "val_no_11_12": "*"
+    },
+    {
+      "bar_no_12_1": "*",
+      "val_no_12_2": "*",
+      "bar_no_12_3": "*",
+      "val_no_12_4": "*",
+      "bar_no_12_5": "*",
+      "val_no_12_6": "*",
+      "bar_no_12_7": "*",
+      "val_no_12_8": "*",
+      "bar_no_12_9": "*",
+      "val_no_12_10": "*",
+      "bar_no_12_11": "*",
+      "val_no_12_12": "*"
+    },
+    {
+      "bar_no_13_1": "*",
+      "val_no_13_2": "*",
+      "bar_no_13_3": "*",
+      "val_no_13_4": "*",
+      "bar_no_13_5": "*",
+      "val_no_13_6": "*",
+      "bar_no_13_7": "*",
+      "val_no_13_8": "*",
+      "bar_no_13_9": "*",
+      "val_no_13_10": "*",
+      "bar_no_13_11": "*",
+      "val_no_13_12": "*"
+    },
+    {
+      "bar_no_14_1": "*",
+      "val_no_14_2": "*",
+      "bar_no_14_3": "*",
+      "val_no_14_4": "*",
+      "bar_no_14_5": "*",
+      "val_no_14_6": "*",
+      "bar_no_14_7": "*",
+      "val_no_14_8": "*",
+      "bar_no_14_9": "*",
+      "val_no_14_10": "*",
+      "bar_no_14_11": "*",
+      "val_no_14_12": "*"
+    },
+    {
+      "bar_no_15_1": "*",
+      "val_no_15_2": "*",
+      "bar_no_15_3": "*",
+      "val_no_15_4": "*",
+      "bar_no_15_5": "*",
+      "val_no_15_6": "*",
+      "bar_no_15_7": "*",
+      "val_no_15_8": "*",
+      "bar_no_15_9": "*",
+      "val_no_15_10": "*",
+      "bar_no_15_11": "*",
+      "val_no_15_12": "*"
+    },
+    {
+      "bar_no_16_1": "*",
+      "val_no_16_2": "*",
+      "bar_no_16_3": "*",
+      "val_no_16_4": "*",
+      "bar_no_16_5": "*",
+      "val_no_16_6": "*",
+      "bar_no_16_7": "*",
+      "val_no_16_8": "*",
+      "bar_no_16_9": "*",
+      "val_no_16_10": "*",
+      "bar_no_16_11": "*",
+      "val_no_16_12": "*"
+    },
+    {
+      "bar_no_17_1": "*",
+      "val_no_17_2": "*",
+      "bar_no_17_3": "*",
+      "val_no_17_4": "*",
+      "bar_no_17_5": "*",
+      "val_no_17_6": "*",
+      "bar_no_17_7": "*",
+      "val_no_17_8": "*",
+      "bar_no_17_9": "*",
+      "val_no_17_10": "*",
+      "bar_no_17_11": "*",
+      "val_no_17_12": "*"
+    },
+    {
+      "bar_no_18_1": "*",
+      "val_no_18_2": "*",
+      "bar_no_18_3": "*",
+      "val_no_18_4": "*",
+      "bar_no_18_5": "*",
+      "val_no_18_6": "*",
+      "bar_no_18_7": "*",
+      "val_no_18_8": "*",
+      "bar_no_18_9": "*",
+      "val_no_18_10": "*",
+      "bar_no_18_11": "*",
+      "val_no_18_12": "*"
+    },
+    {
+      "bar_no_19_1": "*",
+      "val_no_19_2": "*",
+      "bar_no_19_3": "*",
+      "val_no_19_4": "*",
+      "bar_no_19_5": "*",
+      "val_no_19_6": "*",
+      "bar_no_19_7": "*",
+      "val_no_19_8": "*",
+      "bar_no_19_9": "*",
+      "val_no_19_10": "*",
+      "bar_no_19_11": "*",
+      "val_no_19_12": "*"
+    },
+    {
+      "bar_no_20_1": "*",
+      "val_no_20_2": "*",
+      "bar_no_20_3": "*",
+      "val_no_20_4": "*",
+      "bar_no_20_5": "*",
+      "val_no_20_6": "*",
+      "bar_no_20_7": "*",
+      "val_no_20_8": "*",
+      "bar_no_20_9": "*",
+      "val_no_20_10": "*",
+      "bar_no_20_11": "*",
+      "val_no_20_12": "*"
+    },
+    {
+      "bar_no_21_1": "*",
+      "val_no_21_2": "*",
+      "bar_no_21_3": "*",
+      "val_no_21_4": "*",
+      "bar_no_21_5": "*",
+      "val_no_21_6": "*",
+      "bar_no_21_7": "*",
+      "val_no_21_8": "*",
+      "bar_no_21_9": "*",
+      "val_no_21_10": "*",
+      "bar_no_21_11": "*",
+      "val_no_21_12": "*"
+    },
+    {
+      "bar_no_22_1": "*",
+      "val_no_22_2": "*",
+      "bar_no_22_3": "*",
+      "val_no_22_4": "*",
+      "bar_no_22_5": "*",
+      "val_no_22_6": "*",
+      "bar_no_22_7": "*",
+      "val_no_22_8": "*",
+      "bar_no_22_9": "*",
+      "val_no_22_10": "*",
+      "bar_no_22_11": "*",
+      "val_no_22_12": "*"
+    },
+    {
+      "bar_no_23_1": "*",
+      "val_no_23_2": "*",
+      "bar_no_23_3": "*",
+      "val_no_23_4": "*",
+      "bar_no_23_5": "*",
+      "val_no_23_6": "*",
+      "bar_no_23_7": "*",
+      "val_no_23_8": "*",
+      "bar_no_23_9": "*",
+      "val_no_23_10": "*",
+      "bar_no_23_11": "*",
+      "val_no_23_12": "*"
+    },
+    {
+      "bar_no_24_1": "*",
+      "val_no_24_2": "*",
+      "bar_no_24_3": "*",
+      "val_no_24_4": "*",
+      "bar_no_24_5": "*",
+      "val_no_24_6": "*",
+      "bar_no_24_7": "*",
+      "val_no_24_8": "*",
+      "bar_no_24_9": "*",
+      "val_no_24_10": "*",
+      "bar_no_24_11": "*",
+      "val_no_24_12": "*"
+    },
+    {
+      "bar_no_25_1": "*",
+      "val_no_25_2": "*",
+      "bar_no_25_3": "*",
+      "val_no_25_4": "*",
+      "bar_no_25_5": "*",
+      "val_no_25_6": "*",
+      "bar_no_25_7": "*",
+      "val_no_25_8": "*",
+      "bar_no_25_9": "*",
+      "val_no_25_10": "*",
+      "bar_no_25_11": "*",
+      "val_no_25_12": "*"
+    },
+    {
+      "bar_no_26_1": "*",
+      "val_no_26_2": "*",
+      "bar_no_26_3": "*",
+      "val_no_26_4": "*",
+      "bar_no_26_5": "*",
+      "val_no_26_6": "*",
+      "bar_no_26_7": "*",
+      "val_no_26_8": "*",
+      "bar_no_26_9": "*",
+      "val_no_26_10": "*",
+      "bar_no_26_11": "*",
+      "val_no_26_12": "*"
+    },
+    {
+      "bar_no_27_1": "*",
+      "val_no_27_2": "*",
+      "bar_no_27_3": "*",
+      "val_no_27_4": "*",
+      "bar_no_27_5": "*",
+      "val_no_27_6": "*",
+      "bar_no_27_7": "*",
+      "val_no_27_8": "*",
+      "bar_no_27_9": "*",
+      "val_no_27_10": "*",
+      "bar_no_27_11": "*",
+      "val_no_27_12": "*"
+    },
+    {
+      "bar_no_28_1": "*",
+      "val_no_28_2": "*",
+      "bar_no_28_3": "*",
+      "val_no_28_4": "*",
+      "bar_no_28_5": "*",
+      "val_no_28_6": "*",
+      "bar_no_28_7": "*",
+      "val_no_28_8": "*",
+      "bar_no_28_9": "*",
+      "val_no_28_10": "*",
+      "bar_no_28_11": "*",
+      "val_no_28_12": "*"
+    },
+    {
+      "bar_no_29_1": "*",
+      "val_no_29_2": "*",
+      "bar_no_29_3": "*",
+      "val_no_29_4": "*",
+      "bar_no_29_5": "*",
+      "val_no_29_6": "*",
+      "bar_no_29_7": "*",
+      "val_no_29_8": "*",
+      "bar_no_29_9": "*",
+      "val_no_29_10": "*",
+      "bar_no_29_11": "*",
+      "val_no_29_12": "*"
+    },
+    {
+      "bar_no_30_1": "*",
+      "val_no_30_2": "*",
+      "bar_no_30_3": "*",
+      "val_no_30_4": "*",
+      "bar_no_30_5": "*",
+      "val_no_30_6": "*",
+      "bar_no_30_7": "*",
+      "val_no_30_8": "*",
+      "bar_no_30_9": "*",
+      "val_no_30_10": "*",
+      "bar_no_30_11": "*",
+      "val_no_30_12": "*"
+    },
+    {
+      "bar_no_31_1": "*",
+      "val_no_31_2": "*",
+      "bar_no_31_3": "*",
+      "val_no_31_4": "*",
+      "bar_no_31_5": "*",
+      "val_no_31_6": "*",
+      "bar_no_31_7": "*",
+      "val_no_31_8": "*",
+      "bar_no_31_9": "*",
+      "val_no_31_10": "*",
+      "bar_no_31_11": "*",
+      "val_no_31_12": "*"
+    },
+    {
+      "bar_no_32_1": "*",
+      "val_no_32_2": "*",
+      "bar_no_32_3": "*",
+      "val_no_32_4": "*",
+      "bar_no_32_5": "*",
+      "val_no_32_6": "*",
+      "bar_no_32_7": "*",
+      "val_no_32_8": "*",
+      "bar_no_32_9": "*",
+      "val_no_32_10": "*",
+      "bar_no_32_11": "*",
+      "val_no_32_12": "*"
+    },
+    {
+      "bar_no_33_1": "*",
+      "val_no_33_2": "*",
+      "bar_no_33_3": "*",
+      "val_no_33_4": "*",
+      "bar_no_33_5": "*",
+      "val_no_33_6": "*",
+      "bar_no_33_7": "*",
+      "val_no_33_8": "*",
+      "bar_no_33_9": "*",
+      "val_no_33_10": "*",
+      "bar_no_33_11": "*",
+      "val_no_33_12": "*"
+    },
+    {
+      "bar_no_34_1": "*",
+      "val_no_34_2": "*",
+      "bar_no_34_3": "*",
+      "val_no_34_4": "*",
+      "bar_no_34_5": "*",
+      "val_no_34_6": "*",
+      "bar_no_34_7": "*",
+      "val_no_34_8": "*",
+      "bar_no_34_9": "*",
+      "val_no_34_10": "*",
+      "bar_no_34_11": "*",
+      "val_no_34_12": "*"
+    },
+    {
+      "bar_no_35_1": "*",
+      "val_no_35_2": "*",
+      "bar_no_35_3": "*",
+      "val_no_35_4": "*",
+      "bar_no_35_5": "*",
+      "val_no_35_6": "*",
+      "bar_no_35_7": "*",
+      "val_no_35_8": "*",
+      "bar_no_35_9": "*",
+      "val_no_35_10": "*",
+      "bar_no_35_11": "*",
+      "val_no_35_12": "*"
+    }
+  ],
+  "final_armature_bar_to_bar_resistance_test": [
+    { "total_bars": "total_bars" },
+    [],
+    [],
+    {
+      "bar_no_1_1": "*",
+      "val_no_1_2": "*",
+      "bar_no_1_3": "*",
+      "val_no_1_4": "*",
+      "bar_no_1_5": "*",
+      "val_no_1_6": "*",
+      "bar_no_1_7": "*",
+      "val_no_1_8": "*",
+      "bar_no_1_9": "*",
+      "val_no_1_10": "*",
+      "bar_no_1_11": "*",
+      "val_no_1_12": "*"
+    },
+    {
+      "bar_no_2_1": "*",
+      "val_no_2_2": "*",
+      "bar_no_2_3": "*",
+      "val_no_2_4": "*",
+      "bar_no_2_5": "*",
+      "val_no_2_6": "*",
+      "bar_no_2_7": "*",
+      "val_no_2_8": "*",
+      "bar_no_2_9": "*",
+      "val_no_2_10": "*",
+      "bar_no_2_11": "*",
+      "val_no_2_12": "*"
+    },
+    {
+      "bar_no_3_1": "*",
+      "val_no_3_2": "*",
+      "bar_no_3_3": "*",
+      "val_no_3_4": "*",
+      "bar_no_3_5": "*",
+      "val_no_3_6": "*",
+      "bar_no_3_7": "*",
+      "val_no_3_8": "*",
+      "bar_no_3_9": "*",
+      "val_no_3_10": "*",
+      "bar_no_3_11": "*",
+      "val_no_3_12": "*"
+    },
+    {
+      "bar_no_4_1": "*",
+      "val_no_4_2": "*",
+      "bar_no_4_3": "*",
+      "val_no_4_4": "*",
+      "bar_no_4_5": "*",
+      "val_no_4_6": "*",
+      "bar_no_4_7": "*",
+      "val_no_4_8": "*",
+      "bar_no_4_9": "*",
+      "val_no_4_10": "*",
+      "bar_no_4_11": "*",
+      "val_no_4_12": "*"
+    },
+    {
+      "bar_no_5_1": "*",
+      "val_no_5_2": "*",
+      "bar_no_5_3": "*",
+      "val_no_5_4": "*",
+      "bar_no_5_5": "*",
+      "val_no_5_6": "*",
+      "bar_no_5_7": "*",
+      "val_no_5_8": "*",
+      "bar_no_5_9": "*",
+      "val_no_5_10": "*",
+      "bar_no_5_11": "*",
+      "val_no_5_12": "*"
+    },
+    {
+      "bar_no_6_1": "*",
+      "val_no_6_2": "*",
+      "bar_no_6_3": "*",
+      "val_no_6_4": "*",
+      "bar_no_6_5": "*",
+      "val_no_6_6": "*",
+      "bar_no_6_7": "*",
+      "val_no_6_8": "*",
+      "bar_no_6_9": "*",
+      "val_no_6_10": "*",
+      "bar_no_6_11": "*",
+      "val_no_6_12": "*"
+    },
+    {
+      "bar_no_7_1": "*",
+      "val_no_7_2": "*",
+      "bar_no_7_3": "*",
+      "val_no_7_4": "*",
+      "bar_no_7_5": "*",
+      "val_no_7_6": "*",
+      "bar_no_7_7": "*",
+      "val_no_7_8": "*",
+      "bar_no_7_9": "*",
+      "val_no_7_10": "*",
+      "bar_no_7_11": "*",
+      "val_no_7_12": "*"
+    },
+    {
+      "bar_no_8_1": "*",
+      "val_no_8_2": "*",
+      "bar_no_8_3": "*",
+      "val_no_8_4": "*",
+      "bar_no_8_5": "*",
+      "val_no_8_6": "*",
+      "bar_no_8_7": "*",
+      "val_no_8_8": "*",
+      "bar_no_8_9": "*",
+      "val_no_8_10": "*",
+      "bar_no_8_11": "*",
+      "val_no_8_12": "*"
+    },
+    {
+      "bar_no_9_1": "*",
+      "val_no_9_2": "*",
+      "bar_no_9_3": "*",
+      "val_no_9_4": "*",
+      "bar_no_9_5": "*",
+      "val_no_9_6": "*",
+      "bar_no_9_7": "*",
+      "val_no_9_8": "*",
+      "bar_no_9_9": "*",
+      "val_no_9_10": "*",
+      "bar_no_9_11": "*",
+      "val_no_9_12": "*"
+    },
+    {
+      "bar_no_10_1": "*",
+      "val_no_10_2": "*",
+      "bar_no_10_3": "*",
+      "val_no_10_4": "*",
+      "bar_no_10_5": "*",
+      "val_no_10_6": "*",
+      "bar_no_10_7": "*",
+      "val_no_10_8": "*",
+      "bar_no_10_9": "*",
+      "val_no_10_10": "*",
+      "bar_no_10_11": "*",
+      "val_no_10_12": "*"
+    },
+    {
+      "bar_no_11_1": "*",
+      "val_no_11_2": "*",
+      "bar_no_11_3": "*",
+      "val_no_11_4": "*",
+      "bar_no_11_5": "*",
+      "val_no_11_6": "*",
+      "bar_no_11_7": "*",
+      "val_no_11_8": "*",
+      "bar_no_11_9": "*",
+      "val_no_11_10": "*",
+      "bar_no_11_11": "*",
+      "val_no_11_12": "*"
+    },
+    {
+      "bar_no_12_1": "*",
+      "val_no_12_2": "*",
+      "bar_no_12_3": "*",
+      "val_no_12_4": "*",
+      "bar_no_12_5": "*",
+      "val_no_12_6": "*",
+      "bar_no_12_7": "*",
+      "val_no_12_8": "*",
+      "bar_no_12_9": "*",
+      "val_no_12_10": "*",
+      "bar_no_12_11": "*",
+      "val_no_12_12": "*"
+    },
+    {
+      "bar_no_13_1": "*",
+      "val_no_13_2": "*",
+      "bar_no_13_3": "*",
+      "val_no_13_4": "*",
+      "bar_no_13_5": "*",
+      "val_no_13_6": "*",
+      "bar_no_13_7": "*",
+      "val_no_13_8": "*",
+      "bar_no_13_9": "*",
+      "val_no_13_10": "*",
+      "bar_no_13_11": "*",
+      "val_no_13_12": "*"
+    },
+    {
+      "bar_no_14_1": "*",
+      "val_no_14_2": "*",
+      "bar_no_14_3": "*",
+      "val_no_14_4": "*",
+      "bar_no_14_5": "*",
+      "val_no_14_6": "*",
+      "bar_no_14_7": "*",
+      "val_no_14_8": "*",
+      "bar_no_14_9": "*",
+      "val_no_14_10": "*",
+      "bar_no_14_11": "*",
+      "val_no_14_12": "*"
+    },
+    {
+      "bar_no_15_1": "*",
+      "val_no_15_2": "*",
+      "bar_no_15_3": "*",
+      "val_no_15_4": "*",
+      "bar_no_15_5": "*",
+      "val_no_15_6": "*",
+      "bar_no_15_7": "*",
+      "val_no_15_8": "*",
+      "bar_no_15_9": "*",
+      "val_no_15_10": "*",
+      "bar_no_15_11": "*",
+      "val_no_15_12": "*"
+    },
+    {
+      "bar_no_16_1": "*",
+      "val_no_16_2": "*",
+      "bar_no_16_3": "*",
+      "val_no_16_4": "*",
+      "bar_no_16_5": "*",
+      "val_no_16_6": "*",
+      "bar_no_16_7": "*",
+      "val_no_16_8": "*",
+      "bar_no_16_9": "*",
+      "val_no_16_10": "*",
+      "bar_no_16_11": "*",
+      "val_no_16_12": "*"
+    },
+    {
+      "bar_no_17_1": "*",
+      "val_no_17_2": "*",
+      "bar_no_17_3": "*",
+      "val_no_17_4": "*",
+      "bar_no_17_5": "*",
+      "val_no_17_6": "*",
+      "bar_no_17_7": "*",
+      "val_no_17_8": "*",
+      "bar_no_17_9": "*",
+      "val_no_17_10": "*",
+      "bar_no_17_11": "*",
+      "val_no_17_12": "*"
+    },
+    {
+      "bar_no_18_1": "*",
+      "val_no_18_2": "*",
+      "bar_no_18_3": "*",
+      "val_no_18_4": "*",
+      "bar_no_18_5": "*",
+      "val_no_18_6": "*",
+      "bar_no_18_7": "*",
+      "val_no_18_8": "*",
+      "bar_no_18_9": "*",
+      "val_no_18_10": "*",
+      "bar_no_18_11": "*",
+      "val_no_18_12": "*"
+    },
+    {
+      "bar_no_19_1": "*",
+      "val_no_19_2": "*",
+      "bar_no_19_3": "*",
+      "val_no_19_4": "*",
+      "bar_no_19_5": "*",
+      "val_no_19_6": "*",
+      "bar_no_19_7": "*",
+      "val_no_19_8": "*",
+      "bar_no_19_9": "*",
+      "val_no_19_10": "*",
+      "bar_no_19_11": "*",
+      "val_no_19_12": "*"
+    },
+    {
+      "bar_no_20_1": "*",
+      "val_no_20_2": "*",
+      "bar_no_20_3": "*",
+      "val_no_20_4": "*",
+      "bar_no_20_5": "*",
+      "val_no_20_6": "*",
+      "bar_no_20_7": "*",
+      "val_no_20_8": "*",
+      "bar_no_20_9": "*",
+      "val_no_20_10": "*",
+      "bar_no_20_11": "*",
+      "val_no_20_12": "*"
+    },
+    {
+      "bar_no_21_1": "*",
+      "val_no_21_2": "*",
+      "bar_no_21_3": "*",
+      "val_no_21_4": "*",
+      "bar_no_21_5": "*",
+      "val_no_21_6": "*",
+      "bar_no_21_7": "*",
+      "val_no_21_8": "*",
+      "bar_no_21_9": "*",
+      "val_no_21_10": "*",
+      "bar_no_21_11": "*",
+      "val_no_21_12": "*"
+    },
+    {
+      "bar_no_22_1": "*",
+      "val_no_22_2": "*",
+      "bar_no_22_3": "*",
+      "val_no_22_4": "*",
+      "bar_no_22_5": "*",
+      "val_no_22_6": "*",
+      "bar_no_22_7": "*",
+      "val_no_22_8": "*",
+      "bar_no_22_9": "*",
+      "val_no_22_10": "*",
+      "bar_no_22_11": "*",
+      "val_no_22_12": "*"
+    },
+    {
+      "bar_no_23_1": "*",
+      "val_no_23_2": "*",
+      "bar_no_23_3": "*",
+      "val_no_23_4": "*",
+      "bar_no_23_5": "*",
+      "val_no_23_6": "*",
+      "bar_no_23_7": "*",
+      "val_no_23_8": "*",
+      "bar_no_23_9": "*",
+      "val_no_23_10": "*",
+      "bar_no_23_11": "*",
+      "val_no_23_12": "*"
+    },
+    {
+      "bar_no_24_1": "*",
+      "val_no_24_2": "*",
+      "bar_no_24_3": "*",
+      "val_no_24_4": "*",
+      "bar_no_24_5": "*",
+      "val_no_24_6": "*",
+      "bar_no_24_7": "*",
+      "val_no_24_8": "*",
+      "bar_no_24_9": "*",
+      "val_no_24_10": "*",
+      "bar_no_24_11": "*",
+      "val_no_24_12": "*"
+    },
+    {
+      "bar_no_25_1": "*",
+      "val_no_25_2": "*",
+      "bar_no_25_3": "*",
+      "val_no_25_4": "*",
+      "bar_no_25_5": "*",
+      "val_no_25_6": "*",
+      "bar_no_25_7": "*",
+      "val_no_25_8": "*",
+      "bar_no_25_9": "*",
+      "val_no_25_10": "*",
+      "bar_no_25_11": "*",
+      "val_no_25_12": "*"
+    },
+    {
+      "bar_no_26_1": "*",
+      "val_no_26_2": "*",
+      "bar_no_26_3": "*",
+      "val_no_26_4": "*",
+      "bar_no_26_5": "*",
+      "val_no_26_6": "*",
+      "bar_no_26_7": "*",
+      "val_no_26_8": "*",
+      "bar_no_26_9": "*",
+      "val_no_26_10": "*",
+      "bar_no_26_11": "*",
+      "val_no_26_12": "*"
+    },
+    {
+      "bar_no_27_1": "*",
+      "val_no_27_2": "*",
+      "bar_no_27_3": "*",
+      "val_no_27_4": "*",
+      "bar_no_27_5": "*",
+      "val_no_27_6": "*",
+      "bar_no_27_7": "*",
+      "val_no_27_8": "*",
+      "bar_no_27_9": "*",
+      "val_no_27_10": "*",
+      "bar_no_27_11": "*",
+      "val_no_27_12": "*"
+    },
+    {
+      "bar_no_28_1": "*",
+      "val_no_28_2": "*",
+      "bar_no_28_3": "*",
+      "val_no_28_4": "*",
+      "bar_no_28_5": "*",
+      "val_no_28_6": "*",
+      "bar_no_28_7": "*",
+      "val_no_28_8": "*",
+      "bar_no_28_9": "*",
+      "val_no_28_10": "*",
+      "bar_no_28_11": "*",
+      "val_no_28_12": "*"
+    },
+    {
+      "bar_no_29_1": "*",
+      "val_no_29_2": "*",
+      "bar_no_29_3": "*",
+      "val_no_29_4": "*",
+      "bar_no_29_5": "*",
+      "val_no_29_6": "*",
+      "bar_no_29_7": "*",
+      "val_no_29_8": "*",
+      "bar_no_29_9": "*",
+      "val_no_29_10": "*",
+      "bar_no_29_11": "*",
+      "val_no_29_12": "*"
+    },
+    {
+      "bar_no_30_1": "*",
+      "val_no_30_2": "*",
+      "bar_no_30_3": "*",
+      "val_no_30_4": "*",
+      "bar_no_30_5": "*",
+      "val_no_30_6": "*",
+      "bar_no_30_7": "*",
+      "val_no_30_8": "*",
+      "bar_no_30_9": "*",
+      "val_no_30_10": "*",
+      "bar_no_30_11": "*",
+      "val_no_30_12": "*"
+    },
+    {
+      "bar_no_31_1": "*",
+      "val_no_31_2": "*",
+      "bar_no_31_3": "*",
+      "val_no_31_4": "*",
+      "bar_no_31_5": "*",
+      "val_no_31_6": "*",
+      "bar_no_31_7": "*",
+      "val_no_31_8": "*",
+      "bar_no_31_9": "*",
+      "val_no_31_10": "*",
+      "bar_no_31_11": "*",
+      "val_no_31_12": "*"
+    },
+    {
+      "bar_no_32_1": "*",
+      "val_no_32_2": "*",
+      "bar_no_32_3": "*",
+      "val_no_32_4": "*",
+      "bar_no_32_5": "*",
+      "val_no_32_6": "*",
+      "bar_no_32_7": "*",
+      "val_no_32_8": "*",
+      "bar_no_32_9": "*",
+      "val_no_32_10": "*",
+      "bar_no_32_11": "*",
+      "val_no_32_12": "*"
+    },
+    {
+      "bar_no_33_1": "*",
+      "val_no_33_2": "*",
+      "bar_no_33_3": "*",
+      "val_no_33_4": "*",
+      "bar_no_33_5": "*",
+      "val_no_33_6": "*",
+      "bar_no_33_7": "*",
+      "val_no_33_8": "*",
+      "bar_no_33_9": "*",
+      "val_no_33_10": "*",
+      "bar_no_33_11": "*",
+      "val_no_33_12": "*"
+    },
+    {
+      "bar_no_34_1": "*",
+      "val_no_34_2": "*",
+      "bar_no_34_3": "*",
+      "val_no_34_4": "*",
+      "bar_no_34_5": "*",
+      "val_no_34_6": "*",
+      "bar_no_34_7": "*",
+      "val_no_34_8": "*",
+      "bar_no_34_9": "*",
+      "val_no_34_10": "*",
+      "bar_no_34_11": "*",
+      "val_no_34_12": "*"
+    },
+    {
+      "bar_no_35_1": "*",
+      "val_no_35_2": "*",
+      "bar_no_35_3": "*",
+      "val_no_35_4": "*",
+      "bar_no_35_5": "*",
+      "val_no_35_6": "*",
+      "bar_no_35_7": "*",
+      "val_no_35_8": "*",
+      "bar_no_35_9": "*",
+      "val_no_35_10": "*",
+      "bar_no_35_11": "*",
+      "val_no_35_12": "*"
+    }
+  ],
+  "capacitor": [
+    [],
+    {
+      "incoming_start_value": "*",
+      "incoming_start_good": true,
+      "incoming_start_fail": true,
+      "incoming_start_na": true,
+      "final_start_value": "*",
+      "final_start_good": true,
+      "final_start_fail": true,
+      "final_start_na": true
+    },
+    {
+      "incoming_run_value": "*",
+      "incoming_run_good": true,
+      "incoming_run_fail": true,
+      "incoming_run_na": true,
+      "final_run_value": "*",
+      "final_run_good": true,
+      "final_run_fail": true,
+      "final_run_na": true
+    }
+  ],
+  "insulation_test": [
+    [],
+    [],
+    {
+      "insulation_incoming_volt": "*",
+      "insulation_incoming_mark_1": "*",
+      "insulation_incoming_1_min_1": "*",
+      "insulation_incoming_10_min_1": "*",
+      "insulation_incoming_pi": "*",
+      "insulation_final_volt": "*",
+      "insulation_final_mark_1": "*",
+      "insulation_final_1_min_1": "*",
+      "insulation_final_10_min_1": "*",
+      "insulation_final_pi": "*"
+    },
+    {
+      "insulation_incoming_mark_2": "*",
+      "insulation_incoming_1_min_2": "*",
+      "insulation_incoming_10_min_2": "*",
+      "insulation_final_mark_2": "*",
+      "insulation_final_1_min_2": "*",
+      "insulation_final_10_min_2": "*"
+    },
+    {
+      "insulation_incoming_mark_3": "*",
+      "insulation_incoming_1_min_3": "*",
+      "insulation_incoming_10_min_3": "*",
+      "insulation_final_mark_3": "*",
+      "insulation_final_1_min_3": "*",
+      "insulation_final_10_min_3": "*"
+    },
+    {
+      "insulation_incoming_1_min_4": "*",
+      "insulation_incoming_10_min_4": "*",
+      "insulation_final_1_min_4": "*",
+      "insulation_final_10_min_4": "*"
+    },
+    [],
+    {
+      "insulation_incoming_id_no": "insulation_incoming_id_no",
+      "insulation_final_id_no": "insulation_final_id_no"
+    }
+  ],
+  "polarization_index": [
+    [],
+    [],
+    [],
+    {
+      "insulation_res_incoming_celsius_1": "*",
+      "insulation_res_incoming_celsius_2": "*",
+      "insulation_res_final_celsius_1": "*",
+      "insulation_res_final_celsius_2": "*"
+    },
+    {
+      "volt": "*",
+      "insulation_res_incoming_1_1": "*",
+      "insulation_res_incoming_1_2": "*",
+      "insulation_res_final_1_1": "*",
+      "insulation_res_final_1_2": "*",
+      "insulation_symbol_incoming_1": "*"
+    },
+    {
+      "insulation_res_incoming_2_1": "*",
+      "insulation_res_incoming_2_2": "*",
+      "insulation_res_final_2_1": "*",
+      "insulation_res_final_2_2": "*",
+      "insulation_symbol_incoming_2": "*"
+    },
+    {
+      "insulation_res_incoming_3_1": "*",
+      "insulation_res_incoming_3_2": "*",
+      "insulation_res_final_3_1": "*",
+      "insulation_res_final_3_2": "*",
+      "insulation_symbol_incoming_3": "*"
+    },
+    {
+      "insulation_res_incoming_4_1": "*",
+      "insulation_res_incoming_4_2": "*",
+      "insulation_res_final_4_1": "*",
+      "insulation_res_final_4_2": "*",
+      "insulation_symbol_incoming_4": "*"
+    },
+    {
+      "insulation_res_incoming_5_1": "*",
+      "insulation_res_incoming_5_2": "*",
+      "insulation_res_final_5_1": "*",
+      "insulation_res_final_5_2": "*"
+    },
+    {
+      "insulation_res_incoming_6_1": "*",
+      "insulation_res_incoming_6_2": "*",
+      "insulation_res_final_6_1": "*",
+      "insulation_res_final_6_2": "*"
+    },
+    {
+      "insulation_res_incoming_7_1": "*",
+      "insulation_res_incoming_7_2": "*",
+      "insulation_res_final_7_1": "*",
+      "insulation_res_final_7_2": "*"
+    },
+    {
+      "insulation_res_incoming_8_1": "*",
+      "insulation_res_incoming_8_2": "*",
+      "insulation_res_final_8_1": "*",
+      "insulation_res_final_8_2": "*"
+    },
+    {
+      "insulation_res_incoming_9_1": "*",
+      "insulation_res_incoming_9_2": "*",
+      "insulation_res_final_9_1": "*",
+      "insulation_res_final_9_2": "*"
+    },
+    {
+      "insulation_res_incoming_10_1": "*",
+      "insulation_res_incoming_10_2": "*",
+      "insulation_res_final_10_1": "*",
+      "insulation_res_final_10_2": "*"
+    },
+    [
+      {
+        "insulation_res_incoming_5_1": "insulation_res_incoming_5_1",
+        "insulation_res_incoming_5_2": "insulation_res_incoming_5_2",
+        "insulation_res_final_5_1": "insulation_res_final_5_1",
+        "insulation_res_final_5_2": "insulation_res_final_5_2"
+      },
+      {
+        "insulation_res_incoming_6_1": "insulation_res_incoming_6_1",
+        "insulation_res_incoming_6_2": "insulation_res_incoming_6_2",
+        "insulation_res_final_6_1": "insulation_res_final_6_1",
+        "insulation_res_final_6_2": "insulation_res_final_6_2"
+      },
+      {
+        "insulation_res_incoming_7_1": "insulation_res_incoming_7_1",
+        "insulation_res_incoming_7_2": "insulation_res_incoming_7_2",
+        "insulation_res_final_7_1": "insulation_res_final_7_1",
+        "insulation_res_final_7_2": "insulation_res_final_7_2"
+      },
+      {
+        "insulation_res_incoming_8_1": "insulation_res_incoming_8_1",
+        "insulation_res_incoming_8_2": "insulation_res_incoming_8_2",
+        "insulation_res_final_8_1": "insulation_res_final_8_1",
+        "insulation_res_final_8_2": "insulation_res_final_8_2"
+      },
+      {
+        "insulation_res_incoming_9_1": "insulation_res_incoming_9_1",
+        "insulation_res_incoming_9_2": "insulation_res_incoming_9_2",
+        "insulation_res_final_9_1": "insulation_res_final_9_1",
+        "insulation_res_final_9_2": "insulation_res_final_9_2"
+      },
+      {
+        "insulation_res_incoming_10_1": "insulation_res_incoming_10_1",
+        "insulation_res_incoming_10_2": "insulation_res_incoming_10_2",
+        "insulation_res_final_10_1": "insulation_res_final_10_1",
+        "insulation_res_final_10_2": "insulation_res_final_10_2"
+      }
+    ]
+  ],
+  "time_resistance_method": [
+    {
+      "chart_01": {
+        "title": "Demo",
+        "type": "line",
+        "datasets": [
+          {
+            "label": "A",
+            "data": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          }
+        ]
+      }
+    }
+  ],
+  "insulation_test_two_speed": [
+    [],
+    [],
+    {
+      "insulation_incoming_volt": "*",
+      "insulation_incoming_1_min_1": "*",
+      "insulation_incoming_10_min_1": "*",
+      "insulation_incoming_pi": "*",
+      "insulation_final_volt": "*",
+      "insulation_final_1_min_1": "*",
+      "insulation_final_10_min_1": "*",
+      "insulation_final_pi": "*"
+    },
+    {
+      "insulation_incoming_1_min_2": "*",
+      "insulation_incoming_10_min_2": "*",
+      "insulation_final_1_min_2": "*",
+      "insulation_final_10_min_2": "*"
+    },
+    {
+      "insulation_incoming_1_min_3": "*",
+      "insulation_incoming_10_min_3": "*",
+      "insulation_final_1_min_3": "*",
+      "insulation_final_10_min_3": "*"
+    },
+    [],
+    { "insulation_incoming_id_no": "*", "insulation_final_id_no": "*" }
+  ],
+  "insulation_test_dc": [
+    [],
+    [],
+    [],
+    {
+      "insulation_incoming_volt": "*",
+      "insulation_incoming_1_min_1": "*",
+      "insulation_final_1_min_1": "*",
+      "insulation_incoming_10_min_1": "*",
+      "insulation_final_10_min_1": "*",
+      "insulation_incoming_pi_1": "*",
+      "insulation_final_pi_1": "*"
+    },
+    {
+      "insulation_incoming_1_min_2": "*",
+      "insulation_final_1_min_2": "*",
+      "insulation_incoming_10_min_2": "*",
+      "insulation_final_10_min_2": "*",
+      "insulation_incoming_pi_2": "*",
+      "insulation_final_pi_2": "*"
+    },
+    {
+      "insulation_incoming_1_min_3": "*",
+      "insulation_final_1_min_3": "*",
+      "insulation_incoming_10_min_3": "*",
+      "insulation_final_10_min_3": "*",
+      "insulation_incoming_pi_3": "*",
+      "insulation_final_pi_3": "*"
+    },
+    {
+      "insulation_incoming_1_min_4": "*",
+      "insulation_final_1_min_4": "*",
+      "insulation_incoming_10_min_4": "*",
+      "insulation_final_10_min_4": "*",
+      "insulation_incoming_pi_4": "*",
+      "insulation_final_pi_4": "*"
+    },
+    {
+      "insulation_incoming_1_min_5": "*",
+      "insulation_final_1_min_5": "*",
+      "insulation_incoming_10_min_5": "*",
+      "insulation_final_10_min_5": "*",
+      "insulation_incoming_pi_5": "*",
+      "insulation_final_pi_5": "*"
+    },
+    {
+      "insulation_incoming_1_min_6": "*",
+      "insulation_final_1_min_6": "*",
+      "insulation_incoming_10_min_6": "*",
+      "insulation_final_10_min_6": "*",
+      "insulation_incoming_pi_6": "*",
+      "insulation_final_pi_6": "*"
+    },
+    {
+      "insulation_incoming_1_min_7": "*",
+      "insulation_final_1_min_7": "*",
+      "insulation_incoming_10_min_7": "*",
+      "insulation_final_10_min_7": "*",
+      "insulation_incoming_pi_7": "*",
+      "insulation_final_pi_7": "*"
+    },
+    [],
+    { "insulation_incoming_id_no": "*", "insulation_final_id_no": "*" }
+  ],
+  "surge_comparison_test": [
+    [],
+    {
+      "incoming_volt": "i_volt",
+      "incoming_na": true,
+      "incoming_good": true,
+      "incoming_ground": true,
+      "incoming_short_turn": true,
+      "incoming_short_phase": true
+    },
+    {
+      "final_volt": "f_volt",
+      "final_na": true,
+      "final_good": true,
+      "final_ground": true,
+      "final_short_turn": true,
+      "final_short_phase": true
+    }
+  ],
+  "surge_comparison_test_dc": [
+    {
+      "wave_form_good": true,
+      "wave_form_ground": true,
+      "wave_form_short_turn": true
+    },
+    [],
+    { "incoming_test_at": "Test at.", "final_test_at": "Test at." },
+    {
+      "incoming_armature_na": true,
+      "incoming_armature_good": true,
+      "incoming_armature_ground": true,
+      "incoming_armature_short_turn": true,
+      "final_armature_na": true,
+      "final_armature_good": true,
+      "final_armature_ground": true,
+      "final_armature_short_turn": true
+    },
+    {
+      "incoming_interpole_na": true,
+      "incoming_interpole_good": true,
+      "incoming_interpole_ground": true,
+      "incoming_interpole_short_turn": true,
+      "final_interpole_na": true,
+      "final_interpole_good": true,
+      "final_interpole_ground": true,
+      "final_interpole_short_turn": true,
+      "0": "Short Turn",
+      "1": "checkbox-l"
+    },
+    {
+      "incoming_compensets_na": true,
+      "incoming_compensets_good": true,
+      "incoming_compensets_ground": true,
+      "incoming_compensets_short_turn": true,
+      "final_compensets_na": true,
+      "final_compensets_good": true,
+      "final_compensets_ground": true,
+      "final_compensets_short_turn": true
+    },
+    {
+      "incoming_shunt_field_na": true,
+      "incoming_shunt_field_good": true,
+      "incoming_shunt_field_ground": true,
+      "incoming_shunt_field_short_turn": true,
+      "final_shunt_field_na": true,
+      "final_shunt_field_good": true,
+      "final_shunt_field_ground": true,
+      "final_shunt_field_short_turn": true
+    },
+    {
+      "incoming_series_field_na": true,
+      "incoming_series_field_good": true,
+      "incoming_series_field_ground": true,
+      "incoming_series_field_short_turn": true,
+      "final_series_field_na": true,
+      "final_series_field_good": true,
+      "final_series_field_ground": true,
+      "final_series_field_short_turn": true
+    }
+  ],
+  "auxiliary_devices_test": [
+    [],
+    [],
+    {
+      "incoming_cnnt_no_1_1": "*",
+      "incoming_cnnt_no_1_2": "*",
+      "incoming_cnnt_no_2_1": "*",
+      "incoming_cnnt_no_2_2": "*",
+      "incoming_cnnt_no_3_1": "*",
+      "incoming_cnnt_no_3_2": "*",
+      "incoming_cnnt_no_4_1": "*",
+      "incoming_cnnt_no_4_2": "*",
+      "incoming_cnnt_no_5_1": "*",
+      "incoming_cnnt_no_5_2": "*",
+      "incoming_cnnt_no_6_1": "*",
+      "incoming_cnnt_no_6_2": "*",
+      "incoming_type_1": "*"
+    },
+    {
+      "incoming_resistance_1": "*",
+      "incoming_resistance_2": "*",
+      "incoming_resistance_3": "*",
+      "incoming_resistance_4": "*",
+      "incoming_resistance_5": "*",
+      "incoming_resistance_6": "*"
+    },
+    {
+      "final_cnnt_no_1_1": "*",
+      "final_cnnt_no_1_2": "*",
+      "final_cnnt_no_2_1": "*",
+      "final_cnnt_no_2_2": "*",
+      "final_cnnt_no_3_1": "*",
+      "final_cnnt_no_3_2": "*",
+      "final_cnnt_no_4_1": "*",
+      "final_cnnt_no_4_2": "*",
+      "final_cnnt_no_5_1": "*",
+      "final_cnnt_no_5_2": "*",
+      "final_cnnt_no_6_1": "*",
+      "final_cnnt_no_6_2": "*",
+      "final_type_1": "*"
+    },
+    {
+      "final_resistance_1": "*",
+      "final_resistance_2": "*",
+      "final_resistance_3": "*",
+      "final_resistance_4": "*",
+      "final_resistance_5": "*",
+      "final_resistance_6": "*"
+    },
+    [],
+    [],
+    {
+      "incoming_cnnt_no_7_1": "*",
+      "incoming_cnnt_no_7_2": "*",
+      "incoming_cnnt_no_8_1": "*",
+      "incoming_cnnt_no_8_2": "*",
+      "incoming_cnnt_no_9_1": "*",
+      "incoming_cnnt_no_9_2": "*",
+      "incoming_cnnt_no_10_1": "*",
+      "incoming_cnnt_no_10_2": "*",
+      "incoming_cnnt_no_11_1": "*",
+      "incoming_cnnt_no_11_2": "*",
+      "incoming_cnnt_no_12_1": "*",
+      "incoming_cnnt_no_12_2": "*",
+      "incoming_type_2": "*"
+    },
+    {
+      "incoming_resistance_7": "*",
+      "incoming_resistance_8": "*",
+      "incoming_resistance_9": "*",
+      "incoming_resistance_10": "*",
+      "incoming_resistance_11": "*",
+      "incoming_resistance_12": "*"
+    },
+    {
+      "final_cnnt_no_7_1": "*",
+      "final_cnnt_no_7_2": "*",
+      "final_cnnt_no_8_1": "*",
+      "final_cnnt_no_8_2": "*",
+      "final_cnnt_no_9_1": "*",
+      "final_cnnt_no_9_2": "*",
+      "final_cnnt_no_10_1": "*",
+      "final_cnnt_no_10_2": "*",
+      "final_cnnt_no_11_1": "*",
+      "final_cnnt_no_11_2": "*",
+      "final_cnnt_no_12_1": "*",
+      "final_cnnt_no_12_2": "*",
+      "final_type_2": "*"
+    },
+    {
+      "final_resistance_7": "*",
+      "final_resistance_8": "*",
+      "final_resistance_9": "*",
+      "final_resistance_10": "*",
+      "final_resistance_11": "*",
+      "final_resistance_12": "*"
+    },
+    { "incoming_id_no": "*", "final_id_no": "*" }
+  ],
+  "temperature_sensor_heater": [
+    [],
+    [],
+    {
+      "temperature_incoming_cnnt_no_de_1": "*",
+      "temperature_incoming_cnnt_no_de_2": "*",
+      "temperature_incoming_cnnt_no_nde_1": "*",
+      "temperature_incoming_cnnt_no_nde_2": "*",
+      "temp_sensor_type": "*",
+      "heater_incoming_cnnt_no_1_1": "*",
+      "heater_incoming_cnnt_no_1_2": "*",
+      "heater_incoming_cnnt_no_2_1": "*",
+      "heater_incoming_cnnt_no_2_2": "*"
+    },
+    {
+      "temperature_incoming_resistance_1": "*",
+      "temperature_incoming_resistance_2": "*",
+      "heater_incoming_resistance_1": "*",
+      "heater_incoming_resistance_2": "*"
+    },
+    {
+      "temperature_final_cnnt_no_de_1": "*",
+      "temperature_final_cnnt_no_de_2": "*",
+      "temperature_final_cnnt_no_nde_1": "*",
+      "temperature_final_cnnt_no_nde_2": "*",
+      "heater_final_cnnt_no_1_1": "*",
+      "heater_final_cnnt_no_1_2": "*",
+      "heater_final_cnnt_no_2_1": "*",
+      "heater_final_cnnt_no_2_2": "*"
+    },
+    {
+      "temperature_final_resistance_1": "*",
+      "temperature_final_resistance_2": "*",
+      "heater_final_resistance_1": "*",
+      "heater_final_resistance_2": "*"
+    },
+    {
+      "temperature_incoming_no_id": "*",
+      "temperature_final_no_id": "*",
+      "heater_incoming_no_id": "*",
+      "heater_final_no_id": "*"
+    }
+  ],
+  "connection": [
+    [],
+    {
+      "incoming_connection_delta": true,
+      "incoming_connection_star": true,
+      "incoming_connection_other": [true, "Incoming"],
+      "incoming_connection_na": true,
+      "final_connection_delta": true,
+      "final_connection_star": true,
+      "final_connection_other": [true, "Final"],
+      "final_connection_na": true
+    }
+  ],
+  "rotation_from_nde": [
+    [],
+    {
+      "incoming_rotation_nde_cw": [
+        true,
+        "https://placehold.co/20x20/black/pink"
+      ],
+      "incoming_rotation_nde_ccw": [
+        true,
+        "https://placehold.co/20x20/black/pink"
+      ],
+      "incoming_rotation_nde_na": true,
+      "final_rotation_nde_cw": [true, "https://placehold.co/20x20/black/pink"],
+      "final_rotation_nde_ccw": [true, "https://placehold.co/20x20/black/pink"],
+      "final_rotation_nde_na": true
+    }
+  ],
+  "locked_rotor_test": [
+    [],
+    [],
+    {
+      "incoming_rated": "*",
+      "incoming_voltage": "*",
+      "incoming_curr_a_r": "*",
+      "incoming_curr_a_s": "*",
+      "incoming_curr_a_t": "*",
+      "incoming_diff": "*",
+      "final_rated": "*",
+      "final_voltage": "*",
+      "final_curr_a_r": "*",
+      "final_curr_a_s": "*",
+      "final_curr_a_t": "*",
+      "final_diff": "*"
+    },
+    {
+      "incoming_id_no_1": "*",
+      "incoming_id_no_2": "*",
+      "final_id_no_1": "*",
+      "final_id_no_2": "*"
+    }
+  ],
+  "locked_rotor_test_dc": [
+    [],
+    {
+      "incoming_application": true,
+      "incoming_na": true,
+      "final_application": true,
+      "final_na": true
+    },
+    {
+      "incoming_id_no_1": "Instrument Incoming ID No.",
+      "incoming_id_no_2": "ID No.",
+      "final_id_no_1": "Instrument final ID No.",
+      "final_id_no_2": "ID No."
+    }
+  ],
+  "running_test": [
+    [],
+    [],
+    [],
+    {
+      "incoming_running_test_min": "*",
+      "incoming_marking_supply_r": "*",
+      "incoming_marking_motor_r": "*",
+      "incoming_voltage_supply_value_r-s": "*",
+      "incoming_current_value_r-s": "*",
+      "incoming_speed_1_min": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "incoming_running_test_min": "*",
+      "incoming_marking_supply_s": "*",
+      "incoming_marking_motor_s": "*",
+      "incoming_voltage_supply_value_r-t": "*",
+      "incoming_current_value_r-t": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "incoming_running_test_min": "*",
+      "incoming_marking_supply_t": "*",
+      "incoming_marking_motor_t": "*",
+      "incoming_voltage_supply_value_s-t": "*",
+      "incoming_current_value_s-t": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "final_running_test_min": "*",
+      "final_marking_supply_r": "*",
+      "final_marking_motor_r": "*",
+      "final_voltage_supply_value_r-s": "*",
+      "final_current_value_r-s": "*",
+      "final_speed_1_min": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    },
+    {
+      "final_running_test_min": "*",
+      "final_marking_supply_s": "*",
+      "final_marking_motor_s": "*",
+      "final_voltage_supply_value_r-t": "*",
+      "final_current_value_r-t": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    },
+    {
+      "final_running_test_min": "*",
+      "final_marking_supply_t": "*",
+      "final_marking_motor_t": "*",
+      "final_voltage_supply_value_s-t": "*",
+      "final_current_value_s-t": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    }
+  ],
+  "dynamic_test_incoming": [
+    [],
+    [],
+    [],
+    {
+      "incoming_running_test_min": "*",
+      "incoming_marking_supply_r": "*",
+      "incoming_marking_motor_r": "*",
+      "incoming_voltage_supply_value_r-s": "*",
+      "incoming_current_value_r-s": "*",
+      "incoming_speed_1_min": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "incoming_marking_supply_s": "*",
+      "incoming_marking_motor_s": "*",
+      "incoming_voltage_supply_value_r-t": "*",
+      "incoming_current_value_r-t": "*"
+    },
+    {
+      "incoming_marking_supply_t": "*",
+      "incoming_marking_motor_t": "*",
+      "incoming_voltage_supply_value_s-t": "*",
+      "incoming_current_value_s-t": "*"
+    },
+    {
+      "incoming_id_no_1": "*",
+      "incoming_id_no_2": "*",
+      "incoming_id_no_3": "*"
+    }
+  ],
+  "dynamic_test_final": [
+    [],
+    [],
+    [],
+    {
+      "final_running_test_min": "*",
+      "final_marking_supply_r": "*",
+      "final_marking_motor_r": "*",
+      "final_voltage_supply_value_r-s": "*",
+      "final_current_value_r-s": "*",
+      "final_speed_1_min": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    },
+    {
+      "final_marking_supply_s": "*",
+      "final_marking_motor_s": "*",
+      "final_voltage_supply_value_r-t": "*",
+      "final_current_value_r-t": "*"
+    },
+    {
+      "final_marking_supply_t": "*",
+      "final_marking_motor_t": "*",
+      "final_voltage_supply_value_s-t": "*",
+      "final_current_value_s-t": "*"
+    },
+    { "final_id_no_1": "*", "final_id_no_2": "*", "final_id_no_3": "*" }
+  ],
+  "running_test_final_mv": [
+    [],
+    [],
+    [],
+    {
+      "time_1": "*",
+      "voltage_r-s_1": "*",
+      "voltage_s-t_1": "*",
+      "voltage_t-r_1": "*",
+      "current_r_1": "*",
+      "current_s_1": "*",
+      "current_t_1": "*",
+      "speed_1_min_1": "*",
+      "temp_shaft_1": "*",
+      "temp_de_1": "*",
+      "temp_frame_1": "*",
+      "temp_nde_1": "*",
+      "temp_amb_1": "*"
+    },
+    {
+      "time_2": "*",
+      "voltage_r-s_2": "*",
+      "voltage_s-t_2": "*",
+      "voltage_t-r_2": "*",
+      "current_r_2": "*",
+      "current_s_2": "*",
+      "current_t_2": "*",
+      "speed_1_min_2": "*",
+      "temp_shaft_2": "*",
+      "temp_de_2": "*",
+      "temp_frame_2": "*",
+      "temp_nde_2": "*",
+      "temp_amb_2": "*"
+    },
+    {
+      "time_3": "*",
+      "voltage_r-s_3": "*",
+      "voltage_s-t_3": "*",
+      "voltage_t-r_3": "*",
+      "current_r_3": "*",
+      "current_s_3": "*",
+      "current_t_3": "*",
+      "speed_1_min_3": "*",
+      "temp_shaft_3": "*",
+      "temp_de_3": "*",
+      "temp_frame_3": "*",
+      "temp_nde_3": "*",
+      "temp_amb_3": "*"
+    },
+    {
+      "time_4": "*",
+      "voltage_r-s_4": "*",
+      "voltage_s-t_4": "*",
+      "voltage_t-r_4": "*",
+      "current_r_4": "*",
+      "current_s_4": "*",
+      "current_t_4": "*",
+      "speed_1_min_4": "*",
+      "temp_shaft_4": "*",
+      "temp_de_4": "*",
+      "temp_frame_4": "*",
+      "temp_nde_4": "*",
+      "temp_amb_4": "*"
+    },
+    {
+      "time_5": "*",
+      "voltage_r-s_5": "*",
+      "voltage_s-t_5": "*",
+      "voltage_t-r_5": "*",
+      "current_r_5": "*",
+      "current_s_5": "*",
+      "current_t_5": "*",
+      "speed_1_min_5": "*",
+      "temp_shaft_5": "*",
+      "temp_de_5": "*",
+      "temp_frame_5": "*",
+      "temp_nde_5": "*",
+      "temp_amb_5": "*"
+    },
+    {
+      "time_6": "*",
+      "voltage_r-s_6": "*",
+      "voltage_s-t_6": "*",
+      "voltage_t-r_6": "*",
+      "current_r_6": "*",
+      "current_s_6": "*",
+      "current_t_6": "*",
+      "speed_1_min_6": "*",
+      "temp_shaft_6": "*",
+      "temp_de_6": "*",
+      "temp_frame_6": "*",
+      "temp_nde_6": "*",
+      "temp_amb_6": "*"
+    },
+    {
+      "time_7": "*",
+      "voltage_r-s_7": "*",
+      "voltage_s-t_7": "*",
+      "voltage_t-r_7": "*",
+      "current_r_7": "*",
+      "current_s_7": "*",
+      "current_t_7": "*",
+      "speed_1_min_7": "*",
+      "temp_shaft_7": "*",
+      "temp_de_7": "*",
+      "temp_frame_7": "*",
+      "temp_nde_7": "*",
+      "temp_amb_7": "*"
+    },
+    { "final_id_no_1": "*", "final_id_no_2": "*", "final_id_no_3": "*" }
+  ],
+  "dynamic_test_running_test_slow": [
+    [],
+    [],
+    [],
+    {
+      "incoming_running_test_min": "*",
+      "incoming_marking_supply_r": "*",
+      "incoming_marking_motor_r": "*",
+      "incoming_voltage_supply_value_r-s": "*",
+      "incoming_current_value_r-s": "*",
+      "incoming_speed_1_min": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "incoming_marking_supply_s": "*",
+      "incoming_marking_motor_s": "*",
+      "incoming_voltage_supply_value_r-t": "*",
+      "incoming_current_value_r-t": "*"
+    },
+    {
+      "incoming_marking_supply_t": "*",
+      "incoming_marking_motor_t": "*",
+      "incoming_voltage_supply_value_s-t": "*",
+      "incoming_current_value_s-t": "*"
+    },
+    {
+      "final_running_test_min": "*",
+      "final_marking_supply_r": "*",
+      "final_marking_motor_r": "*",
+      "final_voltage_supply_value_r-s": "*",
+      "final_current_value_r-s": "*",
+      "final_speed_1_min": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    },
+    {
+      "final_marking_supply_s": "*",
+      "final_marking_motor_s": "*",
+      "final_voltage_supply_value_r-t": "*",
+      "final_current_value_r-t": "*"
+    },
+    {
+      "final_marking_supply_t": "*",
+      "final_marking_motor_t": "*",
+      "final_voltage_supply_value_s-t": "*",
+      "final_current_value_s-t": "*"
+    },
+    {
+      "incoming_id_no_1": "*",
+      "incoming_id_no_2": "*",
+      "incoming_id_no_3": "*"
+    }
+  ],
+  "dynamic_test_running_test_fast": [
+    [],
+    [],
+    [],
+    {
+      "incoming_running_test_min": "*",
+      "incoming_marking_supply_r": "*",
+      "incoming_marking_motor_r": "*",
+      "incoming_voltage_supply_value_r-s": "*",
+      "incoming_current_value_r-s": "*",
+      "incoming_speed_1_min": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "incoming_marking_supply_s": "*",
+      "incoming_marking_motor_s": "*",
+      "incoming_voltage_supply_value_r-t": "*",
+      "incoming_current_value_r-t": "*"
+    },
+    {
+      "incoming_marking_supply_t": "*",
+      "incoming_marking_motor_t": "*",
+      "incoming_voltage_supply_value_s-t": "*",
+      "incoming_current_value_s-t": "*"
+    },
+    {
+      "final_running_test_min": "*",
+      "final_marking_supply_r": "*",
+      "final_marking_motor_r": "*",
+      "final_voltage_supply_value_r-s": "*",
+      "final_current_value_r-s": "*",
+      "final_speed_1_min": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    },
+    {
+      "final_marking_supply_s": "*",
+      "final_marking_motor_s": "*",
+      "final_voltage_supply_value_r-t": "*",
+      "final_current_value_r-t": "*"
+    },
+    {
+      "final_marking_supply_t": "*",
+      "final_marking_motor_t": "*",
+      "final_voltage_supply_value_s-t": "*",
+      "final_current_value_s-t": "*"
+    },
+    {
+      "incoming_id_no_1": "*",
+      "incoming_id_no_2": "*",
+      "incoming_id_no_3": "*"
+    }
+  ],
+  "running_test_single_phase": [
+    [],
+    [],
+    [],
+    [],
+    {
+      "incoming_running_test_min": "*",
+      "incoming_voltage_supply_value": "*",
+      "incoming_current_value": "*",
+      "incoming_speed_1_min": "*",
+      "incoming_shaft": "*",
+      "incoming_de": "*",
+      "incoming_frame": "*",
+      "incoming_nde": "*",
+      "incoming_amb": "*"
+    },
+    {
+      "final_running_test_min": "*",
+      "final_voltage_supply_value": "*",
+      "final_current_value": "*",
+      "final_speed_1_min": "*",
+      "final_shaft": "*",
+      "final_de": "*",
+      "final_frame": "*",
+      "final_nde": "*",
+      "final_amb": "*"
+    },
+    {
+      "incoming_id_no_1": "Instrument Incoming ID NO.",
+      "incoming_id_no_2": "ID NO.",
+      "incoming_id_no_3": "ID NO."
+    },
+    {
+      "final_id_no_1": "Instrument Final ID NO.",
+      "final_id_no_2": "ID NO.",
+      "final_id_no_3": "ID NO."
+    }
+  ],
+  "dynamic_test_dc": [
+    { "incoming_time_test_running": "*" },
+    [],
+    [],
+    [],
+    [],
+    {
+      "incoming_field_marking": "*",
+      "incoming_field_supply": "*",
+      "incoming_field_voltage_vdc": "*",
+      "incoming_field_current_adv": "*",
+      "incoming_field_speed_1_min": "*",
+      "incoming_field_shaft": "*",
+      "incoming_field_de": "*",
+      "incoming_field_frame": "*",
+      "incoming_field_nde": "*",
+      "incoming_field_amb": "*"
+    },
+    {
+      "incoming_armature_marking": "*",
+      "incoming_armature_supply": "*",
+      "incoming_armature_voltage_vdc": "*",
+      "incoming_armature_current_adv": "*",
+      "incoming_armature_speed_1_min": "*",
+      "incoming_armature_shaft": "*",
+      "incoming_armature_de": "*",
+      "incoming_armature_frame": "*",
+      "incoming_armature_nde": "*",
+      "incoming_armature_amb": "*"
+    },
+    {
+      "incoming_id_no_1": "*",
+      "incoming_id_no_2": "*",
+      "incoming_id_no_3": "*"
+    },
+    { "final_time_test_running": "*" },
+    [],
+    [],
+    [],
+    [],
+    {
+      "final_field_marking": "*",
+      "final_field_supply": "*",
+      "final_field_voltage_vdc": "*",
+      "final_field_current_adv": "*",
+      "final_field_speed_1_min": "*",
+      "final_field_shaft": "*",
+      "final_field_de": "*",
+      "final_field_frame": "*",
+      "final_field_nde": "*",
+      "final_field_amb": "*"
+    },
+    {
+      "final_armature_marking": "*",
+      "final_armature_supply": "*",
+      "final_armature_voltage_vdc": "*",
+      "final_armature_current_adv": "*",
+      "final_armature_speed_1_min": "*",
+      "final_armature_shaft": "*",
+      "final_armature_de": "*",
+      "final_armature_frame": "*",
+      "final_armature_nde": "*",
+      "final_armature_amb": "*"
+    },
+    { "final_id_no_1": "*", "final_id_no_2": "*", "final_id_no_3": "*" }
+  ],
+  "vibration_test_bearing_test": [
+    [],
+    [],
+    {
+      "incoming_de_v": "*",
+      "incoming_de_h": "*",
+      "incoming_de_a": "*",
+      "incoming_de_g": "*",
+      "final_de_v": "*",
+      "final_de_h": "*",
+      "final_de_a": "*",
+      "final_de_g": "*"
+    },
+    {
+      "incoming_nde_v": "*",
+      "incoming_nde_h": "*",
+      "incoming_nde_a": "*",
+      "incoming_nde_g": "*",
+      "final_nde_v": "*",
+      "final_nde_h": "*",
+      "final_nde_a": "*",
+      "final_nde_g": "*"
+    },
+    [],
+    [],
+    [],
+    { "incoming_id_no": "*", "final_id_no": "*" }
+  ],
+  "vibration_test_bearing_test_incoming_mv": [
+    [],
+    [],
+    {
+      "incoming_de_v": "*",
+      "incoming_de_h": "*",
+      "incoming_de_a": "*",
+      "incoming_de_g": "*"
+    },
+    {
+      "incoming_nde_v": "*",
+      "incoming_nde_h": "*",
+      "incoming_nde_a": "*",
+      "incoming_nde_g": "*"
+    },
+    [],
+    [],
+    [],
+    { "incoming_id_no_1": "*", "incoming_id_no_2": "*" }
+  ],
+  "vibration_test_bearing_test_incoming_time_mv": [
+    [],
+    [],
+    [],
+    [],
+    {
+      "incoming_time_1": "*",
+      "incoming_de_v_1": "*",
+      "incoming_de_h_1": "*",
+      "incoming_de_a_1": "*",
+      "incoming_nde_v_1": "*",
+      "incoming_nde_h_1": "*",
+      "incoming_nde_a_1": "*",
+      "incoming_de_g_1": "*",
+      "incoming_nde_g_1": "*"
+    },
+    {
+      "incoming_time_2": "*",
+      "incoming_de_v_2": "*",
+      "incoming_de_h_2": "*",
+      "incoming_de_a_2": "*",
+      "incoming_nde_v_2": "*",
+      "incoming_nde_h_2": "*",
+      "incoming_nde_a_2": "*",
+      "incoming_de_g_2": "*",
+      "incoming_nde_g_2": "*"
+    },
+    {
+      "incoming_time_3": "*",
+      "incoming_de_v_3": "*",
+      "incoming_de_h_3": "*",
+      "incoming_de_a_3": "*",
+      "incoming_nde_v_3": "*",
+      "incoming_nde_h_3": "*",
+      "incoming_nde_a_3": "*",
+      "incoming_de_g_3": "*",
+      "incoming_nde_g_3": "*"
+    },
+    {
+      "incoming_time_4": "*",
+      "incoming_de_v_4": "*",
+      "incoming_de_h_4": "*",
+      "incoming_de_a_4": "*",
+      "incoming_nde_v_4": "*",
+      "incoming_nde_h_4": "*",
+      "incoming_nde_a_4": "*",
+      "incoming_de_g_4": "*",
+      "incoming_nde_g_4": "*"
+    },
+    {
+      "incoming_time_5": "*",
+      "incoming_de_v_5": "*",
+      "incoming_de_h_5": "*",
+      "incoming_de_a_5": "*",
+      "incoming_nde_v_5": "*",
+      "incoming_nde_h_5": "*",
+      "incoming_nde_a_5": "*",
+      "incoming_de_g_5": "*",
+      "incoming_nde_g_5": "*"
+    },
+    {
+      "incoming_time_6": "*",
+      "incoming_de_v_6": "*",
+      "incoming_de_h_6": "*",
+      "incoming_de_a_6": "*",
+      "incoming_nde_v_6": "*",
+      "incoming_nde_h_6": "*",
+      "incoming_nde_a_6": "*",
+      "incoming_de_g_6": "*",
+      "incoming_nde_g_6": "*"
+    },
+    {
+      "incoming_acceptable_vibration_test": "*",
+      "incoming_acceptable_bearing_test": "*"
+    },
+    [],
+    [],
+    { "incoming_id_no": "*", "0": "Instrument Incoming ID NO." }
+  ],
+  "vibration_test_bearing_test_final_time_mv": [
+    [],
+    [],
+    [],
+    [],
+    {
+      "final_time_1": "*",
+      "final_de_v_1": "*",
+      "final_de_h_1": "*",
+      "final_de_a_1": "*",
+      "final_nde_v_1": "*",
+      "final_nde_h_1": "*",
+      "final_nde_a_1": "*",
+      "final_de_g_1": "*",
+      "final_nde_g_1": "*"
+    },
+    {
+      "final_time_2": "*",
+      "final_de_v_2": "*",
+      "final_de_h_2": "*",
+      "final_de_a_2": "*",
+      "final_nde_v_2": "*",
+      "final_nde_h_2": "*",
+      "final_nde_a_2": "*",
+      "final_de_g_2": "*",
+      "final_nde_g_2": "*"
+    },
+    {
+      "final_time_3": "*",
+      "final_de_v_3": "*",
+      "final_de_h_3": "*",
+      "final_de_a_3": "*",
+      "final_nde_v_3": "*",
+      "final_nde_h_3": "*",
+      "final_nde_a_3": "*",
+      "final_de_g_3": "*",
+      "final_nde_g_3": "*"
+    },
+    {
+      "final_time_4": "*",
+      "final_de_v_4": "*",
+      "final_de_h_4": "*",
+      "final_de_a_4": "*",
+      "final_nde_v_4": "*",
+      "final_nde_h_4": "*",
+      "final_nde_a_4": "*",
+      "final_de_g_4": "*",
+      "final_nde_g_4": "*"
+    },
+    {
+      "final_time_5": "*",
+      "final_de_v_5": "*",
+      "final_de_h_5": "*",
+      "final_de_a_5": "*",
+      "final_nde_v_5": "*",
+      "final_nde_h_5": "*",
+      "final_nde_a_5": "*",
+      "final_de_g_5": "*",
+      "final_nde_g_5": "*"
+    },
+    {
+      "final_time_6": "*",
+      "final_de_v_6": "*",
+      "final_de_h_6": "*",
+      "final_de_a_6": "*",
+      "final_nde_v_6": "*",
+      "final_nde_h_6": "*",
+      "final_nde_a_6": "*",
+      "final_de_g_6": "*",
+      "final_nde_g_6": "*"
+    },
+    {
+      "final_acceptable_vibration_test": "*",
+      "final_acceptable_bearing_test": "*"
+    },
+    [],
+    [],
+    { "final_id_no": "*", "0": "Instrument Incoming ID NO." }
+  ],
+  "mechanical_repairing": [
+    [],
+    [],
+    [],
+    {
+      "housing_incoming_de": "*",
+      "housing_incoming_nde": "*",
+      "housing_final_de": "*",
+      "housing_final_nde": "*",
+      "shaft_incoming_de": "*",
+      "shaft_incoming_nde": "*",
+      "shaft_final_de": "*",
+      "shaft_final_nde": "*"
+    },
+    {
+      "housing_final_de_max": "*",
+      "housing_final_nde_max": "*",
+      "shaft_final_de_max": "*",
+      "shaft_final_nde_max": "*"
+    },
+    {
+      "housing_final_de_min": "*",
+      "housing_final_nde_min": "*",
+      "shaft_final_de_min": "*",
+      "shaft_final_nde_min": "*"
+    },
+    []
+  ],
+  "summary_of_electrical_work": [
+    [],
+    {
+      "stator_winding_overhaul": true,
+      "stator_winding_rewind": true,
+      "stator_winding_note": "*",
+      "stator_winding_accept": true,
+      "stator_winding_accept_note": "*"
+    },
+    {
+      "core_loss_stator_test": true,
+      "core_loss_stator_na": true,
+      "core_loss_stator_note": "*",
+      "core_loss_stator_accept": true,
+      "core_loss_stator_accept_note": "*"
+    },
+    {
+      "hot_spot_stator_test": true,
+      "hot_spot_stator_na": true,
+      "hot_spot_stator_note": "*",
+      "hot_spot_stator_accept": true,
+      "hot_spot_stator_accept_note": "*"
+    },
+    {
+      "hot_spot_rotor_test": true,
+      "hot_spot_rotor_na": true,
+      "hot_spot_rotor_note": "*",
+      "hot_spot_rotor_accept": true,
+      "hot_spot_rotor_accept_note": "*"
+    },
+    {
+      "stator_laminate_restack": true,
+      "stator_laminate_repair": true,
+      "stator_laminate_note": "*",
+      "stator_laminate_accept": true,
+      "stator_laminate_accept_note": "*"
+    },
+    {
+      "rotor_laminate_restack": true,
+      "rotor_laminate_repair": true,
+      "rotor_laminate_note": "*",
+      "rotor_laminate_accept": true,
+      "rotor_laminate_accept_note": "*"
+    },
+    {
+      "slot_wadge_replace": true,
+      "slot_wadge_repair": true,
+      "slot_wadge_note": "*",
+      "slot_wadge_accept": true,
+      "slot_wadge_accept_note": "*"
+    },
+    {
+      "mgnt_slot_wadge_replace": true,
+      "mgnt_slot_wadge_repair": true,
+      "mgnt_slot_wadge_note": "*",
+      "mgnt_slot_wadge_accept": true,
+      "mgnt_slot_wadge_accept_note": "*"
+    },
+    {
+      "cable_gland_replace": true,
+      "cable_gland_na": true,
+      "cable_gland_note": "*",
+      "cable_gland_accept": true,
+      "cable_gland_accept_note": "*"
+    },
+    {
+      "diode_replace": true,
+      "diode_na": true,
+      "diode_note": "*",
+      "diode_accept": true
+    },
+    {
+      "rectifier_unit_replace": true,
+      "rectifier_unit_na": true,
+      "rectifier_unit_note": "*",
+      "rectifier_unit_accept": true,
+      "rectifier_unit_accept_note": "*"
+    },
+    {
+      "lead_wire_replace": true,
+      "lead_wire_na": true,
+      "lead_wire_note": "*",
+      "lead_wire_accept": true,
+      "lead_wire_accept_note": "*"
+    },
+    {
+      "glass_sleeve_replace": true,
+      "glass_sleeve_na": true,
+      "glass_sleeve_note": "*",
+      "glass_sleeve_accept": true,
+      "glass_sleeve_accept_note": "*"
+    },
+    {
+      "heater_replace": true,
+      "heater_na": true,
+      "heater_note": "*",
+      "heater_accept": true,
+      "heater_accept_note": "*"
+    },
+    {
+      "temp_sensor_replace": true,
+      "temp_sensor_na": true,
+      "temp_sensor_note": "*",
+      "temp_sensor_accept": true,
+      "temp_sensor_accept_note": "*"
+    },
+    {
+      "terminal_board_replace": true,
+      "terminal_board_repair": true,
+      "terminal_board_note": "*",
+      "terminal_board_accept": true,
+      "terminal_board_accept_note": "*"
+    },
+    {
+      "terminal_box_replace": true,
+      "terminal_box_repair": true,
+      "terminal_box_note": "*",
+      "terminal_box_accept": true,
+      "terminal_box_accept_note": "*"
+    }
+  ],
+  "summary_of_mechanical_work": [
+    [],
+    [],
+    {
+      "stator_frame_pass": true,
+      "stator_frame_fail": true,
+      "stator_frame_note": "*",
+      "stator_frame_accept": true,
+      "stator_frame_accept_note": "*"
+    },
+    {
+      "endshield_de_pass": true,
+      "endshield_de_fail": true,
+      "endshield_de_note": "*",
+      "endshield_de_accept": true,
+      "endshield_de_accept_note": "*"
+    },
+    {
+      "endshield_nde_pass": true,
+      "endshield_nde_fail": true,
+      "endshield_nde_note": "*",
+      "endshield_nde_accept": true,
+      "endshield_nde_accept_note": "*"
+    },
+    {
+      "bearing_cap_de_pass": true,
+      "bearing_cap_de_fail": true,
+      "bearing_cap_de_note": "*",
+      "bearing_cap_de_accept": true,
+      "bearing_cap_de_accept_note": "*"
+    },
+    {
+      "bearing_cap_nde_pass": true,
+      "bearing_cap_nde_fail": true,
+      "bearing_cap_nde_note": "*",
+      "bearing_cap_nde_accept": true,
+      "bearing_cap_nde_accept_note": "*"
+    },
+    {
+      "bearing_de_value": "*",
+      "bearing_de_replace": true,
+      "bearing_de_note": "*",
+      "bearing_de_accept": true,
+      "bearing_de_accept_note": "*"
+    },
+    {
+      "bearing_nde_value": "*",
+      "bearing_nde_replace": true,
+      "bearing_nde_note": "*",
+      "bearing_nde_accept": true,
+      "bearing_nde_accept_note": "*"
+    },
+    {
+      "bearing_housing_de_pass": true,
+      "bearing_housing_de_replace": true,
+      "bearing_housing_de_note": "*",
+      "bearing_housing_de_accept": true,
+      "bearing_housing_de_accept_note": "*"
+    },
+    {
+      "bearing_housing_nde_pass": true,
+      "bearing_housing_nde_replace": true,
+      "bearing_housing_nde_note": "*",
+      "bearing_housing_nde_accept": true,
+      "bearing_housing_nde_accept_note": "*"
+    },
+    {
+      "fan_clearance_cover_pass": true,
+      "fan_clearance_cover_fail": true,
+      "fan_clearance_cover_note": "*",
+      "fan_clearance_cover_accept": true,
+      "fan_clearance_cover_accept_note": "*"
+    },
+    [],
+    {
+      "fan_cover_pass": true,
+      "fan_cover_fail": true,
+      "fan_cover_note": "*",
+      "fan_cover_accept": true,
+      "fan_cover_accept_note": "*"
+    },
+    [],
+    {
+      "terminal_box_lid_pass": true,
+      "terminal_box_lid_fail": true,
+      "terminal_box_lid_note": "*",
+      "terminal_box_lid_accept": true,
+      "terminal_box_lid_accept_note": "*"
+    },
+    {
+      "terminal_gaskets_pass": true,
+      "terminal_gaskets_fail": true,
+      "terminal_gaskets_note": "*",
+      "terminal_gaskets_accept": true,
+      "terminal_gaskets_accept_note": "*"
+    },
+    {
+      "terminal_fixed_pass": true,
+      "terminal_fixed_fail": true,
+      "terminal_fixed_note": "*",
+      "terminal_fixed_accept": true,
+      "terminal_fixed_accept_note": "*"
+    },
+    [],
+    [],
+    {
+      "studs_nut_pass": true,
+      "studs_nut_fail": true,
+      "studs_nut_note": "*",
+      "studs_nut_accept": true,
+      "studs_nut_accept_note": "*"
+    },
+    {
+      "no_sharp_edges_on_terminal_pass": true,
+      "no_sharp_edges_on_terminal_fail": true,
+      "no_sharp_edges_on_terminal_note": "*",
+      "no_sharp_edges_on_terminal_accept": true,
+      "no_sharp_edges_on_terminal_accept_note": "*"
+    },
+    {
+      "conductors_pass": true,
+      "conductors_fail": true,
+      "conductors_note": "*",
+      "conductors_accept": true,
+      "conductors_accept_note": "*"
+    },
+    {
+      "clearances_bar_pass": true,
+      "clearances_bar_fail": true,
+      "clearances_bar_note": "*",
+      "clearances_bar_accept": true,
+      "clearances_bar_accept_note": "*"
+    },
+    [],
+    {
+      "barriers_std_pass": true,
+      "barriers_std_fail": true,
+      "barriers_std_note": "*",
+      "barriers_std_accept": true,
+      "barriers_std_accept_note": "*"
+    },
+    {
+      "correct_fixing_pass": true,
+      "correct_fixing_fail": true,
+      "correct_fixing_note": "*",
+      "correct_fixing_accept": true,
+      "correct_fixing_accept_note": "*"
+    },
+    [],
+    {
+      "cable_entry_pass": true,
+      "cable_entry_fail": true,
+      "cable_entry_note": "*",
+      "cable_entry_accept": true,
+      "cable_entry_accept_note": "*"
+    },
+    {
+      "gland_pass": true,
+      "gland_fail": true,
+      "gland_note": "*",
+      "gland_accept": true,
+      "gland_accept_note": "*"
+    },
+    {
+      "stator_core_pass": true,
+      "stator_core_fail": true,
+      "stator_core_note": "*",
+      "stator_core_accept": true,
+      "stator_core_accept_note": "*"
+    },
+    {
+      "rotor_core_pass": true,
+      "rotor_core_fail": true,
+      "rotor_core_note": "*",
+      "rotor_core_accept": true,
+      "rotor_core_accept_note": "*"
+    },
+    {
+      "mountings_pass": true,
+      "mountings_fail": true,
+      "mountings_note": "*",
+      "mountings_accept": true,
+      "mountings_accept_note": "*"
+    },
+    {
+      "feet_pass": true,
+      "feet_fail": true,
+      "feet_note": "*",
+      "feet_accept": true,
+      "feet_accept_note": "*"
+    },
+    {
+      "flange_pass": true,
+      "flange_fail": true,
+      "flange_note": "*",
+      "flange_accept": true,
+      "flange_accept_note": "*"
+    },
+    {
+      "fixing_bolts_pass": true,
+      "fixing_bolts_fail": true,
+      "fixing_bolts_note": "*",
+      "fixing_bolts_accept": true,
+      "fixing_bolts_accept_note": "*"
+    },
+    {
+      "lifting_pass": true,
+      "lifting_fail": true,
+      "lifting_note": "*",
+      "lifting_accept": true,
+      "lifting_accept_note": "*"
+    },
+    {
+      "enclosure_protect_pass": true,
+      "enclosure_protect_fail": true,
+      "enclosure_protect_note": "*",
+      "enclosure_protect_accept": true,
+      "enclosure_protect_accept_note": "*"
+    },
+    [],
+    {
+      "ancillaries_pass": true,
+      "ancillaries_fail": true,
+      "ancillaries_note": "*",
+      "ancillaries_accept": true,
+      "ancillaries_accept_note": "*"
+    },
+    {
+      "rotor_balance_pass": true,
+      "rotor_balance_fail": true,
+      "rotor_balance_note": "*",
+      "rotor_balance_accept": true,
+      "rotor_balance_accept_note": "*"
+    },
+    {
+      "surface_finish_pass": true,
+      "surface_finish_fail": true,
+      "surface_finish_note": "*",
+      "surface_finish_accept": true,
+      "surface_finish_thickness": "*"
+    },
+    { "other": "*" }
+  ],
+  "radial_air_gab_calculation": [
+    [],
+    [],
+    [],
+    [],
+    { "D": "*" },
+    [],
+    [],
+    { "f": "*" },
+    { "p": "*" },
+    { "L": "*" },
+    { "is_rolling_bearing": "*" },
+    [],
+    [],
+    { "minimum_radial_gap": "*" },
+    [],
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "radial_air_gap_calc_group_2": [
+    [],
+    { "img_1": "assets/images/radial_air_gap_calc_group_2.png" },
+    [],
+    [],
+    [],
+    [],
+    { "a1": "*", "b1": "*" },
+    { "a2": "*", "b2": "*" },
+    { "ecl_a": "*", "ecl_b": "*" },
+    [],
+    { "bearing_housing_max_nde": "*", "bearing_housing_max_de": "*" },
+    { "bearing_housing_min_nde": "*", "bearing_housing_min_de": "*" },
+    { "hcl_nde": "*", "hcl_de": "*" },
+    [],
+    { "s_nde": "*", "s_de": "*" },
+    { "r_nde": "*", "r_de": "*" },
+    { "agcl_nde": "*", "agcl_de": "*" },
+    [],
+    { "bearing_tolerance_nde": "*", "bearing_tolerance_de": "*" },
+    {
+      "actual_min_radial_air_gap_nde": "*",
+      "actual_min_radial_air_gap_de": "*"
+    },
+    { "calc_min_radial_air_gap_nde": "*", "calc_min_radial_air_gap_de": "*" },
+    { "is_pass_nde": "*", "is_pass_de": "*" }
+  ],
+  "others_components": [
+    [],
+    {
+      "oil_seal_de_replace": true,
+      "oil_seal_de_replace_note": "*",
+      "oil_seal_de_na": true,
+      "oil_seal_de_note": "*",
+      "oil_seal_de_accept": true,
+      "oil_seal_de_accept_note": "*"
+    },
+    {
+      "oil_seal_nde_replace": true,
+      "oil_seal_nde_replace_note": "*",
+      "oil_seal_nde_na": true,
+      "oil_seal_nde_note": "*",
+      "oil_seal_nde_accept": true,
+      "oil_seal_nde_accept_note": "*"
+    },
+    {
+      "v-ring_de_replace": true,
+      "v-ring_de_replace_note": "*",
+      "v-ring_de_na": true,
+      "v-ring_de_note": "*",
+      "v-ring_de_accept": true,
+      "v-ring_de_accept_note": "*"
+    },
+    {
+      "v-ring_nde_replace": true,
+      "v-ring_nde_replace_note": "*",
+      "v-ring_nde_na": true,
+      "v-ring_nde_note": "*",
+      "v-ring_nde_accept": true,
+      "v-ring_nde_accept_note": "*"
+    },
+    {
+      "wave_spring_replace": true,
+      "wave_spring_replace_note": "*",
+      "wave_spring_na": true,
+      "wave_spring_note": "*",
+      "wave_spring_accept": true,
+      "wave_spring_accept_note": "*"
+    },
+    {
+      "eye_bolt_replace": true,
+      "eye_bolt_replace_note": "*",
+      "eye_bolt_na": true,
+      "eye_bolt_note": "*",
+      "eye_bolt_accept": true,
+      "eye_bolt_accept_note": "*"
+    },
+    {
+      "pulley_replace": true,
+      "pulley_repair": true,
+      "pulley_na": true,
+      "pulley_note": "*",
+      "pulley_accept": true,
+      "pulley_accept_note": "*"
+    },
+    {
+      "coupling_replace": true,
+      "coupling_repair": true,
+      "coupling_na": true,
+      "coupling_note": "*",
+      "coupling_accept": true,
+      "coupling_accept_note": "*"
+    },
+    {
+      "rubber_coupling_replace": true,
+      "rubber_coupling_replace_note": "*",
+      "rubber_coupling_na": true,
+      "rubber_coupling_note": "*",
+      "rubber_coupling_accept": true,
+      "rubber_coupling_accept_note": "*"
+    }
+  ],
+  "measuring_devices_and_instruments": [
+    [],
+    [],
+    {
+      "incoming_serial_no_1": "*",
+      "incoming_id_no_1": "*",
+      "final_serial_no_1": "*",
+      "final_id_no_1": "*"
+    },
+    {
+      "incoming_serial_no_2": "*",
+      "incoming_id_no_2": "*",
+      "final_serial_no_2": "*",
+      "final_id_no_2": "*"
+    },
+    {
+      "incoming_serial_no_3": "*",
+      "incoming_id_no_3": "*",
+      "final_serial_no_3": "*",
+      "final_id_no_3": "*"
+    },
+    {
+      "incoming_serial_no_4": "*",
+      "incoming_id_no_4": "*",
+      "final_serial_no_4": "*",
+      "final_id_no_4": "*"
+    },
+    {
+      "incoming_serial_no_5": "*",
+      "incoming_id_no_5": "*",
+      "final_serial_no_5": "*",
+      "final_id_no_5": "*"
+    },
+    {
+      "incoming_serial_no_6": "*",
+      "incoming_id_no_6": "*",
+      "final_serial_no_6": "*",
+      "final_id_no_6": "*"
+    },
+    {
+      "incoming_serial_no_7": "*",
+      "incoming_id_no_7": "*",
+      "final_serial_no_7": "*",
+      "final_id_no_7": "*"
+    },
+    {
+      "incoming_serial_no_8": "*",
+      "incoming_id_no_8": "*",
+      "final_serial_no_8": "*",
+      "final_id_no_8": "*"
+    },
+    {
+      "incoming_serial_no_9": "*",
+      "incoming_id_no_9": "*",
+      "final_serial_no_9": "*",
+      "final_id_no_9": "*"
+    },
+    {
+      "incoming_serial_no_10": "*",
+      "incoming_id_no_10": "*",
+      "final_serial_no_10": "*",
+      "final_id_no_10": "*"
+    },
+    {
+      "incoming_serial_no_11": "*",
+      "incoming_id_no_11": "*",
+      "final_serial_no_11": "*",
+      "final_id_no_11": "*"
+    },
+    {
+      "incoming_serial_no_12": "*",
+      "incoming_id_no_12": "*",
+      "final_serial_no_12": "*",
+      "final_id_no_12": "*"
+    },
+    {
+      "incoming_serial_no_13": "*",
+      "incoming_id_no_13": "*",
+      "final_serial_no_13": "*",
+      "final_id_no_13": "*"
+    },
+    {
+      "incoming_serial_no_14": "*",
+      "incoming_id_no_14": "*",
+      "final_serial_no_14": "*",
+      "final_id_no_14": "*"
+    },
+    {
+      "incoming_serial_no_15": "*",
+      "incoming_id_no_15": "*",
+      "final_serial_no_15": "*",
+      "final_id_no_15": "*"
+    },
+    {
+      "incoming_serial_no_16": "*",
+      "incoming_id_no_16": "*",
+      "final_serial_no_16": "*",
+      "final_id_no_16": "*"
+    },
+    {
+      "incoming_serial_no_17": "*",
+      "incoming_id_no_17": "*",
+      "final_serial_no_17": "*",
+      "final_id_no_17": "*"
+    },
+    { "summary": "*" },
+    [],
+    { "new_tE": "New tE =", "IA_IN": "IA/IN =" },
+    [],
+    [],
+    [],
+    { "check_1": true, "check_2": true }
+  ]
+}

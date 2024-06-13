@@ -16,7 +16,13 @@ class DynamicTestDC extends RunningTest
 
     protected static array $data = [
         'dynamic_test_dc' => [
-            [], [], [], [],
+            [
+                'incoming_time_test_running' => '-',
+            ],
+            [],
+            [],
+            [],
+            [],
             [
                 // Field
                 'incoming_field_marking' => '-',
@@ -48,7 +54,13 @@ class DynamicTestDC extends RunningTest
                 'incoming_id_no_2' => '-',
                 'incoming_id_no_3' => '-',
             ],
-            [], [], [], [],
+            [
+                'final_time_test_running' => '-',
+            ],
+            [],
+            [],
+            [],
+            [],
             [
                 // Field
                 'final_field_marking' => '-',

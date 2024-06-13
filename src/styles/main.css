@@ -408,5 +408,30 @@
     div:nth-child(27) > div > input {
       @apply h-8 w-8;
     }
+    div:nth-child(25) > span:nth-child(1),
+    .triangle::after {
+      font-size: large;
+    }
+
+    .triangle {
+      @apply !m-0 !p-0 !border-0;
+      width: 75px;
+      height: 75px;
+      background-color: black;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .triangle::after {
+      width: 70px;
+      height: 70px;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+      background-color: white;
+      content: "R";
+      text-align: center;
+      line-height: 60px;
+    }
   }
 }
