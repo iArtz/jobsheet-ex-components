@@ -16,6 +16,7 @@ services:
       PUBLIC_DIR: ${PUBLIC_DIR}
       APACHE_DOCUMENT_ROOT: ${APACHE_DOCUMENT_ROOT}
       XDEBUG_MODE: ${XDEBUG_MODE}
+      API_ENDPOINTS_EX_COMPONENTS: ${API_ENDPOINTS_EX_COMPONENTS}
     volumes:
       - .:/var/www/html
       - ./infra/docker/app/logs:/tmp/logs

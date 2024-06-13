@@ -16,10 +16,25 @@ class Chart extends FormElement
 
     protected function handlerType(): string
     {
-        if (empty($this->data['data'])) throw new Exception('Undefined data');
         if (empty($this->data['type'])) throw new Exception('Please specific chart type.');
+        if (empty($this->data['datasets'])) throw new Exception('Undefined datasets');
+        if (empty($this->data['title'])) throw new Exception('Undefined title');
         $chart = '';
-        $data = Helper::toJSON($this->data['data']);
+        $datasets = [];
+        foreach ($this->data['datasets'] as $data) {
+            $datasets[] = [
+                'label' => $data['label'],
+                'data' => $data['data'],
+                'backgroundColor' => [
+                    "rgba({$data['color']}, 0.2)",
+                ],
+                'borderColor' => [
+                    "rgba({$data['color']}, 1",
+                ],
+                'borderWidth' => 1,
+            ];
+        }
+        $datasets = json_encode($datasets);
         switch ($this->data['type']) {
             default:
                 $chart = <<<HTML
@@ -33,17 +48,7 @@ class Chart extends FormElement
                                     type: '{$this->data['type']}',
                                     data: {
                                         labels: [1,2,3,4,5,6,7,8,9,10], // X Axis
-                                        datasets: [{
-                                            label: '# Time (min.)',
-                                            data: {$data}, // Y Axis
-                                            backgroundColor: [
-                                                'rgba(0, 0, 255, 0.2)',
-                                            ],
-                                            borderColor: [
-                                                'rgba(0, 0, 255, 1)',
-                                            ],
-                                            borderWidth: 1,
-                                        }]
+                                        datasets: {$datasets}
                                     },
                                     options: {
                                         responsive: true,

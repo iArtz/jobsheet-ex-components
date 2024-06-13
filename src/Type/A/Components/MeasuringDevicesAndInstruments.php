@@ -154,7 +154,7 @@ class MeasuringDevicesAndInstruments extends Component
             [
                 new Span('R'),
                 new Span('(Repair to standard AND certificate)'),
-                new Span('R'),
+                new Span('', ['triangle']),
                 new Span('(Repair to standard, but not in compliance with certificate)')
             ],
             [
